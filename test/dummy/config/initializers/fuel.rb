@@ -5,6 +5,8 @@ Fuel.configure do |config|
   config.layout = "application"
 
   # Change title of blog
-  config.blog_title = "Ryan's Blog"
+  #config.blog_title = "Blog"
 
+  # Add Disqus
+  config.disqus_name = 'your_disqus_name'
 end

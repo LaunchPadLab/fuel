@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_posts
+ *# require_posts
  */
 /* ALL FUEL */
 .fuel h1 { margin-bottom: 10px; font-size: 2.5em; }
@@ -48,10 +48,10 @@
 .fuel-admin fieldset { border: none; margin-top: none; }
 
 /* Blog */
-.fuel-posts .fuel_post_title { font-size: 1.8em; margin-top: 20px; }
+.fuel-posts .fuel-post-title { font-size: 1.8em; margin-top: 20px; }
 
 .fuel-posts h1, .fuel-posts h2, .fuel-posts h3, .fuel-posts h4, .fuel-posts h5, .fuel-posts h6 { font-weight: bold; }
 .fuel-posts { padding: 20px; }
-.fuel-posts .fuel_post_additional_info { margin-top: 5px; display: block; }
-.fuel-posts .fuel_post_author, .fuel_post_date { display: inline; font-size: 1em; color: #999;}
-.fuel-posts .fuel_post_content { margin-top: 20px; }
+.fuel-posts .fuel-post-additional-info { margin-top: 5px; display: block; }
+.fuel-posts .fuel-post-author, .fuel-post-date { display: inline; font-size: 1em; color: #999;}
+.fuel-posts .fuel-post-content { margin-top: 20px; }

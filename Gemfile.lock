@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fuel (0.2.0)
+    fuel (0.2.4)
       friendly_id
       kaminari
       rails

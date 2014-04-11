@@ -1,13 +1,13 @@
-<div class="fuel_post_additional_info">
+<div class="fuel-post-additional-info">
   <!-- <span class="fuel_post_date"><%= post.created_at.strftime('%b %d, %Y') %> - </span> -->
-  <span class="fuel_post_author">By <%= post.author %></span>
+  <span class="fuel-post-author">By <%= post.author %></span>
 </div>
 <% if action_name == "show" %>
-  <div class="fuel_post_content">
+  <div class="fuel-post-content">
     <%= markdown(post.content).html_safe %>
   </div>
 <% else %>
-  <div class="fuel_post_content">
+  <div class="fuel-post-content">
     <%= markdown(truncate post.content, length: 800).html_safe %>
   </div>
   <% if post.content.length > 800 %>

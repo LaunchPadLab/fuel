@@ -32,12 +32,20 @@ mount Fuel::Engine => "/blog", as: "blog"
 Usage
 --------------------
 
-**Paths:**
+**Paths**
 
 * Path to Admin Panel: /blog/admin
 * Path to Blog: /blog
 
-If you want to customize the views, you can generate them with rails generate fuel:views
+**Views**
+
+If you want to customize the views, you can generate them in terminal:
+
+```
+rails generate fuel:views
+```
+
+**Layout**
 
 You will probably want the blog posts to render within an existing layout of your application. By default, it will render within "application" layout. You can change this in config/initializers/fuel.rb:
 

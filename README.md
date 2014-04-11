@@ -53,6 +53,18 @@ You will probably want the blog posts to render within an existing layout of you
 config.layout = "application"
 ```
 
+Other Customization Options
+--------------------
+
+**Disqus Commenting**
+
+In config/initializers/fuel.rb, uncomment the following line and replace the name with your disqus account name:
+
+```
+config.disqus_name = 'your_disqus_name'
+```
+
+
 The MIT License (MIT)
 --------------------
 

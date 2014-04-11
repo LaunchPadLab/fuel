@@ -1,0 +1,16 @@
+<div class="fuel_post_additional_info">
+  <!-- <span class="fuel_post_date"><%= post.created_at.strftime('%b %d, %Y') %> - </span> -->
+  <span class="fuel_post_author">By <%= post.author %></span>
+</div>
+<% if action_name == "show" %>
+  <div class="fuel_post_content">
+    <%= markdown(post.content).html_safe %>
+  </div>
+<% else %>
+  <div class="fuel_post_content">
+    <%= markdown(truncate post.content, length: 800).html_safe %>
+  </div>
+  <% if post.content.length > 800 %>
+    <p><%= link_to 'Read more', post_url(post) %></p>
+  <% end %>
+<% end %>

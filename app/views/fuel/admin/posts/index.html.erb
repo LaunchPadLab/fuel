@@ -1,0 +1,25 @@
+<div class="fuel fuel-admin index">
+  <h1>Blog Admin Panel</h1>
+
+  <%= link_to 'New Post', new_admin_post_path %> | <%= link_to 'View Blog', posts_path %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Published On</th>
+        <th>Title</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.published ? post.created_at.strftime('%m/%d/%Y') : 'Draft' %></td>
+          <td><%= link_to post.title, post_path(post) %></td>
+          <td><%= link_to "Edit", edit_admin_post_path(post) %></td>
+          <td><%= link_to "Delete", admin_post_path(post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

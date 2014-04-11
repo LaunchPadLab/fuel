@@ -1,0 +1,9 @@
+<div class="fuel fuel-posts">
+  <div class="tagline">
+    <h1 class="tagline"><%= link_to @blog_title, root_path %></h1>
+  </div>
+  <article class="fuel-post fuel-post-show">
+    <h2 class="fuel_post_title"><%= @post.title %></h2>
+    <%= render 'post', post: @post %>
+  </article>
+</div>

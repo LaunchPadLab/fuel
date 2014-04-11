@@ -1,0 +1,19 @@
+<div class="fuel fuel-posts">
+  <div class="tagline">
+    <h1 class="tagline"><%= link_to @blog_title, root_path %></h1>
+  </div>
+
+  <% if @posts %>
+    <section class="posts">
+      <%= paginate @posts %>
+      <% @posts.each do |post| %>
+        <article class="fuel-post fuel-post-index">
+          <h2 class="fuel_post_title"><%= link_to post.title, post %></h2>
+          <%= render "fuel/posts/post", post: post %>
+        </article>
+      <% end %>
+    </section>
+  <% else %>
+
+  <% end %>
+</div>

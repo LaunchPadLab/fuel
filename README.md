@@ -28,3 +28,12 @@ config/routes.rb:
 ```ruby
 mount Fuel::Engine => "/blog", as: "blog"
 ```
+
+Usage
+--------------------
+
+You will probably want the blog posts to render within an existing layout of your application. In config/fuel.rb, uncomment the following line and change "application" to the name of the appropriate layout:
+
+```ruby
+config.layout = "application"
+```

@@ -24,9 +24,7 @@ module Fuel
     private
 
       def main_app_url_helper?(method)
-        Fuel.configuration.inline_main_app_named_routes and
-          (method.to_s.end_with?('_path') or method.to_s.end_with?('_url')) and
-          main_app.respond_to?(method)
+        (method.to_s.end_with?('_path') or method.to_s.end_with?('_url')) and main_app.respond_to?(method)
       end
 
   end

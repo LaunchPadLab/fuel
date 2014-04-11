@@ -3,7 +3,9 @@ module Fuel
     extend FriendlyId
     friendly_id :title, use: :slugged
 
-    # attr_accessible :tag, :author, :content, :title, :slug, :published
+    if Rails.version[0].to_i < 4
+      attr_accessible :tag, :author, :content, :title
+    end
 
     validates_presence_of :title, :content, :author
     paginates_per 5

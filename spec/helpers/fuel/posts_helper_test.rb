@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 
 module Fuel
   class PostsHelperTest < ActionView::TestCase

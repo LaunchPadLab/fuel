@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'spec_helper'
 
 class NavigationTest < ActionDispatch::IntegrationTest
   fixtures :all

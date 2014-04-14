@@ -3,9 +3,11 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path('../dummy/config/environment', __FILE__)
 require 'rspec/rails'
 require 'factory_girl'
+require 'factories'
 require 'rspec/autorun'
 
 include Fuel
+ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
   # ## Mock Framework
@@ -34,4 +36,5 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   # config.order = "random"
+  config.include FactoryGirl::Syntax::Methods
 end

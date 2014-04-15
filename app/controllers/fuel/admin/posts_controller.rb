@@ -1,6 +1,6 @@
 module Fuel
   class Admin::PostsController < ApplicationController
-    http_basic_authenticate_with name: "admin", password: "password"
+    http_basic_authenticate_with name: Fuel.configuration.username, password: Fuel.configuration.password
 
     def index
       @posts = Fuel::Post.all

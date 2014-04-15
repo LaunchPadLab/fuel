@@ -37,6 +37,16 @@ Usage
 * Path to Admin Panel: /blog/admin
 * Path to Blog: /blog
 
+**Admin Username / Password**
+
+The default username and password is admin and password, respectively. You can change these in config/initializers/fuel.rb:
+
+```ruby
+config.username = "admin"
+
+config.password = "password"
+```
+
 **Views**
 
 If you want to customize the views, you can generate them in terminal:

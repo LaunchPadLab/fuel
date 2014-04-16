@@ -1,7 +1,7 @@
 Fuel::Engine.routes.draw do
   resources :posts
 
-  root to: 'posts#index'
+  get "/" => "posts#index", as: :blog_root
 
   namespace :admin do
     root to: 'posts#index'

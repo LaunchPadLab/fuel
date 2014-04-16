@@ -5,6 +5,7 @@ require "fuel/configuration"
 require "friendly_id"
 
 module Fuel
+
   def self.configure(&block)
     block.call(configuration)
   end
@@ -12,4 +13,5 @@ module Fuel
   def self.configuration
     @configuration ||= Configuration.new
   end
+
 end

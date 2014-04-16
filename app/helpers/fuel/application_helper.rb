@@ -1,5 +1,6 @@
 module Fuel
   module ApplicationHelper
+    include ::ApplicationHelper
 
     def markdown(text)
       markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,

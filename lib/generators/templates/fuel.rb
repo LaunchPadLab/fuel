@@ -13,6 +13,10 @@ Fuel.configure do |config|
   # Change admin password
   config.username = "password"
 
+  config.helpers = ["ApplicationHelper",
+                    #"another_helper",
+                    ]
+
   # Add Disqus
   #config.disqus_name = 'your_disqus_name'
 

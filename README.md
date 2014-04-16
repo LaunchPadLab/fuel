@@ -74,6 +74,16 @@ In config/initializers/fuel.rb, uncomment the following line and replace the nam
 config.disqus_name = 'your_disqus_name'
 ```
 
+**Including Your Own Helpers**
+
+By default, Fuel will only include your ApplicationHelper. You can tell Fuel to include additional helper files as well at config/initializers/fuel.rb:
+
+```ruby
+config.helpers = ["ApplicationHelper",
+                  #"another_helper",
+                  ]
+```
+
 
 The MIT License (MIT)
 --------------------

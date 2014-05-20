@@ -51,7 +51,7 @@ module Fuel
     end
 
     def preview
-      @content = params[:content]
+      @content = params[:post][:content]
       respond_to do |format|
         format.js
       end

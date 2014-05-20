@@ -498,3 +498,37 @@ Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
   [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1
   [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1[0m
   [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFuel::Post Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "fuel_posts" ("author", "content", "created_at", "slug", "tag", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Ryan Francis"], ["content", "Some content for a blog post"], ["created_at", "2014-05-20 19:14:47.594597"], ["slug", "this-is-a-title-f2cda74b-6852-495e-8c5e-1381a810e5b3"], ["tag", "Coding"], ["title", "This is a title"], ["updated_at", "2014-05-20 19:14:47.594597"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Processing by Fuel::PostsController#show as HTML
+  Parameters: {"id"=>"this-is-a-title-f2cda74b-6852-495e-8c5e-1381a810e5b3"}
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title-f2cda74b-6852-495e-8c5e-1381a810e5b3' LIMIT 1
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_posts" ("author", "content", "created_at", "slug", "tag", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Ryan Francis"], ["content", "Some content for a blog post"], ["created_at", "2014-05-20 19:14:47.615522"], ["slug", "this-is-a-title-afc3a666-2f2f-432d-8f7a-160784d6020c"], ["tag", "Coding"], ["title", "This is a title"], ["updated_at", "2014-05-20 19:14:47.615522"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Processing by Fuel::PostsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."slug" = '36' LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."id" = 36 LIMIT 1
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_posts" ("author", "content", "created_at", "slug", "tag", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author", "Ryan Francis"], ["content", "Some content for a blog post"], ["created_at", "2014-05-20 19:14:47.621820"], ["slug", "this-is-a-title-5583f723-1f05-4499-904c-9fa94541497e"], ["tag", "Coding"], ["title", "This is a title"], ["updated_at", "2014-05-20 19:14:47.621820"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Processing by Fuel::PostsController#show as HTML
+  Parameters: {"id"=>"this-is-a-title-5583f723-1f05-4499-904c-9fa94541497e"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title-5583f723-1f05-4499-904c-9fa94541497e' LIMIT 1[0m
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1
+  [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = '' LIMIT 1[0m
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = '' LIMIT 1
+  [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1[0m
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1
+  [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1[0m
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-a-title' LIMIT 1

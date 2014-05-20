@@ -3,12 +3,11 @@ $(function() {
     e.preventDefault();
     var id = $(this).data('id');
     if (id == "preview") {
-      var content = $("#post_content").val();
+      var content = $("#post_content").serialize();
       $.ajax({
         url: 'preview',
-        data: {content: content}
+        data: content
       });
-
     }
     $(".content-area").hide();
     $("#content-" + id).show();

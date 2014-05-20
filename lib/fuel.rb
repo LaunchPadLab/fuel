@@ -5,6 +5,7 @@ require "fuel/configuration"
 require "friendly_id"
 require "jquery-rails"
 require "sass-rails"
+require "slim"
 
 module Fuel
 

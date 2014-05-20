@@ -6,6 +6,7 @@ Fuel::Engine.routes.draw do
   namespace :admin do
     root to: 'posts#index'
     get "posts/preview" => 'posts#preview'
+    get "posts/:slug/preview" => 'posts#preview'
     resources :posts do
       member do
         get 'content'

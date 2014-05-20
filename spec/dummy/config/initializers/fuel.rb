@@ -7,10 +7,20 @@ Fuel.configure do |config|
   # Change title of blog
   config.blog_title = "Blog"
 
+  # Change admin username
+  config.username = "admin"
+
+  # Change admin password
+  config.password = "password"
+
+  config.helpers = ["ApplicationHelper",
+                    #"another_helper",
+                    ]
+
   # Add Disqus
   #config.disqus_name = 'your_disqus_name'
 
   # Add Twitter
-  config.twitter = true
+  #config.twitter = true
 
 end

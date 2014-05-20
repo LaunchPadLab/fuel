@@ -21,6 +21,13 @@ module Fuel
       @disqus_name = Fuel.configuration.disqus_name
     end
 
+    def preview
+      @content = params[:content]
+      respond_to do |format|
+        format.js
+      end
+    end
+
     private
 
       def truncate_on_space(text, length)

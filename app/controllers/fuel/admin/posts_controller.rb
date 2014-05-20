@@ -50,6 +50,13 @@ module Fuel
       redirect_to admin_posts_path, notice: "Post was successfully deleted"
     end
 
+    def preview
+      @content = params[:content]
+      respond_to do |format|
+        format.js
+      end
+    end
+
     private
 
       def post_params

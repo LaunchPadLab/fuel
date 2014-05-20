@@ -11,7 +11,7 @@ Fuel.configure do |config|
   config.username = "admin"
 
   # Change admin password
-  config.username = "password"
+  config.password = "password"
 
   config.helpers = ["ApplicationHelper",
                     #"another_helper",

@@ -17,7 +17,14 @@
   <%= f.label :author %>
   <%= f.text_field :author %>
   <%= f.label :content %>
-  <%= f.text_area :content %>
+  <%= link_to 'Edit', '#', data: { id: "edit" }, class: "edit-preview-toggle" %>
+  <%= link_to 'Preview', '#', data: { id: "preview" }, class: "edit-preview-toggle" %>
+  <div id="content-edit" class="content-area">
+    <%= f.text_area :content, cols: "80", rows: "20" %>
+  </div>
+  <div id="content-preview" class="content-area" style="display:none;">
+    <%= render 'content', content: @post.content %>
+  </div>
   <%= f.submit 'Publish' %>
   <%= f.submit 'Save Draft' %>
 <% end %>

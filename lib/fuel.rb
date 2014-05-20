@@ -3,6 +3,8 @@ require "redcarpet"
 require "kaminari"
 require "fuel/configuration"
 require "friendly_id"
+require "jquery-rails"
+require "sass-rails"
 
 module Fuel
 

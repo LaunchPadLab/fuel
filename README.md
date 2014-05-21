@@ -18,16 +18,9 @@ Terminal:
 
 ```
 bundle
-rails generate fuel:install
-rake fuel:install:migrations
-rake db:migrate
+rails g fuel:install
 ```
 
-config/routes.rb:
-
-```ruby
-mount Fuel::Engine => "/blog", as: "blog"
-```
 
 Usage
 --------------------

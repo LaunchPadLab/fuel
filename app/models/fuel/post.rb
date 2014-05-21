@@ -8,7 +8,7 @@ module Fuel
     end
 
     validates_presence_of :title, :content, :author, if: :is_published
-    paginates_per 5
+    paginates_per Fuel.configuration.paginates_per.to_i
 
     def should_generate_new_friendly_id?
       new_record? #Don't generate new id on edit

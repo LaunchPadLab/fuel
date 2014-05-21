@@ -35604,3 +35604,349 @@ Processing by Fuel::Admin::PostsController#preview as */*
   Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (1.5ms)
   Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/preview.js.erb (3.6ms)
 Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-21 14:18:15 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.1.0/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2014-05-21 14:18:18 -0500
+Processing by Fuel::PostsController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'[0m
+  [1m[35mFuel::Post Load (0.3ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (2.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 83ms (Views: 55.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:18:19 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:18:19 -0500
+
+
+Started GET "/admin" for 127.0.0.1 at 2014-05-21 14:18:21 -0500
+
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.7ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.3ms)
+
+
+Started GET "/blog/admin" for 127.0.0.1 at 2014-05-21 14:18:27 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+Filter chain halted as #<Proc:0x007fb92577e238@/Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/admin" for 127.0.0.1 at 2014-05-21 14:18:27 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+Filter chain halted as #<Proc:0x007fb92577e238@/Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_controller/metal/http_authentication.rb:71> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/admin" for 127.0.0.1 at 2014-05-21 14:18:30 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (21.0ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fuel/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:18:30 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 14:18:30 -0500
+
+
+Started GET "/assets/fuel/admin.js?body=1" for 127.0.0.1 at 2014-05-21 14:18:30 -0500
+
+
+Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:18:30 -0500
+
+
+Started GET "/blog/admin/posts/new" for 127.0.0.1 at 2014-05-21 14:18:39 -0500
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (3.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (28.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.slim within layouts/fuel/application (32.7ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 14:18:39 -0500
+
+
+Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:18:39 -0500
+
+
+Started GET "/blog/admin/posts" for 127.0.0.1 at 2014-05-21 14:22:23 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (3.0ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:23 -0500
+
+
+Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:23 -0500
+
+
+Started GET "/blog/posts" for 127.0.0.1 at 2014-05-21 14:22:25 -0500
+Processing by Fuel::PostsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'[0m
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:22:25 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:25 -0500
+
+
+Started GET "/blog/posts/test-title" for 127.0.0.1 at 2014-05-21 14:22:27 -0500
+Processing by Fuel::PostsController#show as HTML
+  Parameters: {"id"=>"test-title"}
+  [1m[36mFuel::Post Load (1.8ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'test-title' LIMIT 1[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:22:27 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:27 -0500
+
+
+Started GET "/blog/" for 127.0.0.1 at 2014-05-21 14:22:29 -0500
+Processing by Fuel::PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:22:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:29 -0500
+
+
+Started GET "/blog/posts/this-is-post-2" for 127.0.0.1 at 2014-05-21 14:22:31 -0500
+Processing by Fuel::PostsController#show as HTML
+  Parameters: {"id"=>"this-is-post-2"}
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'this-is-post-2' LIMIT 1
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:22:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:31 -0500
+
+
+Started GET "/blog/" for 127.0.0.1 at 2014-05-21 14:22:33 -0500
+Processing by Fuel::PostsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'[0m
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:22:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:33 -0500
+
+
+Started GET "/blog/posts/first-post" for 127.0.0.1 at 2014-05-21 14:22:35 -0500
+Processing by Fuel::PostsController#show as HTML
+  Parameters: {"id"=>"first-post"}
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'first-post' LIMIT 1[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:22:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:35 -0500
+
+
+Started GET "/blog/" for 127.0.0.1 at 2014-05-21 14:22:36 -0500
+Processing by Fuel::PostsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:22:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:22:36 -0500
+
+
+Started GET "/blog/" for 127.0.0.1 at 2014-05-21 14:29:03 -0500
+Processing by Fuel::PostsController#index as HTML
+Completed 500 Internal Server Error in 20ms
+
+NoMethodError (undefined method `paginates_per' for #<Rails::Application::Configuration:0x007fdc5541d438>):
+  railties (4.1.0) lib/rails/railtie/configuration.rb:95:in `method_missing'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:11:in `<class:Post>'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:2:in `<module:Fuel>'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:1:in `<top (required)>'
+  activesupport (4.1.0) lib/active_support/dependencies.rb:443:in `load'
+  activesupport (4.1.0) lib/active_support/dependencies.rb:443:in `block in load_file'
+  activesupport (4.1.0) lib/active_support/dependencies.rb:633:in `new_constants_in'
+  activesupport (4.1.0) lib/active_support/dependencies.rb:442:in `load_file'
+  activesupport (4.1.0) lib/active_support/dependencies.rb:342:in `require_or_load'
+  activesupport (4.1.0) lib/active_support/dependencies.rb:480:in `load_missing_constant'
+  activesupport (4.1.0) lib/active_support/dependencies.rb:180:in `const_missing'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/controllers/fuel/posts_controller.rb:14:in `index'
+  actionpack (4.1.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.0) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.0) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.0) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.0) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/railtie.rb:194:in `public_send'
+  railties (4.1.0) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.1.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.0) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.0) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.0) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.0) lib/rails/engine.rb:514:in `call'
+  railties (4.1.0) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.9ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.7ms)
+
+
+Started GET "/blog/" for 127.0.0.1 at 2014-05-21 14:29:25 -0500
+Processing by Fuel::PostsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'[0m
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-21 14:29:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-21 14:29:26 -0500

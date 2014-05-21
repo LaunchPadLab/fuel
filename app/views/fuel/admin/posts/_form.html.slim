@@ -15,8 +15,9 @@
   = f.text_field :author
   = f.label :content
   br
-  = link_to 'Edit', '#', data: { id: "edit" }, class: "edit-preview-toggle"
-  = link_to 'Preview', '#', data: { id: "preview" }, class: "edit-preview-toggle"
+  .preview-links
+    = link_to 'Edit', '#', data: { id: "edit" }, class: "edit-preview-toggle active"
+    = link_to 'Preview', '#', data: { id: "preview" }, class: "edit-preview-toggle"
   #content-edit.content-area
     = f.text_area :content, cols: "80", rows: "20"
   #content-preview.content-area style="display:none;"

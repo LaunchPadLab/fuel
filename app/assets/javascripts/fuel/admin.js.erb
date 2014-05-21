@@ -11,5 +11,7 @@ $(function() {
     }
     $(".content-area").hide();
     $("#content-" + id).show();
+    $(".edit-preview-toggle").removeClass("active");
+    $(this).addClass("active");
   });
 });

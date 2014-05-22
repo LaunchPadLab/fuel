@@ -11,7 +11,6 @@ module Fuel
     end
 
     def create
-      # raise Fuel::Post.new.inspect
       @post = Fuel::Post.new
       @post.tag = post_params["tag"]
       @post.author = post_params["author"]
@@ -20,7 +19,7 @@ module Fuel
       update_published
 
       if @post.save
-        redirect_to @post, notice: "Your blog post was successfully #{@message}."
+        redirect_to admin_posts_path, notice: "Your blog post was successfully #{@message}."
       else
         render action: "new"
       end

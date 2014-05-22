@@ -10,6 +10,9 @@ FactoryGirl.define do
     factory :invalid_post do
       title nil
     end
+    factory :unpublished_post do
+      published false
+    end
   end
 
 end

@@ -1,2 +1,3 @@
 #render-content
-  = markdown(content || "").try(:html_safe)
+  .fuel-posts
+    = markdown(content || "").try(:html_safe)

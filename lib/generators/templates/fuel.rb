@@ -13,6 +13,9 @@ Fuel.configure do |config|
   # Change admin password
   config.password = "password"
 
+  # Change number of posts to show per page on blog
+  config.paginates_per = 5
+
   config.helpers = ["ApplicationHelper",
                     #"another_helper",
                     ]

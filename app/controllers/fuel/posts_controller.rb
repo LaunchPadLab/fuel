@@ -11,7 +11,7 @@ module Fuel
     end
 
     def index
-      @posts = Fuel::Post.where(published: true).order("created_at DESC").page(params[:page])
+      @posts = Fuel::Post.recent_published_posts.page(params[:page])
     end
 
     def show

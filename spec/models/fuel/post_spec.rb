@@ -18,5 +18,27 @@ module Fuel
         expect(post).to have(0).errors_on(attr)
       end
     end
+
+    describe "Scope recent published posts" do
+      before(:each) do
+        @num_published_posts = 3
+        @num_published_posts.times do |post|
+          create(:post)
+        end
+        create(:unpublished_post)
+        @posts = Fuel::Post.recent_published_posts
+      end
+      it "returns an array of posts" do
+        expect(@posts.count).to be > (0)
+      end
+      it "only displays published posts" do
+        expect(@posts.count).to eq(@num_published_posts)
+      end
+      it "sorts the posts by created_at datetime" do
+        is_ordered = @posts[0].created_at > @posts[1].created_at && @posts[1].created_at > @posts[2].created_at
+        expect(is_ordered).to be_true
+      end
+    end
+
   end
 end

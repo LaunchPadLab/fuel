@@ -1,4 +1,6 @@
 Fuel
+[![Code Climate](https://codeclimate.com/github/LaunchPadLab/fuel.png)](https://codeclimate.com/github/LaunchPadLab/fuel)
+[![Code Climate](https://codeclimate.com/github/LaunchPadLab/fuel/coverage.png)](https://codeclimate.com/github/LaunchPadLab/fuel)
 ====================
 
 By [LaunchPad Lab](http://launchpadlab.com).

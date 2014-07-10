@@ -33,5 +33,6 @@ module Fuel
       def truncate_on_space(text, length)
         truncate(text, length: length, separator: ' ')
       end
+
   end
 end

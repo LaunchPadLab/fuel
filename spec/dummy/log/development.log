@@ -1019,3 +1019,144 @@ Started GET "/assets/fuel/admin.js?body=1" for 127.0.0.1 at 2014-07-10 10:44:55 
 
 
 Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-07-10 10:44:55 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-07 13:49:51 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.1.0/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/admin" for 127.0.0.1 at 2014-10-07 13:49:58 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (1.9ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (27.1ms)
+Completed 200 OK in 118ms (Views: 87.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-07 13:49:58 -0500
+
+
+Started GET "/assets/fuel/application.css?body=1" for 127.0.0.1 at 2014-10-07 13:49:58 -0500
+
+
+Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-10-07 13:49:58 -0500
+
+
+Started GET "/assets/fuel/admin.js?body=1" for 127.0.0.1 at 2014-10-07 13:49:58 -0500
+
+
+Started GET "/blog/admin/posts/new" for 127.0.0.1 at 2014-10-07 13:50:00 -0500
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (2.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (29.6ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.slim within layouts/fuel/application (36.3ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fuel/application.css?body=1" for 127.0.0.1 at 2014-10-07 13:50:00 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-07 13:50:00 -0500
+
+
+Started GET "/assets/fuel/admin.js?body=1" for 127.0.0.1 at 2014-10-07 13:50:00 -0500
+
+
+Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-10-07 13:50:00 -0500
+
+
+Started GET "/blog/admin/posts/preview?post%5Bcontent%5D=%23being+awesome" for 127.0.0.1 at 2014-10-07 13:50:15 -0500
+Processing by Fuel::Admin::PostsController#preview as */*
+  Parameters: {"post"=>{"content"=>"#being awesome"}}
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (2.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/preview.js.erb (5.0ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/admin/posts/preview?post%5Bcontent%5D=%23+being+awesome" for 127.0.0.1 at 2014-10-07 13:50:17 -0500
+Processing by Fuel::Admin::PostsController#preview as */*
+  Parameters: {"post"=>{"content"=>"# being awesome"}}
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/preview.js.erb (1.8ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blog/admin/posts" for 127.0.0.1 at 2014-10-07 13:50:21 -0500
+Processing by Fuel::Admin::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vbWRAcT0Ej9YYx5AyS6ZTVfCmE+wtJXMfI8zDw93X3w=", "post"=>{"title"=>"Hello", "tag"=>"A great tag", "author"=>"Ryan Francis", "content"=>"# being awesome"}, "commit"=>"Publish"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFuel::Post Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts"  WHERE "fuel_posts"."slug" = 'hello' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "fuel_posts" ("author", "content", "created_at", "slug", "tag", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author", "Ryan Francis"], ["content", "# being awesome"], ["created_at", "2014-10-07 18:50:21.259859"], ["slug", "hello"], ["tag", "A great tag"], ["title", "Hello"], ["updated_at", "2014-10-07 18:50:21.259859"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:5000/blog/admin/posts
+Completed 302 Found in 95ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/blog/admin/posts" for 127.0.0.1 at 2014-10-07 13:50:21 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (3.8ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-07 13:50:21 -0500
+
+
+Started GET "/assets/fuel/application.css?body=1" for 127.0.0.1 at 2014-10-07 13:50:21 -0500
+
+
+Started GET "/assets/fuel/admin.js?body=1" for 127.0.0.1 at 2014-10-07 13:50:21 -0500
+
+
+Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-10-07 13:50:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-29 15:39:38 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.1.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for 127.0.0.1 at 2014-10-29 15:39:42 -0500
+Processing by Fuel::PostsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'[0m
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (2.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/_post.html.erb (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (30.3ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 88ms (Views: 54.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-29 15:39:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-29 15:39:42 -0500
+
+
+Started GET "/blog/admin" for 127.0.0.1 at 2014-10-29 15:39:46 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (17.4ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fuel/application.css?body=1" for 127.0.0.1 at 2014-10-29 15:39:46 -0500
+
+
+Started GET "/assets/fuel/admin.js?body=1" for 127.0.0.1 at 2014-10-29 15:39:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-29 15:39:46 -0500
+
+
+Started GET "/assets/fuel/application.js?body=1" for 127.0.0.1 at 2014-10-29 15:39:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-29 16:48:58 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.1.0/lib/rails/templates/rails/welcome/index.html.erb (0.5ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)

@@ -4,7 +4,7 @@ module Fuel
     layout "fuel/application"
 
     def index
-      @posts = Fuel::Post.all
+      @posts = Fuel::Post.order("created_at DESC")
     end
 
     def new

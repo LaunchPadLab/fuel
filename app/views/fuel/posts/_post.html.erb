@@ -11,7 +11,7 @@
   </div>
 <% else %>
   <div class="fuel-post-content">
-    <%= markdown(truncate post.content, length: 800).html_safe %>
+    <%= markdown(truncate_html post.content, length: 800).html_safe %>
   </div>
   <% if post.content.length > 800 %>
     <p><%= link_to 'Read more', post_url(post) %></p>

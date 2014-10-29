@@ -6,6 +6,7 @@ require "friendly_id"
 require "jquery-rails"
 require "sass-rails"
 require "slim"
+require "truncate_html"
 
 module Fuel
 

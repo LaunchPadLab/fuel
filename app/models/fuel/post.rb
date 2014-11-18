@@ -4,7 +4,7 @@ module Fuel
     friendly_id :title, use: :slugged
 
     if Rails.version[0].to_i < 4
-      attr_accessible :tag, :author, :content, :title
+      attr_accessible :tag, :author, :content, :title, :featured_image_url, :teaser
     end
 
     validates_presence_of :title, :content, :author, if: :is_published

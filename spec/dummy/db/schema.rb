@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123230639) do
+ActiveRecord::Schema.define(version: 20141118162237) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -32,9 +32,11 @@ ActiveRecord::Schema.define(version: 20140123230639) do
     t.text     "content"
     t.string   "title"
     t.string   "slug"
-    t.boolean  "published",  default: true
+    t.boolean  "published",          default: true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "featured_image_url"
+    t.text     "teaser"
   end
 
   add_index "fuel_posts", ["slug"], name: "index_fuel_posts_on_slug", unique: true

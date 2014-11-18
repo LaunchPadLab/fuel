@@ -13,6 +13,10 @@
   = f.text_field :tag
   = f.label :author
   = f.text_field :author
+  = f.label :featured_image_url, "Featured Image URL"
+  = f.text_field :featured_image_url
+  p= f.label :teaser
+  p= f.text_area :content, cols: "89", rows: "5"
   = f.label :content
   br
   .preview-links
@@ -22,7 +26,8 @@
     = f.text_area :content, cols: "80", rows: "20"
   #content-preview.content-area style="display:none;"
     = render 'content', content: @post.content
-  = f.submit 'Publish'
-  = f.submit 'Save Draft'
+  p
+    = f.submit 'Publish', class: 'first-btn fuel-btn'
+    = f.submit 'Save Draft', class: 'last-btn fuel-btn'
 = form_tag('preview', method: "post", id: "preview_form") do
   = hidden_field_tag :content

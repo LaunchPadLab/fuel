@@ -20,6 +20,12 @@ Fuel.configure do |config|
                     #"another_helper",
                     ]
 
+  config.featured_image_settings = {
+    styles: {
+      thumb: "100x100>", medium: "300x300>"
+    }
+  }
+
   # Add Disqus
   #config.disqus_name = 'your_disqus_name'
 

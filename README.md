@@ -61,6 +61,30 @@ config.layout = "application"
 Other Customization Options
 --------------------
 
+**S3**
+
+S3 ships with three storage options: File Storage, S3, or Fog. We recommend using S3. To do so, add the following to your config/application.rb file:
+
+```ruby
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+```
+
+Make sure to also add your environment variables to config/application.yml using something like [Figaro](https://github.com/laserlemon/figaro):
+
+```yml
+AWS_ACCESS_KEY: [YOUR-S3-ACCESS-KEY]
+AWS_SECRET_ACCESS_KEY: [YOUR-S3-SECRET-KEY]
+AWS_BUCKET: [YOUR-S3-BUCKET]
+```
+
+
 **Disqus Commenting**
 
 In config/initializers/fuel.rb, uncomment the following line and replace the name with your disqus account name:

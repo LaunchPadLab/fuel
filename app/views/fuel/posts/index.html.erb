@@ -8,9 +8,9 @@
       <%= paginate @posts %>
       <% @posts.each do |post| %>
         <article class="fuel-post fuel-post-index">
-          <% if post.featured_image_file_name.present? %>
+          <% if post.featured_image_file_name.present? || post.featured_image_url.present? %>
             <div class="image-area">
-              <%= image_tag post.featured_image.url %>
+              <%= image_tag post.prioritized_featured_image_url(:medium) %>
             </div>
           <% end %>
           <h2 class="fuel-post-title"><%= link_to post.title, post %></h2>

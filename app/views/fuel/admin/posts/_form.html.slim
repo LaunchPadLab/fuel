@@ -23,6 +23,9 @@
     .featured-image
       = image_tag @post.featured_image.url if @post.featured_image_file_name.present?
   .field
+    = f.label :featured_image_url, "Featured Image URL (alternative to upload)"
+    = f.text_field :featured_image_url
+  .field
     = f.label :teaser
     br
     = f.text_area :teaser, cols: "89", rows: "5"

@@ -27,5 +27,9 @@ module Fuel
       self.published
     end
 
+    def prioritized_featured_image_url(type = :original)
+      featured_image_file_name.present? ? featured_image.url(type) : featured_image_url
+    end
+
   end
 end

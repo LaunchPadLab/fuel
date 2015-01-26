@@ -5,12 +5,16 @@ module Fuel
       source_root File.expand_path('../../templates', __FILE__)
       desc "Creates a Fuel initializer in config/initializers, adds/migrates Fuel migration files and migrates the files, and adds the appropriate route to config/routes"
 
+      # rake fuel:install
       def install
         run 'bundle install'
         route "mount Fuel::Engine => '/blog'"
         rake 'fuel:install:migrations'
         rake 'db:migrate'
       end
+
+      # to generate migration updates:
+      # rake fuel:install:migrations
 
       def copy_initializer
         template "fuel.rb", "config/initializers/fuel.rb"

@@ -12,13 +12,11 @@ module Fuel
     end
 
     def create
-      @post = Fuel::Post.new
-      @post.tag = post_params["tag"]
-      @post.author = post_params["author"]
-      @post.content = post_params["content"]
-      @post.title = post_params["title"]
-      @post.featured_image_url = post_params["featured_image_url"]
-      @post.teaser = post_params["teaser"]
+      if Rails.version[0].to_i < 4
+        @post = Fuel::Post.new(params[:post])
+      else
+        @post = Fuel::Post.new(post_params)
+      end
       update_published
 
       if @post.save
@@ -34,12 +32,11 @@ module Fuel
 
     def update
       @post = Fuel::Post.find_by_slug(params[:id])
-      @post.tag = post_params["tag"]
-      @post.author = post_params["author"]
-      @post.content = post_params["content"]
-      @post.title = post_params["title"]
-      @post.featured_image_url = post_params["featured_image_url"]
-      @post.teaser = post_params["teaser"]
+      if Rails.version[0].to_i < 4
+        @post.attributes = params[:post]
+      else
+        @post.attributes = post_params
+      end
       update_published
 
       if @post.save
@@ -50,7 +47,6 @@ module Fuel
     end
 
     def destroy
-      raise "hello"
       @post = Fuel::Post.find_by_slug(params[:id])
       @post.destroy
       redirect_to admin_posts_path, notice: "Post was successfully deleted"
@@ -66,7 +62,7 @@ module Fuel
     private
 
       def post_params
-        params.require(:post).permit(:tag, :author, :content, :title, :featured_image_url, :teaser)
+        params.require(:post).permit(:tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image)
       end
 
       def update_published

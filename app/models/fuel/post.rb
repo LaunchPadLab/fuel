@@ -4,8 +4,11 @@ module Fuel
     friendly_id :title, use: :slugged
 
     if Rails.version[0].to_i < 4
-      attr_accessible :tag, :author, :content, :title, :featured_image_url, :teaser
+      attr_accessible :tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image
     end
+
+    has_attached_file :featured_image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+    validates_attachment_content_type :featured_image, :content_type => /\Aimage\/.*\Z/
 
     validates_presence_of :title, :content, :author, if: :is_published
     paginates_per Fuel.configuration.paginates_per.to_i

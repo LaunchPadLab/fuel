@@ -1,9 +1,4 @@
 Fuel::Engine.routes.draw do
-  resources :posts, :path => ''
-  get '/posts/:id' => 'posts#redirect'
-
-  get "/" => "posts#index", as: :blog_root
-
   namespace :admin do
     root to: 'posts#index'
     get "posts/preview" => 'posts#preview'
@@ -14,5 +9,9 @@ Fuel::Engine.routes.draw do
       end
     end
   end
+
+  resources :posts, :path => ''
+  get '/posts/:id' => 'posts#redirect'
+  get "/" => "posts#index", as: :blog_root
 
 end

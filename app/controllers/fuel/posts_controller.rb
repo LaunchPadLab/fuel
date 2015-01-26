@@ -28,6 +28,11 @@ module Fuel
       end
     end
 
+    def redirect
+      post = Fuel::Post.find_by_slug(params[:id]) || Fuel::Post.find_by_id(params[:id])
+      return redirect_to post
+    end
+
     private
 
       def truncate_on_space(text, length)

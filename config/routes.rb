@@ -1,5 +1,6 @@
 Fuel::Engine.routes.draw do
   resources :posts, :path => ''
+  get '/posts/:id' => 'posts#redirect'
 
   get "/" => "posts#index", as: :blog_root
 

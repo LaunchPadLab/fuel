@@ -1,5 +1,5 @@
 module Fuel
-  module ApplicationHelper
+  module FuelHelper
     Fuel.configuration.helpers.each do |helper|
       include "::#{helper}".constantize
     end

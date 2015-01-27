@@ -8,12 +8,13 @@
       <%= paginate @posts %>
       <% @posts.each do |post| %>
         <article class="fuel-post fuel-post-index">
+          <h2 class="fuel-post-title"><%= link_to post.title, post %></h2>
+          <%= render 'additional_info', post: post %>
           <% if post.featured_image_file_name.present? || post.featured_image_url.present? %>
             <div class="image-area">
               <%= image_tag post.prioritized_featured_image_url(:medium) %>
             </div>
           <% end %>
-          <h2 class="fuel-post-title"><%= link_to post.title, post %></h2>
           <%= render "fuel/posts/post", post: post %>
         </article>
       <% end %>

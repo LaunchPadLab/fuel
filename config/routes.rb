@@ -10,8 +10,8 @@ Fuel::Engine.routes.draw do
     end
   end
 
-  resources :posts, :path => ''
-  get '/posts/:id' => 'posts#redirect'
-  get "/" => "posts#index", as: :blog_root
+  resources :posts, :path => '', controller: "Fuel::Posts"
+  get '/posts/:id', controller: "Fuel::Posts", action: "redirect"
+  get "/", controller: "Fuel::Posts", action: "index", as: :blog_root
 
 end

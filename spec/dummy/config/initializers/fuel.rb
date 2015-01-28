@@ -20,16 +20,6 @@ Fuel.configure do |config|
                     #"another_helper",
                     ]
 
-  ## PAPERCLIP S3 SETTINGS
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['AWS_BUCKET'],
-      :access_key_id => ENV['AWS_ACCESS_KEY'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
-  }
-
   config.featured_image_settings = {
     styles: {
       thumb: "100x100>", medium: "300x300>"

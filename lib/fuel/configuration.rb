@@ -2,7 +2,7 @@ module Fuel
   class Configuration
 
     # What kind of comments do you want to add to your blog ? (:active_record, :disqus or :no)
-    attr_accessor :layout, :blog_title, :disqus_name, :twitter, :username, :password, :helpers, :paginates_per, :featured_image_settings, :mount_location
+    attr_accessor :layout, :blog_title, :disqus_name, :twitter, :username, :password, :helpers, :paginates_per, :featured_image_settings
 
     def initialize
       @layout = "application"
@@ -18,7 +18,6 @@ module Fuel
         }
       }
       @paginates_per = 5
-      @mount_location = "blog"
     end
 
   end

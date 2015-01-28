@@ -8,12 +8,12 @@ class FuelPostsController < ApplicationController
   end
 
   def index
-    @posts = Fuel::FuelPost.recent_published_posts.page(params[:page])
+    @posts = FuelPost.recent_published_posts.page(params[:page])
   end
 
   def show
-    # delete || Fuel::Post.find_by_id(params[:id]) once done testing pagination
-    @post = Fuel::FuelPost.find_by_slug(params[:id]) || Fuel::FuelPost.find_by_id(params[:id])
+    # delete || Post.find_by_id(params[:id]) once done testing pagination
+    @post = FuelPost.find_by_slug(params[:id]) || FuelPost.find_by_id(params[:id])
     @title = truncate_on_space(@post.title, 70)
     @disqus_name = Fuel.configuration.disqus_name
   end
@@ -26,7 +26,7 @@ class FuelPostsController < ApplicationController
   end
 
   def redirect
-    post = Fuel::FuelPost.find_by_slug(params[:id]) || Fuel::FuelPost.find_by_id(params[:id])
+    post = FuelPost.find_by_slug(params[:id]) || FuelPost.find_by_id(params[:id])
     return redirect_to post
   end
 

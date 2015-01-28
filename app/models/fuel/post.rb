@@ -1,4 +1,5 @@
-class FuelPost < ActiveRecord::Base
+module Fuel
+  class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
@@ -30,4 +31,5 @@ class FuelPost < ActiveRecord::Base
     featured_image_file_name.present? ? featured_image.url(type) : featured_image_url
   end
 
+  end
 end

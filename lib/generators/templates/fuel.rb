@@ -1,10 +1,6 @@
 # Customize Fuel
 Fuel.configure do |config|
 
-  # change the base path
-  # i.e. www.yourapp.com/blog
-  config.mount_location = "blog"
-
   # Change the layout to render with the blog
   config.layout = "application"
 

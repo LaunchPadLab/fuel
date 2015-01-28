@@ -1,10 +1,9 @@
 Fuel::Engine.routes.draw do
 
   scope module: 'fuel' do
-    resources :posts, path: ''
-    get '/posts/:id' => 'posts#redirect'
-    get '/' => 'posts#index', as: :blog_root
 
+    root to: 'posts#index', as: :blog_root
+    # admin namespace is listed first intentionally
     namespace :admin do
       root to: 'posts#index'
       get "posts/preview" => 'posts#preview'
@@ -15,6 +14,10 @@ Fuel::Engine.routes.draw do
         end
       end
     end
+
+    resources :posts, path: ''
+    get '/posts/:id' => 'posts#redirect'
+
   end
 
 end

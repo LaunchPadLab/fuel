@@ -10,5 +10,9 @@ module Fuel
       raw markdown.render(text)
     end
 
+    def method_missing method, *args, &block
+      fuel.send(method, *args)
+    end
+
   end
 end

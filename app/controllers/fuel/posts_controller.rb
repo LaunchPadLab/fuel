@@ -28,7 +28,7 @@ module Fuel
 
     def redirect
       post = Fuel::Post.find_by_slug(params[:id]) || Fuel::Post.find_by_id(params[:id])
-      return redirect_to post
+      return redirect_to fuel.post_path(post)
     end
 
     private

@@ -15,14 +15,14 @@ module Fuel
 
     def create
       if Rails.version[0].to_i < 4
-        @post = Fuel::Post.new(params[:post])
+        @post = Fuel::Post.new(params[:fuel_post])
       else
         @post = Fuel::Post.new(post_params)
       end
       update_published
 
       if @post.save
-        redirect_to fuel_engine.fuel_admin_posts_path, notice: "Your blog post was successfully #{@message}."
+        redirect_to fuel.admin_posts_path, notice: "Your blog post was successfully #{@message}."
       else
         render action: "new"
       end
@@ -34,14 +34,14 @@ module Fuel
 
     def update
       if Rails.version[0].to_i < 4
-        @post.attributes = params[:post]
+        @post.attributes = params[:fuel_post]
       else
         @post.attributes = post_params
       end
       update_published
 
       if @post.save
-        redirect_to fuel_engine.fuel_admin_posts_path, notice: "Post was updated and #{@message}"
+        redirect_to fuel.admin_posts_path, notice: "Post was updated and #{@message}"
       else
         render action: "edit"
       end
@@ -49,20 +49,23 @@ module Fuel
 
     def destroy
       @post.destroy
-      redirect_to fuel_engine.fuel_admin_posts_path, notice: "Post was successfully deleted"
+      redirect_to fuel.admin_posts_path, notice: "Post was successfully deleted"
     end
 
     def preview
-      @content = params[:post][:content]
+      @content = params[:fuel_post][:content]
       respond_to do |format|
         format.js
       end
     end
 
+    def show
+    end
+
     private
 
       def post_params
-        params.require(:post).permit(:tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image)
+        params.require(:fuel_post).permit(:tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image)
       end
 
       def update_published
@@ -75,7 +78,7 @@ module Fuel
       end
 
       def set_url
-        @url = ["new", "create"].include?(action_name) ? fuel_engine.fuel_admin_posts_path : fuel_engine.fuel_admin_post_path(@post)
+        @url = ["new", "create"].include?(action_name) ? fuel.admin_posts_path : fuel.admin_post_path(@post)
       end
 
   end

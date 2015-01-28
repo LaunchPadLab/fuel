@@ -57,7 +57,7 @@ describe Fuel::Admin::PostsController do
         expect(new_count - @original_count).to eq(1)
       end
       it "redirects to the show page" do
-        expect(response).to redirect_to(fuel_engine.fuel_admin_posts_path)
+        expect(response).to redirect_to(fuel.admin_posts_path)
       end
     end
     context "with invalid attributes" do
@@ -88,7 +88,7 @@ describe Fuel::Admin::PostsController do
       end
       it "redirects to the post" do
         put :update, id: @post, post: attributes_for(:post)
-        expect(response).to redirect_to(fuel_engine.fuel_admin_posts_path)
+        expect(response).to redirect_to(fuel.admin_posts_path)
       end
     end
     context "with invalid attributes" do
@@ -117,7 +117,7 @@ describe Fuel::Admin::PostsController do
     end
     it "redirects to admin/posts#index" do
       delete :destroy, id: @post
-      expect(response).to redirect_to(fuel_engine.fuel_admin_posts_path)
+      expect(response).to redirect_to(fuel.admin_posts_path)
     end
   end
 

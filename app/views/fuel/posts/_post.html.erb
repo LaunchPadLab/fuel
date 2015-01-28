@@ -9,6 +9,6 @@
     <%= markdown(truncate_html content, length: 250).html_safe %>
   </div>
   <% if post.content.length > 800 %>
-    <p><%= link_to 'Read more', fuel_engine.fuel_post_url(post) %></p>
+    <p><%= link_to 'Read more', fuel.post_url(post) %></p>
   <% end %>
 <% end %>

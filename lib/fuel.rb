@@ -1,6 +1,7 @@
 require "fuel/engine"
 require "redcarpet"
 require "kaminari"
+require "kaminari/helpers/tag"
 require "fuel/configuration"
 require "friendly_id"
 require "jquery-rails"

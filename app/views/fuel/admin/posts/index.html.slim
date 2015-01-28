@@ -1,7 +1,7 @@
 .fuel.fuel-admin.index
   h1 Blog Admin Panel
-  => link_to 'New Blog Post', new_admin_post_path
-  | | #{link_to 'View Blog', posts_path}
+  => link_to 'New Blog Post', fuel.new_admin_post_path
+  | | #{link_to 'View Blog', blog_root_path}
   table.table
     thead
       tr
@@ -13,6 +13,6 @@
       - @posts.each do |post|
         tr
           td= post.published ? post.created_at.strftime('%m/%d/%Y') : 'Draft'
-          td= link_to post.title, post_path(post)
-          td= link_to "Edit", edit_admin_post_path(post)
-          td= link_to "Delete", admin_post_path(post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" }
+          td= link_to post.title, fuel.post_path(post)
+          td= link_to "Edit", fuel.edit_admin_post_path(post)
+          td= link_to "Delete", fuel.admin_post_path(post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" }

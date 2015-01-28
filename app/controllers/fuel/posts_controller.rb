@@ -1,7 +1,5 @@
-require_dependency "fuel/application_controller"
-
 module Fuel
-  class PostsController < ApplicationController
+  class PostsController < FuelController
     include ActionView::Helpers::TextHelper
     layout Fuel.configuration.layout if Fuel.configuration.layout
     before_filter :define_title
@@ -15,7 +13,7 @@ module Fuel
     end
 
     def show
-      # delete || Fuel::Post.find_by_id(params[:id]) once done testing pagination
+      # delete || Post.find_by_id(params[:id]) once done testing pagination
       @post = Fuel::Post.find_by_slug(params[:id]) || Fuel::Post.find_by_id(params[:id])
       @title = truncate_on_space(@post.title, 70)
       @disqus_name = Fuel.configuration.disqus_name
@@ -30,7 +28,7 @@ module Fuel
 
     def redirect
       post = Fuel::Post.find_by_slug(params[:id]) || Fuel::Post.find_by_id(params[:id])
-      return redirect_to post
+      return redirect_to fuel.post_path(post)
     end
 
     private

@@ -3,9 +3,9 @@ $(function() {
     e.preventDefault();
     var id = $(this).data('id');
     if (id == "preview") {
-      var content = $("#post_content").serialize();
+      var content = $("#fuel_post_content").serialize();
       $.ajax({
-        url: 'preview',
+        url: 'posts/preview',
         data: content
       });
     }

@@ -1,9 +1,16 @@
 module Kaminari
   module Helpers
     class Tag
+
       def page_url_for(page)
-        Fuel::Engine.routes.url_helpers.url_for @params.merge(@param_name => (page <= 1 ? nil : page), :only_path=>true).symbolize_keys
+        arguments = @params.merge(@param_name => (page <= 1 ? nil : page), :only_path => true).symbolize_keys
+        begin
+          Fuel::Engine.routes.url_helpers.url_for arguments
+        rescue
+          @template.main_app.url_for arguments
+        end
       end
+
     end
   end
 end

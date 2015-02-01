@@ -15,6 +15,7 @@ Fuel::Engine.routes.draw do
       end
     end
 
+    get '/posts'=> 'posts#index'
     resources :posts, path: ''
     get '/posts/:id' => 'posts#redirect'
 

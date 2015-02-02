@@ -32,5 +32,9 @@ module Fuel
       featured_image_file_name.present? ? featured_image.url(type) : featured_image_url
     end
 
+    def teaser_content
+      teaser.present? ? teaser : content
+    end
+
   end
 end

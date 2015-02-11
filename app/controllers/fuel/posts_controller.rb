@@ -13,8 +13,7 @@ module Fuel
     end
 
     def show
-      # delete || Post.find_by_id(params[:id]) once done testing pagination
-      @post = Fuel::Post.find_by_slug(params[:id]) || Fuel::Post.find_by_id(params[:id])
+      @post = Fuel::Post.find_by_slug(params[:id]) || Fuel::Post.find_by_id(params[:id]) || not_found
       @title = truncate_on_space(@post.title, 70)
       @disqus_name = Fuel.configuration.disqus_name
     end

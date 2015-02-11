@@ -16,6 +16,14 @@ module Fuel
 
     scope :recent_published_posts, -> { where(published: true).order("created_at DESC") }
 
+    def next
+      self.class.where("created_at < ? AND id != ?", created_at, id).first
+    end
+
+    def previous
+      self.class.where("created_at > ? AND id != ?", created_at, id).last
+    end
+
     def should_generate_new_friendly_id?
       new_record? #Don't generate new id on edit
     end

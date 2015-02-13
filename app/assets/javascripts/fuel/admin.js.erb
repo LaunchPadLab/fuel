@@ -1,6 +1,7 @@
 $(function() {
   $(".edit-preview-toggle").click(function(e) {
     e.preventDefault();
+    console.log("hello");
     var id = $(this).data('id');
     if (id == "preview") {
       var content = $("#fuel_post_content").serialize();

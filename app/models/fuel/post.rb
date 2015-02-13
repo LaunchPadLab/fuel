@@ -15,13 +15,14 @@ module Fuel
     paginates_per Fuel.configuration.paginates_per.to_i
 
     scope :recent_published_posts, -> { where(published: true).order("created_at DESC") }
+    scope :recent, -> { order("created_at DESC") }
 
     def next
-      self.class.where("created_at < ? AND id != ?", created_at, id).first
+      recent.where("created_at <= ? AND id != ?", created_at, id).first
     end
 
     def previous
-      self.class.where("created_at > ? AND id != ?", created_at, id).last
+      recent.where("created_at >= ? AND id != ?", created_at, id).last
     end
 
     def should_generate_new_friendly_id?

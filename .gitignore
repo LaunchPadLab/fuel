@@ -8,4 +8,5 @@ spec/dummy/tmp/
 spec/dummy/.sass-cache
 spec/dummy/*
 spec/codeclimate_env.rb
+spec/dummy/log/development.log
 coverage/*

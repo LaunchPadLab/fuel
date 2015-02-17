@@ -7,6 +7,9 @@ Fuel.configure do |config|
   # Change title of blog
   config.blog_title = "Blog"
 
+  # Set site name
+  config.site_name = nil
+
   # Change admin username
   config.username = "admin"
 
@@ -25,6 +28,8 @@ Fuel.configure do |config|
       thumb: "100x100>", medium: "300x300>"
     }
   }
+
+  # config.facebook_app_id = "318506165696214"
 
   # Add Disqus
   #config.disqus_name = 'your_disqus_name'

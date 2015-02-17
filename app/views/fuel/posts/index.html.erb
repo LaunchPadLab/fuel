@@ -1,3 +1,10 @@
+<% content_for :social_meta_tags do %>
+  <meta property="og:title" content="<%= @blog_title %>"/>
+  <meta property="og:url" content="<%= fuel.blog_root_url %>"/>
+  <meta property="og:site_name" content="<%= Fuel.configuration.site_name %>"/>
+  <meta property="og:type" content="Website"/>
+<% end %>
+
 <div class="fuel fuel-posts">
   <div class="tagline">
     <h1 class="tagline"><%= link_to @blog_title, fuel.blog_root_path %></h1>

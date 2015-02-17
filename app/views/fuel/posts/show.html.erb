@@ -12,7 +12,16 @@
   </div>
   <article class="fuel-post fuel-post-show">
     <h2 class="fuel-post-title"><%= @post.title %></h2>
-    <%= render 'post', post: @post %>
+    <div class="fuel-post-additional-info">
+      <span class="fuel_post_date"><%= post.created_at.strftime('%b %d, %Y') %> - </span>
+      <span class="fuel-post-author">By <%= post.author %></span>
+      <span class="fuel-social-buttons">
+        <%= render 'tweet', post: post if Fuel.configuration.twitter %>
+      </span>
+    </div>
+    <div class="fuel-post-content">
+      <%= markdown(post.content).html_safe %>
+    </div>
   </article>
   <div class="disqus-area">
     <%= render 'disqus' if @disqus_name %>

@@ -9,7 +9,7 @@ module Fuel
       source_root File.expand_path('../../../../app/views', __FILE__)
 
       def copy_views
-        directory 'fuel', 'app/views/fuel'
+        directory 'fuel', 'app/views/fuel/posts'
       end
 
     end

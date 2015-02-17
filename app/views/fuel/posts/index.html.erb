@@ -16,13 +16,22 @@
       <% @posts.each do |post| %>
         <article class="fuel-post fuel-post-index">
           <h2 class="fuel-post-title"><%= link_to post.title, fuel.post_path(post) %></h2>
-          <%= render 'additional_info', post: post %>
+          <div class="fuel-post-additional-info">
+            <span class="fuel_post_date"><%= post.created_at.strftime('%b %d, %Y') %> - </span>
+            <span class="fuel-post-author">By <%= post.author %></span>
+          </div>
           <% if post.featured_image_file_name.present? || post.featured_image_url.present? %>
             <div class="image-area">
               <%= image_tag post.prioritized_featured_image_url(:medium) %>
             </div>
           <% end %>
-          <%= render "fuel/posts/post", post: post %>
+          <div class="fuel-post-content">
+            <% content = post.teaser && post.teaser.length > 0 ? post.teaser : post.content %>
+            <%= markdown(truncate_html content, length: 250).html_safe %>
+          </div>
+          <% if post.content.length > 800 %>
+            <p><%= link_to 'Read more', fuel.post_url(post) %></p>
+          <% end %>
         </article>
       <% end %>
     </section>

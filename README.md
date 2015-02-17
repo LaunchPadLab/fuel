@@ -24,7 +24,7 @@ rails g fuel:install
 ```
 
 
-Usage
+Basic Usage
 --------------------
 
 **Paths**
@@ -58,10 +58,9 @@ You will probably want the blog posts to render within an existing layout of you
 config.layout = "application"
 ```
 
-Other Customization Options
---------------------
 
-**S3**
+S3
+--------------------
 
 S3 ships with three storage options: File Storage, S3, or Fog. We recommend using S3. To do so, add the following to your config/application.rb file:
 
@@ -83,6 +82,44 @@ AWS_ACCESS_KEY: [YOUR-S3-ACCESS-KEY]
 AWS_SECRET_ACCESS_KEY: [YOUR-S3-SECRET-KEY]
 AWS_BUCKET: [YOUR-S3-BUCKET]
 ```
+
+
+Social Integration
+--------------------
+
+To set proper og:graph meta data for your blog, add the following to the head of your main layout (such as application.html.erb):
+
+```
+<%= yield :social_meta_tags %>
+```
+
+**Twitter**
+
+Set config.twitter = true in initializer:
+
+```
+# config/initializers/fuel.rb
+config.twitter = true
+
+```
+
+
+**Facebook Share**
+
+Note: the purpose of this integration is for creating a custom share dialog link via the Javascript SDK. For more simplistic integrations, like the default Facebook Share button, please see this guide: https://developers.facebook.com/docs/plugins/share-button
+
+1. Create a Facebook application via developer.facebook.com and put your application ID in Fuel's initializer file (config/initializers/fuel.rb)
+2. Add a link in your view with class "fuel-fb" and data-url corresponding with the post:
+
+```
+<%= link_to "Facebook", '#', class: "fuel-fb", data: { url: fuel.post_url(@post) } %>
+```
+
+Note that until your application is deployed to a public domain, Facebook will not pull your og:graph meta information into the share dialog window.
+
+
+Other Customization Options
+--------------------
 
 
 **Disqus Commenting**

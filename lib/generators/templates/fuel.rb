@@ -8,7 +8,7 @@ Fuel.configure do |config|
   config.blog_title = "Blog"
 
   # Change description of blog
-  config.blog_description = "A list of posts about a topic"
+  # config.blog_description = "A list of posts about a topic"
 
   # Set site name
   config.site_name = nil

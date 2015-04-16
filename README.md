@@ -104,6 +104,12 @@ config.twitter = true
 ```
 
 
+SEO 
+----------
+
+You have access to two SEO fields: `title` and `description`
+
+
 **Facebook Share**
 
 Note: the purpose of this integration is for creating a custom share dialog link via the Javascript SDK. For more simplistic integrations, like the default Facebook Share button, please see this guide: https://developers.facebook.com/docs/plugins/share-button

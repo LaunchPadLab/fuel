@@ -107,7 +107,18 @@ config.twitter = true
 SEO 
 ----------
 
-You have access to two SEO fields: `title` and `description`
+To see our HTML `<title>` and `<meta> description` for your blog, you have access to two instance variables: `@title` and `@description`. These should be called in your `layout` template for your blog as follows:
+
+```
+<title><%= @title %></title>
+<meta name="description" content="<%= @description %>">
+```
+
+Note:
+
+For your blog index page, `@title` and `@description` are defined in your Fuel configuration file.
+
+For your blog post show page, `@title` and `@description` are defined by the values on your post for `seo_title` and `seo_description` respectively.
 
 
 **Facebook Share**

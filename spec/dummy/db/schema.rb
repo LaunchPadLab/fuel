@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150126171128) do
+ActiveRecord::Schema.define(version: 20150414220909) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -41,6 +41,8 @@ ActiveRecord::Schema.define(version: 20150126171128) do
     t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
+    t.string   "seo_title"
+    t.text     "seo_description"
   end
 
   add_index "fuel_posts", ["slug"], name: "index_fuel_posts_on_slug", unique: true

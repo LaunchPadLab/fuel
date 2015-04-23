@@ -5,7 +5,7 @@ module Fuel
     friendly_id :title, use: :slugged
 
     if Rails.version[0].to_i < 4
-      attr_accessible :tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image
+      attr_accessible :tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image, :seo_title, :seo_description
     end
 
     has_attached_file :featured_image, :styles => { :medium => Fuel.configuration.featured_image_settings[:styles][:medium], :thumb => Fuel.configuration.featured_image_settings[:styles][:thumb] }, :default_url => "/images/:style/missing.png"

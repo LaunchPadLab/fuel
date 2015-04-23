@@ -22,6 +22,10 @@ Fuel.configure do |config|
   # Change number of posts to show per page on blog
   config.paginates_per = 5
 
+  config.authors = ['John Doe', 'Jane Smith']
+
+  config.tags = ['Tag 1', 'Tag 2']
+
   config.helpers = ["ApplicationHelper",
                     #"another_helper",
                     ]

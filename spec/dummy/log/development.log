@@ -12551,3 +12551,915 @@ Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-04-16 09:41:5
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-04-16 09:41:51 -0500
+
+
+Started GET "/" for ::1 at 2015-04-23 09:14:56 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog" for ::1 at 2015-04-23 09:14:59 -0500
+Processing by Fuel::PostsController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Post> at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:11)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts" WHERE "fuel_posts"."published" = 't'[0m
+  [1m[35mFuel::Post Load (0.4ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."published" = 't'  ORDER BY created_at DESC LIMIT 5 OFFSET 0
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/posts/index.html.erb within layouts/application (211.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+Completed 200 OK in 331ms (Views: 278.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for ::1 at 2015-04-23 09:14:59 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:14:59 -0500
+
+
+Started GET "/images/Test%20Post" for ::1 at 2015-04-23 09:14:59 -0500
+
+ActionController::RoutingError (No route matches [GET] "/images/Test%20Post"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.8ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (59.3ms)
+
+
+Started GET "/blog/admin" for ::1 at 2015-04-23 09:15:04 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+Filter chain halted as #<Proc:0x007fbbf924b028@/Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/admin" for ::1 at 2015-04-23 09:15:10 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.3ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (19.9ms)
+DEPRECATION WARNING: Extra .css in SASS file is unnecessary. Rename /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.css.sass to /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.sass. (called from ___sers_ryanfrancis__ocuments__aunch_ad_fuel_app_views_layouts_fuel_application_html_erb___2432798113229922455_70222657903120 at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/layouts/fuel/application.html.erb:6)
+DEPRECATION WARNING: Extra .css in SASS file is unnecessary. Rename /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.css.sass to /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.sass. (called from ___sers_ryanfrancis__ocuments__aunch_ad_fuel_app_views_layouts_fuel_application_html_erb___2432798113229922455_70222657903120 at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/layouts/fuel/application.html.erb:6)
+DEPRECATION WARNING: Extra .css in SASS file is unnecessary. Rename /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.css.sass to /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.sass. (called from ___sers_ryanfrancis__ocuments__aunch_ad_fuel_app_views_layouts_fuel_application_html_erb___2432798113229922455_70222657903120 at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/layouts/fuel/application.html.erb:6)
+DEPRECATION WARNING: Extra .css in SASS file is unnecessary. Rename /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.css.sass to /Users/ryanfrancis/Documents/LaunchPad/fuel/app/assets/stylesheets/fuel/admin.sass. (called from ___sers_ryanfrancis__ocuments__aunch_ad_fuel_app_views_layouts_fuel_application_html_erb___2432798113229922455_70222657903120 at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/layouts/fuel/application.html.erb:6)
+Completed 200 OK in 389ms (Views: 388.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:15:10 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:15:10 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:15:10 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:15:10 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:15:10 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:15:10 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:15:26 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (3.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (25.7ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (30.1ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:15:26 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:15:26 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:15:26 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:15:26 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:15:26 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:15:26 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:05 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Post> at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:11)
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (12.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (13.5ms)
+Completed 200 OK in 41ms (Views: 26.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:05 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:05 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:05 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:05 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:05 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:05 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:08 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (6.0ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:08 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.7ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:08 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:09 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.4ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:09 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:09 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:09 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:09 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:09 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:09 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:17 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (10.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (11.2ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:17 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:17 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:17 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:17 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:17 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:17 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:18 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.5ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:18 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.4ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:18 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.6ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:18 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:18:19 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.5ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:19 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:19 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:19 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:19 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:19 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:19 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-04-23 09:18:21 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (7.6ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:21 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:21 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:21 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:21 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:21 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:21 -0500
+
+
+Started GET "/blog/admin/posts/new" for ::1 at 2015-04-23 09:18:23 -0500
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.slim within layouts/fuel/application (9.1ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:23 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:23 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:23 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:23 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:23 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:23 -0500
+
+
+Started GET "/blog/admin/posts/new" for ::1 at 2015-04-23 09:18:48 -0500
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (11.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.slim within layouts/fuel/application (13.3ms)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:18:48 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:18:48 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:18:48 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:18:48 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:18:48 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:18:48 -0500
+
+
+Started GET "/blog/admin/posts/new" for ::1 at 2015-04-23 09:21:02 -0500
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.6ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.slim within layouts/fuel/application (6.2ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:21:02 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:21:02 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:21:02 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:21:02 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:21:02 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:21:02 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-04-23 09:21:07 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.3ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (4.6ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:21:07 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:21:07 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:21:07 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:21:07 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:21:07 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:21:07 -0500
+
+
+Started GET "/blog/admin/posts/hello/edit" for ::1 at 2015-04-23 09:21:09 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"hello"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "hello"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.2ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:21:09 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:21:09 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:21:09 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:21:09 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:21:09 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:21:09 -0500
+
+
+Started GET "/blog/admin/posts/first-post/edit" for ::1 at 2015-04-23 09:21:20 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"first-post"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "first-post"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (3.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (4.8ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:21:20 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:21:20 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:21:20 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:21:20 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:21:20 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:21:20 -0500
+
+
+Started GET "/blog/admin/posts/first-post/edit" for ::1 at 2015-04-23 09:21:40 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"first-post"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "first-post"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (13.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (14.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms)
+
+RuntimeError - "Ryan":
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim:17:in `block in ___sers_ryanfrancis__ocuments__aunch_ad_fuel_app_views_fuel_admin_posts__form_html_slim___949516198857820610_70222682961880'
+  actionview (4.2.1) lib/action_view/helpers/capture_helper.rb:38:in `block in capture'
+  actionview (4.2.1) lib/action_view/helpers/capture_helper.rb:200:in `with_output_buffer'
+  actionview (4.2.1) lib/action_view/helpers/capture_helper.rb:38:in `capture'
+  actionview (4.2.1) lib/action_view/helpers/form_helper.rb:444:in `form_for'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim:1:in `___sers_ryanfrancis__ocuments__aunch_ad_fuel_app_views_fuel_admin_posts__form_html_slim___949516198857820610_70222682961880'
+  actionview (4.2.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.1) lib/action_view/renderer/partial_renderer.rb:339:in `render_partial'
+  actionview (4.2.1) lib/action_view/renderer/partial_renderer.rb:310:in `block in render'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.1) lib/action_view/renderer/partial_renderer.rb:309:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:47:in `render_partial'
+  actionview (4.2.1) lib/action_view/helpers/rendering_helper.rb:35:in `render'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim:4:in `___sers_ryanfrancis__ocuments__aunch_ad_fuel_app_views_fuel_admin_posts_edit_html_slim__3799427934786862886_70222628445180'
+  actionview (4.2.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:39:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:39:in `instrument'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.0) lib/rack/etag.rb:24:in `call'
+  rack (1.6.0) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.0) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.0) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/blog/__better_errors/0f85c02dd5ad9762/variables" for ::1 at 2015-04-23 09:21:40 -0500
+
+
+Started GET "/blog/admin/posts/first-post/edit" for ::1 at 2015-04-23 09:21:49 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"first-post"}
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "first-post"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (14.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (16.2ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:21:49 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:21:49 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:21:49 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:21:49 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:21:49 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:21:49 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-04-23 09:22:08 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (0.3ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (5.5ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:22:08 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:22:08 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:22:08 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:22:08 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:22:08 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:22:08 -0500
+
+
+Started GET "/blog/admin/posts/ryan-s-awesome/edit" for ::1 at 2015-04-23 09:22:11 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ryan-s-awesome"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ryan-s-awesome"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (7.6ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (9.0ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:22:11 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:22:11 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:22:11 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:22:11 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:22:11 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:22:11 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-04-23 09:22:15 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (4.4ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:22:15 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:22:15 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:22:15 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:22:15 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:22:15 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:22:15 -0500
+
+
+Started GET "/blog/admin/posts/new" for ::1 at 2015-04-23 09:22:16 -0500
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.slim within layouts/fuel/application (5.6ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:22:16 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:22:16 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:22:16 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:22:16 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:22:16 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:22:16 -0500
+
+
+Started POST "/blog/admin/posts" for ::1 at 2015-04-23 09:25:01 -0500
+Processing by Fuel::Admin::PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LCl7cVBhWETWiHeYnzuYMCCxdY79tjGyuV8rYFhUleyJWbjsVXXc/vehvXKSMurpFTN3ZLrPYCF4yWBGxJWT4w==", "fuel_post"=>{"title"=>"A test post", "tag"=>"Tag 2", "author"=>"Jane Smith", "teaser"=>"asdf", "content"=>"asdfsdaf"}, "commit"=>"Publish"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mFuel::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1  [["slug", "a-test-post"]]
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "fuel_posts" ("tag", "author", "content", "title", "teaser", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["tag", "Tag 2"], ["author", "Jane Smith"], ["content", "asdfsdaf"], ["title", "A test post"], ["teaser", "asdf"], ["slug", "a-test-post"], ["created_at", "2015-04-23 14:25:01.539095"], ["updated_at", "2015-04-23 14:25:01.539095"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/blog/admin/posts
+Completed 302 Found in 107ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-04-23 09:25:01 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.slim within layouts/fuel/application (5.0ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:25:01 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:25:01 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:25:01 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:25:01 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:25:01 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:25:01 -0500
+
+
+Started GET "/blog/admin/posts/a-test-post/edit" for ::1 at 2015-04-23 09:25:04 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"a-test-post"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "a-test-post"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.slim (4.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.slim within layouts/fuel/application (5.8ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-04-23 09:25:04 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-04-23 09:25:04 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-04-23 09:25:04 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-04-23 09:25:04 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-04-23 09:25:04 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-04-23 09:25:04 -0500

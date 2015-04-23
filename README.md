@@ -104,6 +104,23 @@ config.twitter = true
 ```
 
 
+SEO 
+----------
+
+To see our HTML `<title>` and `<meta> description` for your blog, you have access to two instance variables: `@title` and `@description`. These should be called in your `layout` template for your blog as follows:
+
+```
+<title><%= @title %></title>
+<meta name="description" content="<%= @description %>">
+```
+
+Note:
+
+For your blog index page, `@title` and `@description` are defined in your Fuel configuration file.
+
+For your blog post show page, `@title` and `@description` are defined by the values on your post for `seo_title` and `seo_description` respectively.
+
+
 **Facebook Share**
 
 Note: the purpose of this integration is for creating a custom share dialog link via the Javascript SDK. For more simplistic integrations, like the default Facebook Share button, please see this guide: https://developers.facebook.com/docs/plugins/share-button

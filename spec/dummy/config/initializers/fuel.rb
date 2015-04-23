@@ -7,6 +7,9 @@ Fuel.configure do |config|
   # Change title of blog
   config.blog_title = "Blog"
 
+  # Change description of blog
+  # config.blog_description = "A list of posts about a topic"
+
   # Change admin username
   config.username = "admin"
 

@@ -12,10 +12,10 @@
     = f.text_field :title
   .field
     = f.label :tag
-    = f.select :tag, options_for_select(Fuel.configuration.tags, selected: f.object.tag)
+    = f.select :tag, options_for_select(Fuel.configuration.tags, selected: f.object.tag), prompt: "Please Select a Tag"
   .field
     = f.label :author
-    = f.select :author, options_for_select(Fuel.configuration.authors, selected: f.object.author)
+    = f.select :author, options_for_select(Fuel.configuration.authors, selected: f.object.author), prompt: "Please Select an Author"
   .field
     = f.label :featured_image, "Featured Image"
     br

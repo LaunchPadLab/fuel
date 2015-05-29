@@ -10,7 +10,8 @@
     <script async>try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <main role="main" aria-label="main-content" class="<%= controller_name -%> <%= action_name -%>">
+    <%= render partial: 'fuel/components/navbar' %>
+    <main role="main" aria-label="main-content" class="<%= controller_name -%> <%= action_name -%> navbar-offset">
       <%= yield %>
     </main>
     <%= javascript_include_tag "fuel/application" %>

@@ -2,8 +2,18 @@
 // ========================================
 
 
+// Variables
+$site-background: $white-light;
+
+$navbar-offset: 75px;
+
+
 // Global Styles
-html, body{ overflow-x: hidden; }
+html,
+body{
+  background-color: $site-background;
+  overflow-x: hidden;
+}
 
 
 // Hide/Show Classes
@@ -15,4 +25,10 @@ html, body{ overflow-x: hidden; }
 .mobile--hide{
   display: none;
   @include media($tablet-landscape){ display: block; }
+}
+
+
+// Page Structure
+.navbar-offset{
+  @include rem(margin-left, $navbar-offset);
 }

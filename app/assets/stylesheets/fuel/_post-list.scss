@@ -1,0 +1,42 @@
+// Page Siebar Component
+// ========================================
+
+
+// Variables
+$post-item-border:  1px solid $grey-light;
+$post-item-padding: 15px 20px;
+
+$post-date-color:   $grey-dark;
+
+
+// Structure
+.post-list{
+  @include rem(padding-bottom, 50px);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-item{
+  @include rem(padding, $post-item-padding);
+  border-bottom: $post-item-border;
+
+  .post-item--date{
+    @include font-type($primary-sans-serif, normal, 700);
+    @include rem(margin-bottom, 5px);
+    @include s-golf;
+    color: $post-date-color;
+    text-transform: uppercase;
+  }
+
+  .post-item--title{
+    @include rem(margin-bottom, 5px);
+  }
+
+  .post-item--content{
+    @include font-type($primary-serif, normal, 300);
+    @include rem(margin-bottom, 5px);
+    @include s-golf;
+  }
+}

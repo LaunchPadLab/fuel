@@ -1,0 +1,42 @@
+// Application Icons Component
+// ========================================
+
+
+// Variables
+$application-height:    30px;
+$application-icon-size: 95px 31px;
+$application-width:     32px;
+$application-icons:     image-url('fuel/icons/application-icons.svg');
+
+
+// Basic Styles
+%application-icon{
+  @include hide-text;
+  background-image: $application-icons;
+  background-size: $application-icon-size;
+  background-repeat: no-repeat;
+  display: block;
+  height: $application-height;
+  width: $application-width;
+
+}
+
+
+// List
+$icons: (
+  add      $application-width * 0,
+  search   $application-width * 1,
+  arrow    $application-width * 3
+);
+
+
+// Loop
+@each $icon in $icons{
+  $name:      nth($icon, 1);
+  $position:  nth($icon, 2);
+
+  .#{$name}-icon{
+    background-position: -($position * 1) 0;
+    @extend %application-icon;
+  }
+}

@@ -36,7 +36,7 @@ h5 { font-size: $font-size-base * 1.45; }
 h6 { font-size: $font-size-base; }
 
 p {
-  @include font-type($secondary-sans-serif, normal, 400);
+  @include font-type($primary-sans-serif, normal, 400);
   @include s-foxtrot;
   @include rem(margin-bottom, 12px);
   line-height: $base-line-height;
@@ -76,7 +76,7 @@ blockquote{
 }
 
 cite{
-  @include font-type($secondary-sans-serif, normal, 700);
+  @include font-type($primary-sans-serif, normal, 700);
   @include rem(margin-top, 15px);
   @include s-foxtrot;
   display: block;

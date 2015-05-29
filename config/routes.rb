@@ -13,6 +13,7 @@ Fuel::Engine.routes.draw do
           get 'content'
         end
       end
+      resources :authors
     end
 
     get '/posts'=> 'posts#index'

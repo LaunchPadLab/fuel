@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414220909) do
+ActiveRecord::Schema.define(version: 20150529202502) do
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -25,6 +25,19 @@ ActiveRecord::Schema.define(version: 20150414220909) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "fuel_authors", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
+    t.text     "bio"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "fuel_posts", force: true do |t|
     t.string   "tag"
@@ -43,6 +56,7 @@ ActiveRecord::Schema.define(version: 20150414220909) do
     t.datetime "featured_image_updated_at"
     t.string   "seo_title"
     t.text     "seo_description"
+    t.datetime "posted_at"
   end
 
   add_index "fuel_posts", ["slug"], name: "index_fuel_posts_on_slug", unique: true

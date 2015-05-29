@@ -1,13 +1,14 @@
 module Fuel
   module Admin
     class PostsController < FuelController
-      http_basic_authenticate_with name: Fuel.configuration.username, password: Fuel.configuration.password
       layout "fuel/application"
+      before_filter :find_posts
       before_filter :find_post, only: [:edit, :update, :destroy]
       before_filter :set_url, only: [:new, :create, :edit, :update]
 
       def index
-        @posts = Fuel::Post.order("created_at DESC")
+        @post = @posts.first
+        set_url
       end
 
       def new
@@ -66,7 +67,7 @@ module Fuel
       private
 
         def post_params
-          params.require(:fuel_post).permit(:tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image)
+          params.require(:fuel_post).permit(:tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image, :posted_at)
         end
 
         def update_published
@@ -76,6 +77,10 @@ module Fuel
 
         def find_post
           @post = Fuel::Post.find_by_slug(params[:id])
+        end
+
+        def find_posts
+          @posts = Fuel::Post.order("created_at DESC")
         end
 
         def set_url

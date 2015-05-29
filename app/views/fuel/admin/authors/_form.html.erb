@@ -1,0 +1,34 @@
+<%= form_for @author, url: @url, html: { multipart: true } do |f| %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+    <div class="avatar">
+      <%= image_tag @author.avatar.url if @author.avatar.present? %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>

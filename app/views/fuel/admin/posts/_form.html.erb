@@ -1,0 +1,56 @@
+<%= form_for @post, url: @url, html: { multipart: true } do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @post.errors.full_messages.to_sentence %></h2>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tag %>
+    <%= f.text_field :tag %>
+  </div>
+  <div class="field">
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+  <div class="field">
+    <%= f.label :featured_image, "Featured Image" %>
+    <br>
+    <%= f.file_field :featured_image %>
+    <div class="featured-image">
+      <%= image_tag @post.featured_image.url if @post.featured_image_file_name.present? %>
+    </div>
+  </div>
+  <div class="field">
+    <%= f.label :featured_image_url, "Featured Image URL (alternative to upload)" %>
+    <%= f.text_field :featured_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :teaser %>
+    br
+    <%= f.text_area :teaser, cols: "89", rows: "5" %>
+  </div>
+  <div class="field">
+    <%= f.label :content %>
+    br
+    .preview-links
+      <%= link_to 'Edit', '#', data: { id: "edit" }, class: "edit-preview-toggle active" %>
+      <%= link_to 'Preview', '#', data: { id: "preview" }, class: "edit-preview-toggle" %>
+    #content-edit.content-area
+      <%= f.text_area :content, cols: "80", rows: "20" %>
+    #content-preview.content-area style="display:none;"
+      <%= render 'content', content: @post.content %>
+  </div>
+  <p>
+    <%= f.submit 'Publish', class: 'first-btn fuel-btn' %>
+    <%= f.submit 'Save Draft', class: 'last-btn fuel-btn' %>
+  </p>
+<% end %>
+
+<%= form_tag('preview', method: "post", id: "preview_form") do %>
+  <%= hidden_field_tag :content %>
+<% end %>

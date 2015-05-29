@@ -1,0 +1,27 @@
+// Misc. Stylesheet
+// ========================================
+
+
+// Background Image
+@mixin background-size($size){
+  -webkit-background-size: $size;
+  -moz-background-size:    $size;
+  -o-background-size:      $size;
+  background-size:         $size;
+}
+
+
+// Box Shadow
+@mixin box-shadow($dim: 0 0 0 0, $color: $black-base){
+  -webkit-box-shadow: $dim $color;
+  -moz-box-shadow:    $dim $color;
+  -o-box-shadow:      $dim $color;
+  box-shadow:         $dim $color;
+}
+
+// Vertical Center
+@mixin vertical-center {
+  @include transform(translateY(-50%));
+  position: absolute;
+  top: 50%;
+}

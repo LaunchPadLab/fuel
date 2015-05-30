@@ -4,14 +4,16 @@ module Fuel
     extend FriendlyId
     friendly_id :title, use: :slugged
 
+    belongs_to :author
+
     if Rails.version[0].to_i < 4
-      attr_accessible :tag, :author, :content, :title, :featured_image_url, :teaser, :featured_image, :seo_title, :seo_description, :posted_at
+      attr_accessible :tag, :author_id, :content, :title, :teaser, :featured_image, :seo_title, :seo_description, :posted_at
     end
 
     has_attached_file :featured_image, :styles => { :medium => Fuel.configuration.featured_image_settings[:styles][:medium], :thumb => Fuel.configuration.featured_image_settings[:styles][:thumb] }, :default_url => "/images/:style/missing.png"
     validates_attachment_content_type :featured_image, :content_type => /\Aimage\/.*\Z/
 
-    validates_presence_of :title, :content, :author, if: :is_published
+    validates_presence_of :title, :content, :author_id, if: :is_published
     paginates_per Fuel.configuration.paginates_per.to_i
 
     scope :recent_published_posts, -> { where(published: true).order("created_at DESC") }

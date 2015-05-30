@@ -1,34 +1,30 @@
 <%= form_for @author, url: @url, html: { multipart: true } do |f| %>
-
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+  <div class="form-container--left">
+    <fieldset>
+      <div class="form-group-half">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+      <div class="form-group-half">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+    </fieldset>
+    <fieldset>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </fieldset>
+    <fieldset>
+      <%= f.label :bio, 'Author Bio' %>
+      <%= f.text_area :bio %>
+    </fieldset>
+    <%= f.submit class: 'button button--secondary' %>
   </div>
-
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :bio %>
-    <%= f.text_area :bio %>
-  </div>
-
-  <div class="field">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-    <div class="avatar">
+  <div class="form-container--right card">
+    <%= f.label :avatar, 'Updated Author Picture' %>
+    <div class="card-image--avatar">
       <%= image_tag @author.avatar.url if @author.avatar.present? %>
     </div>
-  </div>
-
-  <div class="field">
-    <%= f.submit %>
+    <%= f.file_field :avatar %>
   </div>
 <% end %>

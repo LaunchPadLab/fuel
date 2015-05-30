@@ -1,0 +1,31 @@
+// Card Component
+// ========================================
+
+
+// Variables
+$card-background:    $white-base;
+$card-border:        1px solid $grey-base;
+$card-border-radius: 3px;
+$card-padding:       20px;
+
+// Structure
+.card {
+  @include rem(padding, $card-padding);
+  background-color: $card-background;
+  border: $card-border;
+  border-radius: $card-border-radius;
+  overflow: hidden;
+}
+
+.card-image--avatar{
+  @include rem(height, 100px);
+  @include rem(margin, 20px auto);
+  @include rem(width, 100px);
+  border-radius: 30em;
+  overflow: hidden;
+
+  img{
+    height: 100%;
+    width: 100%;
+  }
+}

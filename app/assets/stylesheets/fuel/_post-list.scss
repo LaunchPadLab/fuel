@@ -3,12 +3,14 @@
 
 
 // Variables
-$post-item-border:  1px solid $grey-light;
-$post-item-padding: 15px 20px;
+$resource-item-border:       1px solid $grey-light;
+$resource-item-padding:      15px 20px;
 
-$post-date-color:   $grey-dark;
-$post-active-color: $grey-base;
+$resource-hover-background:  $white-dark;
 
+$resource-active-background: $white-dark;
+$resource-active-color:      $blue-base;
+$resource-date-color:        $grey-dark;
 
 // Structure
 .resource-list {
@@ -20,16 +22,28 @@ $post-active-color: $grey-base;
 }
 
 .resource-item {
-  @include rem(padding, $post-item-padding);
-  border-bottom: $post-item-border;
+  @include rem(padding, $resource-item-padding);
+  @include transition(all 0.2s ease-in-out);
+  border-bottom: $resource-item-border;
   margin-top: 0;
 
+  &:hover{
+    background-color: $resource-hover-background;
+  }
+
+  &.active {
+    background-color: $resource-active-background;
+    border-left: 5px solid $resource-active-color;
+  }
+
+
+  // Resource list styles
   .post-item--date,
   .author-item--title {
     @include font-type($primary-sans-serif, normal, 700);
     @include rem(margin-bottom, 5px);
     @include s-golf;
-    color: $post-date-color;
+    color: $resource-date-color;
     text-transform: uppercase;
   }
 
@@ -44,7 +58,12 @@ $post-active-color: $grey-base;
     @include s-golf;
   }
 
-  &.active {
-    border-right: 5px solid $post-active-color;
+  .author-avatar{
+    @include rem(height, 50px);
+    @include rem(margin-right, 10px);
+    @include rem(width, 50px);
+    border-radius: 30em;
+    float: left;
+    overflow: hidden;
   }
 }

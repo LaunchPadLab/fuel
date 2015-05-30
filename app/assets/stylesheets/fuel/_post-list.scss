@@ -7,10 +7,11 @@ $post-item-border:  1px solid $grey-light;
 $post-item-padding: 15px 20px;
 
 $post-date-color:   $grey-dark;
+$post-active-color: $grey-base;
 
 
 // Structure
-.post-list{
+.resource-list {
   @include rem(padding-bottom, 50px);
   height: 100%;
   overflow-x: hidden;
@@ -18,11 +19,13 @@ $post-date-color:   $grey-dark;
   -webkit-overflow-scrolling: touch;
 }
 
-.post-item{
+.resource-item {
   @include rem(padding, $post-item-padding);
   border-bottom: $post-item-border;
+  margin-top: 0;
 
-  .post-item--date{
+  .post-item--date,
+  .author-item--title {
     @include font-type($primary-sans-serif, normal, 700);
     @include rem(margin-bottom, 5px);
     @include s-golf;
@@ -30,13 +33,18 @@ $post-date-color:   $grey-dark;
     text-transform: uppercase;
   }
 
-  .post-item--title{
+  .post-item--title,
+  .author-item--name {
     @include rem(margin-bottom, 5px);
   }
 
-  .post-item--content{
+  .post-item--content, .author-item--bio {
     @include font-type($primary-serif, normal, 300);
     @include rem(margin-bottom, 5px);
     @include s-golf;
+  }
+
+  &.active {
+    border-right: 5px solid $post-active-color;
   }
 }

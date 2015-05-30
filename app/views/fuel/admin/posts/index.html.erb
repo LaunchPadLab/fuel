@@ -1,27 +1,7 @@
-<aside class="page-sidebar post-sidebar">
-  <header class="page-sidebar--header">
-    <div class="header-container--left">
-      <h5 class="header--title">Your Posts</h5>
-    </div>
-    <div class="header-container--right">
-      <ul class="header-container--right__actions">
-        <li><i class="search-icon">Search</i></li>
-        <li><%= link_to 'New Blog Post', fuel.new_admin_post_path, class: 'add-icon' %></li>
-      </ul>
-    </div>
-  </header>
-  <ul class="post-list">
-    <% @posts.each do |post| %>
-      <%= link_to fuel.edit_admin_post_path(post) do %>
-        <li class="post-item">
-          <p class="post-item--date">Last Updated: <time><%= post.published ? post.created_at.strftime('%m/%d/%Y') : 'Draft' %></time> </p>
-          <h5 class="post-item--title"><%= post.title %></h5>
-          <p class="post-item--content"><%= truncate(post.content, length: 60) %></p>
-        </li>
-      <% end %>
-    <% end %>
-  </ul>
-</aside>
+<%= render 'posts' %>
 
-
+<div class="page-area">
+  <h2>Edit Post</h2>
+  <%= render 'form' %>
+</div>
 <%#= link_to "Delete", fuel.admin_post_path(post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %>

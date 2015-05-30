@@ -3,7 +3,7 @@ module Fuel
 
     # What kind of comments do you want to add to your blog ? (:active_record, :disqus or :no)
     attr_accessor :layout, :blog_title, :disqus_name, :twitter, :username, :password, :helpers, :paginates_per,
-        :featured_image_settings, :facebook_app_id, :site_name, :blog_description
+        :featured_image_settings, :avatar_settings, :facebook_app_id, :site_name, :blog_description
 
     def initialize
       @layout = "application"
@@ -15,6 +15,11 @@ module Fuel
       @password = "password"
       @helpers = ["ApplicationHelper"]
       @featured_image_settings = {
+        styles: {
+          thumb: "100x100>", medium: "300x300>"
+        }
+      }
+      @avatar_settings = {
         styles: {
           thumb: "100x100>", medium: "300x300>"
         }

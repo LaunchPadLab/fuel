@@ -10,25 +10,25 @@ $navbar-offset: 75px;
 
 // Global Styles
 html,
-body{
+body {
   background-color: $site-background;
   overflow-x: hidden;
 }
 
 
 // Hide/Show Classes
-.mobile--show{
+.mobile--show {
   display: block;
   @include media($tablet-landscape){ display: none; }
 }
 
-.mobile--hide{
+.mobile--hide {
   display: none;
   @include media($tablet-landscape){ display: block; }
 }
 
 
 // Page Structure
-.navbar-offset{
+.navbar-offset {
   @include rem(margin-left, $navbar-offset);
 }

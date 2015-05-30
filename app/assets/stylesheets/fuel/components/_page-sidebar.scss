@@ -58,3 +58,7 @@ $sidebar-header-shadow-spread:  2px 0 5px;
     &:last-child{ margin-right: 0; }
   }
 }
+
+.page-area {
+  margin-left: $sidebar-width + 50px;
+}

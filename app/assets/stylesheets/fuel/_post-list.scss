@@ -11,7 +11,7 @@ $post-active-color: $grey-base;
 
 
 // Structure
-.resource-list{
+.resource-list {
   @include rem(padding-bottom, 50px);
   height: 100%;
   overflow-x: hidden;
@@ -19,12 +19,13 @@ $post-active-color: $grey-base;
   -webkit-overflow-scrolling: touch;
 }
 
-.resource-item{
+.resource-item {
   @include rem(padding, $post-item-padding);
   border-bottom: $post-item-border;
-  margin-top: 0px;
+  margin-top: 0;
 
-  .post-item--date, .author-item--title{
+  .post-item--date,
+  .author-item--title {
     @include font-type($primary-sans-serif, normal, 700);
     @include rem(margin-bottom, 5px);
     @include s-golf;
@@ -32,11 +33,12 @@ $post-active-color: $grey-base;
     text-transform: uppercase;
   }
 
-  .post-item--title, .author-item--name{
+  .post-item--title,
+  .author-item--name {
     @include rem(margin-bottom, 5px);
   }
 
-  .post-item--content, .author-item--bio{
+  .post-item--content, .author-item--bio {
     @include font-type($primary-serif, normal, 300);
     @include rem(margin-bottom, 5px);
     @include s-golf;

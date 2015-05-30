@@ -1,7 +1,7 @@
 // Base Typography
 // ========================================
 
-html{
+html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -43,7 +43,7 @@ p {
 }
 
 li,
-dd{
+dd {
   @include s-foxtrot;
   @include rem(margin-top, 3px);
   line-height: normal;
@@ -70,12 +70,12 @@ a {
   }
 }
 
-blockquote{
+blockquote {
   @include font-type($primary-sans-serif, normal, 300);
   @include s-bravo;
 }
 
-cite{
+cite {
   @include font-type($primary-sans-serif, normal, 700);
   @include rem(margin-top, 15px);
   @include s-foxtrot;
@@ -84,19 +84,19 @@ cite{
 
 
 // Type Styles
-em{ @include font-type(inherit, italic, inherit); }
+em { @include font-type(inherit, italic, inherit); }
 strong { @include font-type(inherit, normal, 700);  }
 
-.center{ text-align: center; }
-.right{ text-align: right; }
+.center { text-align: center; }
+.right { text-align: right; }
 
-.uppercase{ text-transform: uppercase; }
+.uppercase { text-transform: uppercase; }
 
 
 // Type Sizes
-.big{ font-size: 35px;  @include media($tablet){ @include s-giga; } }
+.big { font-size: 35px;  @include media($tablet){ @include s-giga; } }
 .small{ @include s-hotel; }
 
 
 // Type Colors
-.inverse{ color: $white-base; }
+.inverse { color: $white-base; }

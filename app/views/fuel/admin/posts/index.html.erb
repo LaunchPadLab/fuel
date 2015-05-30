@@ -1,5 +1,6 @@
 <%= render 'posts' %>
 <section class="page-area">
-  <p>Select a post from the list on the left.</p>
+  <div class="no-content-container">
+    <p class="no-content-message">Select a post from the list on the left or <%= link_to 'create', new_admin_post_path, class: 'link-primary' %> a new post.</p>
+  </div>
 </section>
-<%#= link_to "Delete", fuel.admin_post_path(post), method: :delete, data: { confirm: "Are you sure you want to delete this post?" } %>

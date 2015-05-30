@@ -50,7 +50,7 @@ dd {
 }
 
 a {
-  @include font-type(inherit, normal, 400);
+  @include font-type(inherit, normal, inherit);
   @include transition(all 0.3s ease-in-out);
   color: inherit;
   text-decoration: none;

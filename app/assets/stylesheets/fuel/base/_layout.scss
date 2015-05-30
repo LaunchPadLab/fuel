@@ -4,7 +4,6 @@
 
 // Variables
 $site-background: $white-light;
-
 $navbar-offset:   75px;
 
 
@@ -31,4 +30,15 @@ body {
 // Page Structure
 .navbar-offset {
   @include rem(margin-left, $navbar-offset);
+}
+
+.no-content-container {
+  margin-top: 30%;
+  text-align: center;
+
+  .no-content-message {
+    @include font-type($primary-sans-serif, normal, 700);
+    @include s-echo;
+    color: $grey-dark;
+  }
 }

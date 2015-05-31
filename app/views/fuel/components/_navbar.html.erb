@@ -1,15 +1,22 @@
-<aside class="navbar">
+<aside class="navbar" role="navigation" aria-label="">
   <div class="navbar-logo">
     <%= image_tag 'fuel/icon-test', alt: 'Fuel' %>
   </div>
   <nav class="navbar-navigation">
     <ul>
       <%= link_to fuel.admin_posts_path do %>
-        <li>Posts</li>
+        <li class="navbar-link">
+          <i class="posts-icon"></i> Posts
+        </li>
       <% end %>
       <%= link_to fuel.admin_authors_path do %>
-        <li>Authors</li>
+        <li class="navbar-link">
+          <i class="authors-icon"></i> Authors
+        </li>
       <% end %>
     </ul>
   </nav>
+  <footer>
+
+  </footer>
 </aside>

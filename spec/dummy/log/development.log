@@ -47376,3 +47376,1787 @@ ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featu
 
 
 Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 14:48:02 -0500
+
+
+Started GET "/" for ::1 at 2015-05-31 17:41:55 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 18ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:42:00 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Post> at /Users/kurtcunningham/Documents/Github/fuel/app/models/fuel/post.rb:11)
+  [1m[36mFuel::Post Load (7.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.8ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.6ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (22.4ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (5.5ms)
+Completed 200 OK in 1543ms (Views: 1453.3ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:42:02 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:42:16 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:52:11 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (17.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (2.4ms)
+Completed 200 OK in 1081ms (Views: 1078.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:52:12 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:53:17 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (1.0ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (14.4ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.3ms)
+Completed 200 OK in 55ms (Views: 51.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:53:17 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:53:48 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (28.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (29.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (2.1ms)
+Completed 200 OK in 943ms (Views: 940.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:53:49 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:53:49 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:53:49 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:53:49 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:53:50 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:53:50 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:53:50 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:53:50 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:53:50 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:55:20 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.9ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.0ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (19.4ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (2.4ms)
+Completed 200 OK in 1062ms (Views: 1059.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:55:21 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:56:28 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (1.0ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (17.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.8ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:56:28 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:57:16 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (18.7ms)
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 1.2ms)
+
+Sass::SyntaxError - Undefined variable: "$navbar-link".:
+  sass (3.4.14) lib/sass/script/tree/variable.rb:49:in `_perform'
+  sass (3.4.14) lib/sass/script/tree/node.rb:50:in `perform'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+  sass (3.4.14) lib/sass/stack.rb:88:in `block in with_import'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:88:in `with_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+  sass (3.4.14) lib/sass/stack.rb:88:in `block in with_import'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:88:in `with_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:52:in `visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `block in visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:157:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:8:in `visit'
+  sass (3.4.14) lib/sass/tree/root_node.rb:36:in `css_tree'
+  sass (3.4.14) lib/sass/tree/root_node.rb:20:in `render'
+  sass (3.4.14) lib/sass/engine.rb:268:in `render'
+  sass-rails (5.0.3) lib/sass/rails/template.rb:47:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (3.1.0) lib/sprockets/legacy_tilt_processor.rb:25:in `call'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.1.0) lib/sprockets/loader.rb:86:in `load_asset_by_uri'
+  sprockets (3.1.0) lib/sprockets/loader.rb:45:in `block in load'
+  sprockets (3.1.0) lib/sprockets/loader.rb:156:in `fetch_asset_from_dependency_cache'
+  sprockets (3.1.0) lib/sprockets/loader.rb:38:in `load'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.1.0) lib/sprockets/bundle.rb:23:in `block in call'
+  sprockets (3.1.0) lib/sprockets/utils.rb:183:in `dfs'
+  sprockets (3.1.0) lib/sprockets/bundle.rb:24:in `call'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.1.0) lib/sprockets/loader.rb:86:in `load_asset_by_uri'
+  sprockets (3.1.0) lib/sprockets/loader.rb:45:in `block in load'
+  sprockets (3.1.0) lib/sprockets/loader.rb:156:in `fetch_asset_from_dependency_cache'
+  sprockets (3.1.0) lib/sprockets/loader.rb:38:in `load'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.1.0) lib/sprockets/base.rb:63:in `find_asset'
+  sprockets (3.1.0) lib/sprockets/environment.rb:30:in `find_asset'
+  sprockets (3.1.0) lib/sprockets/base.rb:89:in `[]'
+  sprockets-rails (2.3.1) lib/sprockets/rails/helper.rb:243:in `lookup_asset_for_path'
+  sprockets-rails (2.3.1) lib/sprockets/rails/helper.rb:173:in `block in stylesheet_link_tag'
+  sprockets-rails (2.3.1) lib/sprockets/rails/helper.rb:171:in `stylesheet_link_tag'
+  /Users/kurtcunningham/Documents/Github/fuel/app/views/layouts/fuel/application.html.erb:8:in `___sers_kurtcunningham__ocuments__ithub_fuel_app_views_layouts_fuel_application_html_erb__2226624678179054300_70212554414800'
+  actionview (4.2.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/blog/__better_errors/162c23e0b5006550/variables" for ::1 at 2015-05-31 17:57:17 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:57:24 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (14.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (15.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.6ms)
+Completed 200 OK in 1019ms (Views: 1016.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:57:25 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:57:27 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:57:27 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:57:27 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:57:27 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:57:36 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (1.1ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (23.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (24.3ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.6ms)
+Completed 200 OK in 977ms (Views: 973.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:57:37 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:57:37 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:57:37 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:57:37 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:57:37 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:57:37 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:57:38 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:57:38 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:57:38 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:57:46 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (17.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.1ms)
+Completed 200 OK in 866ms (Views: 863.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:57:47 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:58:23 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.2ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (18.2ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.4ms)
+Completed 200 OK in 901ms (Views: 898.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:58:24 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:59:07 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.7ms)
+Completed 500 Internal Server Error in 412ms (ActiveRecord: 1.3ms)
+
+Sass::SyntaxError - Undefined mixin 's-hall'.:
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:348:in `block in visit_mixin'
+  sass (3.4.14) lib/sass/stack.rb:98:in `block in with_mixin'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:98:in `with_mixin'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:346:in `visit_mixin'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:430:in `block (2 levels) in visit_rule'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:430:in `block in visit_rule'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+  sass (3.4.14) lib/sass/stack.rb:88:in `block in with_import'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:88:in `with_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block (2 levels) in visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:325:in `block in visit_import'
+  sass (3.4.14) lib/sass/stack.rb:88:in `block in with_import'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:88:in `with_import'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+  sass (3.4.14) lib/sass/stack.rb:79:in `block in with_base'
+  sass (3.4.14) lib/sass/stack.rb:115:in `with_frame'
+  sass (3.4.14) lib/sass/stack.rb:79:in `with_base'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:158:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:52:in `visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `block in visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+  sass (3.4.14) lib/sass/tree/visitors/base.rb:36:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:157:in `visit'
+  sass (3.4.14) lib/sass/tree/visitors/perform.rb:8:in `visit'
+  sass (3.4.14) lib/sass/tree/root_node.rb:36:in `css_tree'
+  sass (3.4.14) lib/sass/tree/root_node.rb:20:in `render'
+  sass (3.4.14) lib/sass/engine.rb:268:in `render'
+  sass-rails (5.0.3) lib/sass/rails/template.rb:47:in `evaluate'
+  tilt (1.4.1) lib/tilt/template.rb:103:in `render'
+  sprockets (3.1.0) lib/sprockets/legacy_tilt_processor.rb:25:in `call'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.1.0) lib/sprockets/loader.rb:86:in `load_asset_by_uri'
+  sprockets (3.1.0) lib/sprockets/loader.rb:45:in `block in load'
+  sprockets (3.1.0) lib/sprockets/loader.rb:156:in `fetch_asset_from_dependency_cache'
+  sprockets (3.1.0) lib/sprockets/loader.rb:38:in `load'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.1.0) lib/sprockets/bundle.rb:23:in `block in call'
+  sprockets (3.1.0) lib/sprockets/utils.rb:183:in `dfs'
+  sprockets (3.1.0) lib/sprockets/bundle.rb:24:in `call'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:75:in `call_processor'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+  sprockets (3.1.0) lib/sprockets/processor_utils.rb:56:in `call_processors'
+  sprockets (3.1.0) lib/sprockets/loader.rb:86:in `load_asset_by_uri'
+  sprockets (3.1.0) lib/sprockets/loader.rb:45:in `block in load'
+  sprockets (3.1.0) lib/sprockets/loader.rb:156:in `fetch_asset_from_dependency_cache'
+  sprockets (3.1.0) lib/sprockets/loader.rb:38:in `load'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:20:in `block in initialize'
+  sprockets (3.1.0) lib/sprockets/cached_environment.rb:47:in `load'
+  sprockets (3.1.0) lib/sprockets/base.rb:63:in `find_asset'
+  sprockets (3.1.0) lib/sprockets/environment.rb:30:in `find_asset'
+  sprockets (3.1.0) lib/sprockets/base.rb:89:in `[]'
+  sprockets-rails (2.3.1) lib/sprockets/rails/helper.rb:243:in `lookup_asset_for_path'
+  sprockets-rails (2.3.1) lib/sprockets/rails/helper.rb:173:in `block in stylesheet_link_tag'
+  sprockets-rails (2.3.1) lib/sprockets/rails/helper.rb:171:in `stylesheet_link_tag'
+  /Users/kurtcunningham/Documents/Github/fuel/app/views/layouts/fuel/application.html.erb:8:in `___sers_kurtcunningham__ocuments__ithub_fuel_app_views_layouts_fuel_application_html_erb__2226624678179054300_70212554414800'
+  actionview (4.2.1) lib/action_view/template.rb:145:in `block in render'
+  activesupport (4.2.1) lib/active_support/notifications.rb:166:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:333:in `instrument'
+  actionview (4.2.1) lib/action_view/template.rb:143:in `render'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:66:in `render_with_layout'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:14:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/blog/__better_errors/898cc702535cc3bd/variables" for ::1 at 2015-05-31 17:59:07 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:59:18 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.2ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.2ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.0ms)
+Completed 200 OK in 855ms (Views: 851.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:59:19 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 17:59:40 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.9ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (14.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (15.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 1006ms (Views: 1002.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 17:59:41 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 17:59:57 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 18:00:42 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (19.0ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.0ms)
+Completed 200 OK in 720ms (Views: 716.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:00:43 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 18:00:48 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (1.0ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.3ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.3ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.0ms)
+Completed 200 OK in 856ms (Views: 852.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:00:49 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 18:01:02 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (1.1ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (14.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (15.6ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 869ms (Views: 865.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:01:03 -0500
+
+
+Started GET "/blog/admin" for ::1 at 2015-05-31 18:02:18 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (14.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (15.0ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.6ms)
+Completed 200 OK in 898ms (Views: 894.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:02:19 -0500
+
+
+Started GET "/blog/admin/authors" for ::1 at 2015-05-31 18:02:26 -0500
+Processing by Fuel::Admin::AuthorsController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Author> at /Users/kurtcunningham/Documents/Github/fuel/app/models/fuel/author.rb:12)
+  [1m[36mFuel::Author Load (1.4ms)[0m  [1mSELECT  "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC LIMIT 1[0m
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/_authors.html.erb (3.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/index.html.erb within layouts/fuel/application (5.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 32.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg?1432933494" for ::1 at 2015-05-31 18:02:26 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.9ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (53.8ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:02:26 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:02:28 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (1.0ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.3ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (17.3ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.9ms)
+Completed 200 OK in 57ms (Views: 53.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:02:28 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:02:35 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:03:04 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.0ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (18.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (2.1ms)
+Completed 200 OK in 1116ms (Views: 1113.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:03:05 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:03:14 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.2ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (17.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.0ms)
+Completed 200 OK in 880ms (Views: 877.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:03:15 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:03:52 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.4ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (20.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (21.0ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.0ms)
+Completed 200 OK in 918ms (Views: 916.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:03:53 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:04:11 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (18.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (19.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.5ms)
+Completed 200 OK in 873ms (Views: 870.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:04:12 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:05:29 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.0ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.1ms)
+Completed 200 OK in 916ms (Views: 913.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:05:30 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:05:52 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.6ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.9ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 964ms (Views: 960.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:05:53 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:06:06 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.0ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 45.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:06:07 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:06:26 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.5ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (14.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (15.4ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.3ms)
+Completed 200 OK in 891ms (Views: 888.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:06:27 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:06:27 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:06:27 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:06:27 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:06:27 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:06:27 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:06:27 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:06:28 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:06:28 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-31 18:06:38 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/_posts.html.erb (15.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (16.6ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 216ms (Views: 213.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:06:38 -0500
+
+
+Started GET "/blog/admin/authors" for ::1 at 2015-05-31 18:06:39 -0500
+Processing by Fuel::Admin::AuthorsController#index as HTML
+  [1m[36mFuel::Author Load (0.3ms)[0m  [1mSELECT  "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC LIMIT 1[0m
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/_authors.html.erb (2.4ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/index.html.erb within layouts/fuel/application (3.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (2.4ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:06:39 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:06:39 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:06:39 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:06:40 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg?1432933494" for ::1 at 2015-05-31 18:06:40 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (48.9ms)
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:06:40 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:06:40 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:06:40 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:06:40 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:06:40 -0500
+
+
+Started GET "/blog/admin/authors/1/edit" for ::1 at 2015-05-31 18:06:42 -0500
+Processing by Fuel::Admin::AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT  "fuel_authors".* FROM "fuel_authors" WHERE "fuel_authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFuel::Author Load (0.3ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/_authors.html.erb (3.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/_form.html.erb (45.2ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/edit.html.erb within layouts/fuel/application (52.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.5ms)
+Completed 200 OK in 98ms (Views: 83.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg?1432933494" for ::1 at 2015-05-31 18:06:42 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.1ms)
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:06:42 -0500
+
+
+Started GET "/blog/admin/authors/2/edit" for ::1 at 2015-05-31 18:06:43 -0500
+Processing by Fuel::Admin::AuthorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFuel::Author Load (0.4ms)[0m  [1mSELECT  "fuel_authors".* FROM "fuel_authors" WHERE "fuel_authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/_authors.html.erb (2.5ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/_form.html.erb (3.7ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/edit.html.erb within layouts/fuel/application (8.1ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (2.2ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg?1432933494" for ::1 at 2015-05-31 18:06:43 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (44.0ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:06:43 -0500
+
+
+Started GET "/blog/admin/authors" for ::1 at 2015-05-31 18:06:48 -0500
+Processing by Fuel::Admin::AuthorsController#index as HTML
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT  "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC LIMIT 1[0m
+  [1m[35mFuel::Author Load (0.3ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/_authors.html.erb (3.3ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/admin/authors/index.html.erb within layouts/fuel/application (4.4ms)
+  Rendered /Users/kurtcunningham/Documents/Github/fuel/app/views/fuel/components/_navbar.html.erb (1.1ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/assets/fuel/icons/navigation-icons.svg" for ::1 at 2015-05-31 18:06:48 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg?1432933494" for ::1 at 2015-05-31 18:06:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/001/original/ryan.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/kurtcunningham/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.7ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-31 18:06:48 -0500

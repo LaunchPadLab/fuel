@@ -4,6 +4,7 @@
       <h2><%= @post.errors.full_messages.to_sentence %></h2>
     </div>
   <% end %>
+
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
@@ -14,8 +15,8 @@
     <%= f.text_field :tag %>
   </div>
   <div class="field">
-    <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= f.label :author_id %>
+    <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name) %>
   </div>
   <div class="field">
     <%= f.label :featured_image, "Featured Image" %>
@@ -26,24 +27,23 @@
     </div>
   </div>
   <div class="field">
-    <%= f.label :featured_image_url, "Featured Image URL (alternative to upload)" %>
-    <%= f.text_field :featured_image_url %>
-  </div>
-  <div class="field">
     <%= f.label :teaser %>
-    br
+    <br>
     <%= f.text_area :teaser, cols: "89", rows: "5" %>
   </div>
   <div class="field">
     <%= f.label :content %>
-    br
-    .preview-links
+    <br>
+    <div class="preview-links">
       <%= link_to 'Edit', '#', data: { id: "edit" }, class: "edit-preview-toggle active" %>
       <%= link_to 'Preview', '#', data: { id: "preview" }, class: "edit-preview-toggle" %>
-    #content-edit.content-area
+    </div>
+    <div id="content-edit" class="content-area">
       <%= f.text_area :content, cols: "80", rows: "20" %>
-    #content-preview.content-area style="display:none;"
+    </div>
+    <div id="content-preview" class="content-area" style="display:none;">
       <%= render 'content', content: @post.content %>
+    </div>
   </div>
   <p>
     <%= f.submit 'Publish', class: 'first-btn fuel-btn' %>

@@ -1,6 +1,8 @@
 module Fuel
   class Author < ActiveRecord::Base
 
+    has_many :posts
+
     if Rails.version[0].to_i < 4
       attr_accessible :first_name, :last_name, :title, :bio, :avatar
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150529202502) do
+ActiveRecord::Schema.define(version: 20150530180549) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 255, null: false
@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20150529202502) do
     t.string   "seo_title",                   limit: 255
     t.text     "seo_description"
     t.datetime "posted_at"
+    t.integer  "author_id"
   end
 
   add_index "fuel_posts", ["slug"], name: "index_fuel_posts_on_slug", unique: true

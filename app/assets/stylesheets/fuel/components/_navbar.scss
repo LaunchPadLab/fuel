@@ -12,9 +12,11 @@ $navbar-width:            70px;
 
 $navbar-logo-size:        100px;
 
+$navbar-link-color:       $white-base;
+
 
 // Structure
-.navbar{
+.navbar {
   @include box-shadow($navbar-shadow-spread, $navbar-shadow-color);
   @include position($navbar-position, -5px null 0 0);
   @include rem(padding, $navbar-padding);
@@ -22,9 +24,22 @@ $navbar-logo-size:        100px;
   background-color: $navbar-background-color;
 }
 
-.navbar-logo{
-  @include rem(height, $navbar-logo-size);
+.navbar-logo {
+  @include rem(height, $navbar-logo-size - 20px);
   @include rem(width, $navbar-logo-size);
 
   img{ width: 50%; }
+}
+
+.navbar-link {
+  @include font-type($primary-sans-serif, normal, 700);
+  @include rem(margin-bottom, 15px);
+  @include s-hotel;
+  @include transition(all 0.3s ease-in-out);
+  color: $navbar-link-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover { color: $blue-base; }
+
 }

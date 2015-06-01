@@ -1,0 +1,41 @@
+// Navigation Icons Component
+// ========================================
+
+
+// Variables
+$navigation-height:    50px;
+$navigation-icon-size: 152px 55px;
+$navigation-width:     50px;
+$navigation-icons:     image-url('fuel/icons/navigation-icons.svg');
+
+
+// Basic Styles
+%navigation-icon{
+  background-image: $navigation-icons;
+  background-size: $navigation-icon-size;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: $navigation-height;
+  width: $navigation-width;
+
+}
+
+
+// List
+$icons: (
+  authors  $navigation-width * 0,
+  posts    $navigation-width * 1,
+  settings $navigation-width * 3
+);
+
+
+// Loop
+@each $icon in $icons{
+  $name:      nth($icon, 1);
+  $position:  nth($icon, 2);
+
+  .#{$name}-icon{
+    background-position: -($position * 1) 0;
+    @extend %navigation-icon;
+  }
+}

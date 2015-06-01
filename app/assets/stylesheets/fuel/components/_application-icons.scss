@@ -15,7 +15,7 @@ $application-icons:     image-url('fuel/icons/application-icons.svg');
   background-image: $application-icons;
   background-size: $application-icon-size;
   background-repeat: no-repeat;
-  display: block;
+  display: inline-block;
   height: $application-height;
   width: $application-width;
 

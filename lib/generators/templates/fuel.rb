@@ -34,7 +34,7 @@ Fuel.configure do |config|
 
   config.avatar_settings = {
     styles: {
-      thumb: "100x100>", medium: "300x300>"
+      thumb: "100x100#", medium: "300x300#"
     }
   }
 

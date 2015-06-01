@@ -1,0 +1,1847 @@
+
+
+Started GET "/blog/admin/posts/weekly-reading-from-launchpad-lab/edit" for ::1 at 2015-05-30 15:46:54 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"weekly-reading-from-launchpad-lab"}
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Post> at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:13)
+  [1m[36mFuel::Post Load (0.3ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "weekly-reading-from-launchpad-lab"]]
+  [1m[35mFuel::Post Load (1.1ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (21.0ms)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Author> at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/author.rb:14)
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (15.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (134.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (163.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (4.8ms)
+Completed 200 OK in 1319ms (Views: 1245.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg?1432912920" for ::1 at 2015-05-30 15:46:55 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.6ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 15:46:55 -0500
+
+
+Started GET "/blog/admin/authors" for ::1 at 2015-05-30 15:46:59 -0500
+Processing by Fuel::Admin::AuthorsController#index as HTML
+  [1m[35mFuel::Author Load (0.3ms)[0m  SELECT  "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC LIMIT 1
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_authors.html.erb (3.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/index.html.erb within layouts/fuel/application (5.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.5ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg?1433001324" for ::1 at 2015-05-30 15:47:00 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.0ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 15:47:00 -0500
+
+
+Started GET "/blog/admin/authors/1/edit" for ::1 at 2015-05-30 15:47:01 -0500
+Processing by Fuel::Admin::AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFuel::Author Load (0.3ms)[0m  SELECT  "fuel_authors".* FROM "fuel_authors" WHERE "fuel_authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_authors.html.erb (3.4ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_form.html.erb (5.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/edit.html.erb within layouts/fuel/application (13.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg?1433001324" for ::1 at 2015-05-30 15:47:01 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.4ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 15:47:01 -0500
+
+
+Started GET "/blog/admin/authors" for ::1 at 2015-05-30 15:47:03 -0500
+Processing by Fuel::Admin::AuthorsController#index as HTML
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT  "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC LIMIT 1
+  [1m[36mFuel::Author Load (0.1ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_authors.html.erb (2.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/index.html.erb within layouts/fuel/application (3.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.4ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg?1433001324" for ::1 at 2015-05-30 15:47:03 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.8ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 15:47:03 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-30 15:47:07 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (0.7ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1
+  [1m[36mFuel::Post Load (0.8ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (19.6ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.3ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 15:47:07 -0500
+
+
+Started GET "/blog/admin/posts/code-for-change/edit" for ::1 at 2015-05-30 15:47:15 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"code-for-change"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "code-for-change"]]
+  [1m[36mFuel::Post Load (0.8ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.4ms)
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (5.7ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (25.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.4ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/055/original/code-for-change.jpg?1432752204" for ::1 at 2015-05-30 15:47:15 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/055/original/code-for-change.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (50.4ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 15:47:15 -0500
+
+
+Started GET "/blog/admin/posts/code-for-change/edit" for ::1 at 2015-05-30 16:51:00 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"code-for-change"}
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "code-for-change"]]
+  [1m[35mFuel::Post Load (0.9ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.7ms)
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (6.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (26.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.9ms)
+Completed 200 OK in 78ms (Views: 75.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:51:01 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:51:01 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:51:01 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:51:01 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:51:01 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:51:01 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:51:01 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/055/original/code-for-change.jpg?1432752204" for ::1 at 2015-05-30 16:51:01 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/055/original/code-for-change.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.1ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:51:02 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/055/original/code-for-change.jpg?1432752204" for ::1 at 2015-05-30 16:51:02 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/055/original/code-for-change.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.0ms)
+
+
+Started GET "/blog/admin/posts/rocket-animation-css-animations-using-svgs/edit" for ::1 at 2015-05-30 16:51:04 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"rocket-animation-css-animations-using-svgs"}
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "rocket-animation-css-animations-using-svgs"]]
+  [1m[36mFuel::Post Load (1.0ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (18.8ms)
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (5.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (26.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.5ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/044/original/lpl-logo.jpg?1432324506" for ::1 at 2015-05-30 16:51:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/044/original/lpl-logo.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:51:04 -0500
+
+
+Started GET "/blog/admin/posts/weekly-reading-from-launchpad-lab/edit" for ::1 at 2015-05-30 16:51:06 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"weekly-reading-from-launchpad-lab"}
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "weekly-reading-from-launchpad-lab"]]
+  [1m[35mFuel::Post Load (1.6ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (31.8ms)
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (7.0ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (42.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.7ms)
+Completed 200 OK in 83ms (Views: 79.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg?1432912920" for ::1 at 2015-05-30 16:51:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (49.6ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:51:06 -0500
+
+
+Started GET "/blog/admin/posts/weekly-reading-from-launchpad-lab/edit" for ::1 at 2015-05-30 16:51:37 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"weekly-reading-from-launchpad-lab"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "weekly-reading-from-launchpad-lab"]]
+  [1m[36mFuel::Post Load (0.7ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.8ms)
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (5.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (25.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (2.0ms)
+Completed 200 OK in 65ms (Views: 62.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg?1432912920" for ::1 at 2015-05-30 16:51:38 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (47.2ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:51:38 -0500
+
+
+Started GET "/blog/admin/posts/weekly-reading-from-launchpad-lab/" for ::1 at 2015-05-30 16:51:41 -0500
+Processing by Fuel::Admin::PostsController#show as HTML
+  Parameters: {"id"=>"weekly-reading-from-launchpad-lab"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate - Missing template fuel/admin/posts/show, fuel/fuel/show, fuel/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :slim]}. Searched in:
+  * "/Users/ryanfrancis/Documents/LaunchPad/fuel/spec/dummy/app/views"
+  * "/Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/kaminari-0.16.3/app/views"
+  * "/Users/ryanfrancis/Documents/LaunchPad/fuel/app/views"
+:
+  actionview (4.2.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.1) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.1) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.1) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.1) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/blog/__better_errors/ba2159b6c338cf83/variables" for ::1 at 2015-05-30 16:51:41 -0500
+
+
+Started GET "/blog/admin/posts/" for ::1 at 2015-05-30 16:51:48 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.6ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC LIMIT 1[0m
+  [1m[35mFuel::Post Load (0.8ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (18.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.1ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:51:48 -0500
+
+
+Started GET "/blog/admin/posts/" for ::1 at 2015-05-30 16:52:44 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Post> at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:13)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"fuel/admin/posts", :id=>nil} missing required keys: [:id]:
+  actionpack (4.2.1) lib/action_dispatch/journey/formatter.rb:46:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:727:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:758:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:801:in `url_for'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:280:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:223:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:345:in `block (2 levels) in define_url_helper'
+  actionpack (4.2.1) lib/action_dispatch/routing/routes_proxy.rb:31:in `admin_post_path'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/controllers/fuel/admin/posts_controller.rb:86:in `set_url'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/controllers/fuel/admin/posts_controller.rb:10:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/blog/__better_errors/6e6536e32190c553/variables" for ::1 at 2015-05-30 16:52:44 -0500
+
+
+Started GET "/blog/admin/posts/" for ::1 at 2015-05-30 16:52:45 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"fuel/admin/posts", :id=>nil} missing required keys: [:id]:
+  actionpack (4.2.1) lib/action_dispatch/journey/formatter.rb:46:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:727:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:758:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:801:in `url_for'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:280:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:223:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:345:in `block (2 levels) in define_url_helper'
+  actionpack (4.2.1) lib/action_dispatch/routing/routes_proxy.rb:31:in `admin_post_path'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/controllers/fuel/admin/posts_controller.rb:86:in `set_url'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/controllers/fuel/admin/posts_controller.rb:10:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/blog/__better_errors/842ab7cb7316f008/variables" for ::1 at 2015-05-30 16:52:45 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-30 16:52:51 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"fuel/admin/posts", :id=>nil} missing required keys: [:id]:
+  actionpack (4.2.1) lib/action_dispatch/journey/formatter.rb:46:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:727:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:758:in `generate'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:801:in `url_for'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:280:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:223:in `call'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:345:in `block (2 levels) in define_url_helper'
+  actionpack (4.2.1) lib/action_dispatch/routing/routes_proxy.rb:31:in `admin_post_path'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/controllers/fuel/admin/posts_controller.rb:86:in `set_url'
+  /Users/ryanfrancis/Documents/LaunchPad/fuel/app/controllers/fuel/admin/posts_controller.rb:10:in `index'
+  actionpack (4.2.1) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:92:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_process_action_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.1) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.1) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.1) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.1) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/railtie.rb:194:in `method_missing'
+  actionpack (4.2.1) lib/action_dispatch/routing/mapper.rb:51:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.1) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.1) lib/action_dispatch/routing/route_set.rb:819:in `call'
+  rack (1.6.1) lib/rack/etag.rb:24:in `call'
+  rack (1.6.1) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.1) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.1) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:649:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/blog/__better_errors/c1eaaf3408d1020d/variables" for ::1 at 2015-05-30 16:52:52 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-30 16:53:09 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Post> at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/post.rb:13)
+  [1m[36mFuel::Post Load (1.2ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (27.0ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (28.7ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (2.1ms)
+Completed 200 OK in 71ms (Views: 65.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:53:09 -0500
+
+
+Started GET "/blog/admin/posts/weekly-reading-from-launchpad-lab/edit" for ::1 at 2015-05-30 16:53:13 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"weekly-reading-from-launchpad-lab"}
+  [1m[35mFuel::Post Load (0.3ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "weekly-reading-from-launchpad-lab"]]
+  [1m[36mFuel::Post Load (0.8ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.4ms)
+DEPRECATION WARNING: Currently, Active Record suppresses errors raised within `after_rollback`/`after_commit` callbacks and only print them to the logs. In the next version, these errors will no longer be suppressed. Instead, the errors will propagate normally just like in other Active Record callbacks.
+
+You can opt into the new behavior and remove this warning by setting:
+
+  config.active_record.raise_in_transactional_callbacks = true
+
+ (called from <class:Author> at /Users/ryanfrancis/Documents/LaunchPad/fuel/app/models/fuel/author.rb:14)
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (17.0ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (35.7ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.1ms)
+Completed 200 OK in 69ms (Views: 65.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg?1432912920" for ::1 at 2015-05-30 16:53:13 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.2ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:53:13 -0500
+
+
+Started GET "/blog/admin/posts/rocket-animation-css-animations-using-svgs/edit" for ::1 at 2015-05-30 16:53:14 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"rocket-animation-css-animations-using-svgs"}
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "rocket-animation-css-animations-using-svgs"]]
+  [1m[35mFuel::Post Load (1.1ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (18.0ms)
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (5.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (26.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (2.1ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/044/original/lpl-logo.jpg?1432324506" for ::1 at 2015-05-30 16:53:15 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/044/original/lpl-logo.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (43.9ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:53:15 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-30 16:53:17 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (1.1ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (110.6ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (111.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.5ms)
+Completed 200 OK in 148ms (Views: 146.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:53:18 -0500
+
+
+Started GET "/blog/admin/posts/weekly-reading-from-launchpad-lab/edit" for ::1 at 2015-05-30 16:53:22 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"weekly-reading-from-launchpad-lab"}
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "weekly-reading-from-launchpad-lab"]]
+  [1m[35mFuel::Post Load (0.9ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.3ms)
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (5.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (24.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg?1432912920" for ::1 at 2015-05-30 16:53:22 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/posts/featured_images/000/000/056/original/mongodb-intro-opt_%281%29.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (39.1ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:53:22 -0500
+
+
+Started GET "/blog/admin/authors" for ::1 at 2015-05-30 16:54:17 -0500
+Processing by Fuel::Admin::AuthorsController#index as HTML
+  [1m[35mFuel::Author Load (0.3ms)[0m  SELECT  "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC LIMIT 1
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_authors.html.erb (2.6ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/index.html.erb within layouts/fuel/application (4.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.5ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg?1433001324" for ::1 at 2015-05-30 16:54:17 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (33.4ms)
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 16:54:17 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 16:54:32 -0500
+
+
+Started GET "/blog/admin/authors/new" for ::1 at 2015-05-30 17:02:27 -0500
+Processing by Fuel::Admin::AuthorsController#new as HTML
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_authors.html.erb (2.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_form.html.erb (2.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/new.html.erb within layouts/fuel/application (9.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (2.7ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg?1433001324" for ::1 at 2015-05-30 17:02:27 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (38.9ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 17:02:27 -0500
+
+
+Started GET "/blog/admin/authors/1/edit" for ::1 at 2015-05-30 17:02:30 -0500
+Processing by Fuel::Admin::AuthorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT  "fuel_authors".* FROM "fuel_authors" WHERE "fuel_authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"  ORDER BY first_name ASC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_authors.html.erb (2.5ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/_form.html.erb (2.8ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/authors/edit.html.erb within layouts/fuel/application (7.3ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.5ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg?1433001324" for ::1 at 2015-05-30 17:02:30 -0500
+
+ActionController::RoutingError (No route matches [GET] "/system/fuel/authors/avatars/000/000/002/original/kurt.jpg"):
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ryanfrancis/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.5ms)
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 17:02:30 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-30 17:03:33 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[36mFuel::Post Load (0.9ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (16.7ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (18.2ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.6ms)
+Completed 200 OK in 52ms (Views: 50.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 17:03:33 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 17:03:33 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 17:03:33 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 17:03:33 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 17:03:33 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 17:03:33 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 17:03:33 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 17:03:34 -0500
+
+
+Started GET "/blog/admin/posts/learn-seo-3-on-page-seo/edit" for ::1 at 2015-05-30 17:03:39 -0500
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"learn-seo-3-on-page-seo"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "learn-seo-3-on-page-seo"]]
+  [1m[36mFuel::Post Load (0.8ms)[0m  [1mSELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (17.8ms)
+  [1m[35mFuel::Author Load (0.2ms)[0m  SELECT "fuel_authors".* FROM "fuel_authors"
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (5.7ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (26.0ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 58ms (Views: 55.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 17:03:39 -0500
+
+
+Started GET "/blog/admin/posts/new" for ::1 at 2015-05-30 17:03:47 -0500
+Processing by Fuel::Admin::PostsController#new as HTML
+  [1m[36mFuel::Author Load (0.2ms)[0m  [1mSELECT "fuel_authors".* FROM "fuel_authors"[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_content.html.slim (0.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_form.html.erb (6.0ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.slim within layouts/fuel/application (11.1ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.2ms)
+Completed 200 OK in 120ms (Views: 119.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 17:03:47 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 17:03:47 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 17:03:47 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 17:03:47 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 17:03:47 -0500
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 17:03:47 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 17:03:48 -0500
+
+
+Started GET "/blog/admin/posts" for ::1 at 2015-05-30 17:03:49 -0500
+Processing by Fuel::Admin::PostsController#index as HTML
+  [1m[35mFuel::Post Load (0.8ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/_posts.html.erb (18.6ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (19.9ms)
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/components/_navbar.html.erb (1.3ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self.js?body=1" for ::1 at 2015-05-30 17:03:49 -0500
+
+
+Started GET "/assets/fuel/application.self.css?body=1" for ::1 at 2015-05-30 17:03:49 -0500
+
+
+Started GET "/assets/fuel/application.self.js?body=1" for ::1 at 2015-05-30 17:03:49 -0500
+
+
+Started GET "/assets/fuel/icon-test" for ::1 at 2015-05-30 17:03:49 -0500
+
+
+Started GET "/assets/fuel/facebook.self.js?body=1" for ::1 at 2015-05-30 17:03:49 -0500
+
+
+Started GET "/assets/fuel/admin.self.js?body=1" for ::1 at 2015-05-30 17:03:49 -0500
+
+
+Started GET "/assets/application.self.js?body=1" for ::1 at 2015-05-30 17:03:49 -0500
+
+
+Started GET "/assets/fuel/icons/application-icons.svg" for ::1 at 2015-05-30 17:03:49 -0500

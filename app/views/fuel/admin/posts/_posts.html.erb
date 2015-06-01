@@ -13,7 +13,7 @@
   <ul class="resource-list post-list">
     <% @posts.each do |post| %>
       <%= link_to fuel.edit_admin_post_path(post) do %>
-        <li class="resource-item post-item <%= 'active' if @post == post %>">
+        <li class="resource-item post-item <%= 'active' if @post && @post == post %>">
           <p class="post-item--date">Last Updated: <time><%= post.published ? post.created_at.strftime('%m/%d/%Y') : 'Draft' %></time> </p>
           <h5 class="post-item--title"><%= post.title %></h5>
           <p class="post-item--content"><%= truncate(post.content, length: 60) %></p>

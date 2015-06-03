@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150530180549) do
+ActiveRecord::Schema.define(version: 20150603205453) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 255, null: false
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(version: 20150530180549) do
     t.datetime "avatar_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
+    t.string   "twitter"
+    t.string   "github"
+    t.string   "dribbble"
   end
 
   create_table "fuel_posts", force: :cascade do |t|

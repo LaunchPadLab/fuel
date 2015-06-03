@@ -18,6 +18,26 @@
       <%= f.label :bio, 'Author Bio' %>
       <%= f.text_area :bio %>
     </fieldset>
+    <fieldset>
+      <div class="form-group-half">
+        <%= f.label :email %>
+        <%= f.email_field :email, placeholder: "ryan@example.com" %>
+      </div>
+      <div class="form-group-half">
+        <%= f.label :twitter %>
+        <%= f.text_field :twitter, placeholder: "ryan_p_francis" %>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="form-group-half">
+        <%= f.label :github %>
+        <%= f.text_field :github, placeholder: "francirp" %>
+      </div>
+      <div class="form-group-half">
+        <%= f.label :dribbble %>
+        <%= f.text_field :dribbble, placeholder: "ryan_p_francis" %>
+      </div>
+    </fieldset>
     <%= f.submit class: 'button button--secondary' %>
   </div>
   <div class="form-container--right card">

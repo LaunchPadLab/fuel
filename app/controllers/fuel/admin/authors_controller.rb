@@ -39,7 +39,6 @@ module Fuel
         else
           @author.attributes = author_params
         end
-        update_published
 
         if @author.save
           redirect_to fuel.admin_authors_path, notice: "Author was updated and #{@message}"
@@ -63,7 +62,7 @@ module Fuel
       private
 
         def author_params
-          params.require(:fuel_author).permit(:first_name, :last_name, :title, :bio, :avatar)
+          params.require(:fuel_author).permit(:first_name, :last_name, :title, :bio, :avatar, :email, :twitter, :github, :dribbble)
         end
 
         def find_author

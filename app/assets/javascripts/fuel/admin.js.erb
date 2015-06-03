@@ -1,18 +1,17 @@
-$(function() {
-  $(".edit-preview-toggle").click(function(e) {
-    e.preventDefault();
-    console.log("hello");
-    var id = $(this).data('id');
-    if (id == "preview") {
-      var content = $("#fuel_post_content").serialize();
-      $.ajax({
-        url: 'posts/preview',
-        data: content
-      });
-    }
-    $(".content-area").hide();
-    $("#content-" + id).show();
-    $(".edit-preview-toggle").removeClass("active");
-    $(this).addClass("active");
-  });
-});
+// $(function() {
+//   $(".edit-preview-toggle").click(function(e) {
+//     e.preventDefault();
+//     var id = $(this).data('id');
+//     if (id == "preview") {
+//       var content = $("#fuel_post_content").serialize();
+//       $.ajax({
+//         url: 'posts/preview',
+//         data: content
+//       });
+//     }
+//     $(".content-area").hide();
+//     $("#content-" + id).show();
+//     $(".edit-preview-toggle").removeClass("active");
+//     $(this).addClass("active");
+//   });
+// });

@@ -1,0 +1,24 @@
+<aside class="page-sidebar author-sidebar">
+  <header class="page-sidebar--header">
+    <div class="header-container--left">
+      <h5 class="header--title">Authors</h5>
+    </div>
+    <div class="header-container--right">
+      <ul class="header-container--right__actions">
+        <!-- <li><i class="search-icon">Search</i></li> -->
+        <li><%= link_to 'New Author', fuel.new_admin_author_path, class: 'add-icon' %></li>
+      </ul>
+    </div>
+  </header>
+  <ul class="resource-list author-list">
+    <% @authors.each do |author| %>
+      <%= link_to fuel.edit_admin_author_path(author) do %>
+        <li class="resource-item author-item <%= 'active' if @author == author %>">
+          <%= image_tag author.avatar.url, class: 'author-avatar' %>
+          <p class="author-item--title"><%= author.title %></p>
+          <h5 class="author-item--name"><%= author.full_name %></h5>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</aside>

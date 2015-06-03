@@ -9,6 +9,8 @@ require "sass-rails"
 require "slim"
 require "truncate_html"
 require "paperclip"
+require "bourbon"
+require "neat"
 
 module Fuel
 

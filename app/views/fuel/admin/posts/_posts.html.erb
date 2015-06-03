@@ -1,0 +1,23 @@
+<aside class="page-sidebar post-sidebar">
+  <header class="page-sidebar--header">
+    <div class="header-container--left">
+      <h5 class="header--title">Your Posts</h5>
+    </div>
+    <div class="header-container--right">
+      <ul class="header-container--right__actions">
+        <li><%= link_to 'New Blog Post', fuel.new_admin_post_path, class: 'add-icon' %></li>
+      </ul>
+    </div>
+  </header>
+  <ul class="resource-list post-list">
+    <% @posts.each do |post| %>
+      <%= link_to fuel.edit_admin_post_path(post) do %>
+        <li class="resource-item post-item <%= 'active' if @post && @post == post %>">
+          <p class="post-item--date">Last Updated: <time><%= post.published ? post.created_at.strftime('%m/%d/%Y') : 'Draft' %></time> </p>
+          <h5 class="post-item--title"><%= post.title %></h5>
+          <p class="post-item--content"><%= truncate(post.content, length: 60) %></p>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+</aside>

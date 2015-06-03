@@ -1,0 +1,42 @@
+<%= form_for @post, url: @url, html: { multipart: true } do |f| %>
+  <% if @post.errors.any? %>
+    <div class="alert alert--warning">
+      <p class="alert--content"><%= @post.errors.full_messages.to_sentence %></h2></p>
+      <%= link_to '#', class: 'alert--trigger' do %>
+        <%= embedded_svg 'icons/alert-icon.svg', class: 'alert--close-icon' %>
+      <% end %>
+    </div>
+  <% end %>
+  <fieldset class="fieldset">
+    <div class="half-group">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="half-group">
+      <%= f.label :author_id %>
+      <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name) %>
+    </div>
+  </fieldset>
+  <fieldset class="fieldset">
+    <div class="half-group">
+      <%= f.label :teaser, 'Post Tease' %>
+      <%= f.text_area :teaser, class: 'tease' %>
+    </div>
+    <div class="half-group last">
+      <%= f.label :tag %>
+      <%= f.text_field :tag %>
+    </div><br>
+    <div class="half-group last">
+      <%= f.label :featured_image, "Featured Image" %>
+      <%= f.file_field :featured_image %>
+    </div>
+  </fieldset>
+  <fieldset class="fieldset">
+    <%= f.label :content, 'Your Post' %>
+    <%= f.text_area :content, class: 'post' %>
+  </fieldset>
+  <fieldset class="fieldset">
+    <%= f.submit 'Publish', class: 'button button--primary' %>
+    <%= f.submit 'Save Draft', class: 'button button--secondary' %>
+  </fieldset>
+<% end %>

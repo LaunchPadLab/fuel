@@ -1,0 +1,45 @@
+// Navbar Component
+// ========================================
+
+
+// Variables
+$navbar-background-color: $blue-dark;
+$navbar-padding:          15px 10px;
+$navbar-position:         fixed;
+$navbar-shadow-color:     rgba(0, 0, 0, 0.5);
+$navbar-shadow-spread:    inset 0 0 5px;
+$navbar-width:            70px;
+
+$navbar-logo-size:        100px;
+
+$navbar-link-color:       $white-base;
+
+
+// Structure
+.navbar {
+  @include box-shadow($navbar-shadow-spread, $navbar-shadow-color);
+  @include position($navbar-position, -5px null 0 0);
+  @include rem(padding, $navbar-padding);
+  @include rem(width, $navbar-width);
+  background-color: $navbar-background-color;
+}
+
+.navbar-logo {
+  @include rem(height, $navbar-logo-size - 20px);
+  @include rem(width, $navbar-logo-size);
+
+  img{ width: 50%; }
+}
+
+.navbar-link {
+  @include font-type($primary-sans-serif, normal, 700);
+  @include rem(margin-bottom, 15px);
+  @include s-hotel;
+  @include transition(all 0.3s ease-in-out);
+  color: $navbar-link-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover { color: $blue-base; }
+
+}

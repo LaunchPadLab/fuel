@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
   s.add_dependency "kaminari"
   s.add_dependency "jquery-rails"
   s.add_dependency "sass-rails"
-  s.add_dependency "slim"
   s.add_dependency "truncate_html"
   s.add_dependency "paperclip", ">=3"
   s.add_dependency "aws-sdk", '< 2.0'

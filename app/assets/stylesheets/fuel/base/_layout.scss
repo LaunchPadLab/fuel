@@ -12,6 +12,11 @@ html,
 body {
   background-color: $site-background;
   overflow-x: hidden;
+
+  .is-fixed {
+    @include position(fixed);
+    width: 100%;
+  }
 }
 
 

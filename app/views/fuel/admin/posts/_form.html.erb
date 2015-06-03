@@ -1,56 +1,42 @@
 <%= form_for @post, url: @url, html: { multipart: true } do |f| %>
   <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= @post.errors.full_messages.to_sentence %></h2>
+    <div class="alert alert--warning">
+      <p class="alert--content"><%= @post.errors.full_messages.to_sentence %></h2></p>
+      <%= link_to '#', class: 'alert--trigger' do %>
+        <%= embedded_svg 'icons/alert-icon.svg', class: 'alert--close-icon' %>
+      <% end %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tag %>
-    <%= f.text_field :tag %>
-  </div>
-  <div class="field">
-    <%= f.label :author_id %>
-    <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name) %>
-  </div>
-  <div class="field">
-    <%= f.label :featured_image, "Featured Image" %>
-    <br>
-    <%= f.file_field :featured_image %>
-    <div class="featured-image">
-      <%= image_tag @post.featured_image.url if @post.featured_image_file_name.present? %>
+  <fieldset class="fieldset">
+    <div class="half-group">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
     </div>
-  </div>
-  <div class="field">
-    <%= f.label :teaser %>
-    <br>
-    <%= f.text_area :teaser, cols: "89", rows: "5" %>
-  </div>
-  <div class="field">
-    <%= f.label :content %>
-    <br>
-    <div class="preview-links">
-      <%= link_to 'Edit', '#', data: { id: "edit" }, class: "edit-preview-toggle active" %>
-      <%= link_to 'Preview', '#', data: { id: "preview" }, class: "edit-preview-toggle" %>
+    <div class="half-group">
+      <%= f.label :author_id %>
+      <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name) %>
     </div>
-    <div id="content-edit" class="content-area">
-      <%= f.text_area :content, cols: "80", rows: "20" %>
+  </fieldset>
+  <fieldset class="fieldset">
+    <div class="half-group">
+      <%= f.label :teaser, 'Post Tease' %>
+      <%= f.text_area :teaser, class: 'tease' %>
     </div>
-    <div id="content-preview" class="content-area" style="display:none;">
-      <%= render 'content', content: @post.content %>
+    <div class="half-group last">
+      <%= f.label :tag %>
+      <%= f.text_field :tag %>
+    </div><br>
+    <div class="half-group last">
+      <%= f.label :featured_image, "Featured Image" %>
+      <%= f.file_field :featured_image %>
     </div>
-  </div>
-  <p>
-    <%= f.submit 'Publish', class: 'first-btn fuel-btn' %>
-    <%= f.submit 'Save Draft', class: 'last-btn fuel-btn' %>
-  </p>
-<% end %>
-
-<%= form_tag('preview', method: "post", id: "preview_form") do %>
-  <%= hidden_field_tag :content %>
+  </fieldset>
+  <fieldset class="fieldset">
+    <%= f.label :content, 'Your Post' %>
+    <%= f.text_area :content, class: 'post' %>
+  </fieldset>
+  <fieldset class="fieldset">
+    <%= f.submit 'Publish', class: 'button button--primary' %>
+    <%= f.submit 'Save Draft', class: 'button button--secondary' %>
+  </fieldset>
 <% end %>

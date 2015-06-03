@@ -19,6 +19,14 @@
   $grey-base:    #DEDEDE;
   $grey-dark:    #9B9B9B;
 
+  // Red
+  $red-base:     #F7917C;
+  $red-dark:     #DF4F32;
+
+  // Yellow
+  $yellow-base:  #F3C859;
+  $yellow-dark:  #FFC107;
+
   // White
   $white-light:  #FAFAFA;
   $white-base:   #FFFFFF;
@@ -37,6 +45,10 @@
     grey-dark     $grey-dark,
     green-base    $green-base,
     green-dark    $green-dark,
+    red-base      $red-base,
+    red-dark      $red-dark,
+    yellow-base   $yellow-base,
+    yellow-dark   $yellow-dark,
     white-light   $white-light,
     white-base    $white-base,
     white-dark    $white-dark

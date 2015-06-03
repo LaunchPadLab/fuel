@@ -2,27 +2,37 @@
 // ========================================
 
 // Labels
-label{
+label {
   @include font-type($primary-sans-serif, normal, 700);
   @include rem(margin-bottom, 3px);
   @include s-golf;
+  color: $grey-dark;
   display: block;
   text-transform: uppercase;
 }
 
-fieldset{
-  @include rem(margin-bottom, 30px);
+fieldset{ @include rem(margin-bottom, 30px); }
+
+.half-group {
+  @include span-columns(6 of 12);
+
+  &.last {
+    @include rem(margin-bottom, 20px);
+    margin-right: 0;
+  }
 }
 
 // Inputs
 #{$all-text-inputs},
 input,
+input[type="file"],
 select,
 textarea{
   @include appearance(none);
   @include font-type($primary-sans-serif, normal, 300);
   @include placeholder{ font-style: italic; }
   @include s-golf;
+  background-color: $white-base;
   border: 1px solid $grey-light;
   border-radius: 2px;
   box-sizing: border-box;
@@ -39,14 +49,23 @@ textarea{
   }
 }
 
-input[type="submit"]{ width: inherit; }
-
-textarea,
-textarea[type="text"]{ height: 100px; }
-
-input[type="submit"]{
+input[type="submit"] {
   @include s-golf;
   border: none;
+  width: inherit;
 
-  &:hover{ cursor: pointer; }
+  &:hover { cursor: pointer; }
+}
+
+// Specific Teaser Heights
+textarea {
+  &.tease { @include rem(height, 108px); }
+  &.post { @include rem(height, 200px); }
+}
+
+select{
+  background-image: image-url('fuel/icons/dropdown-arrow-icon.svg');
+  background-position: 97%;
+  background-repeat: no-repeat;
+  background-size: 10px;
 }

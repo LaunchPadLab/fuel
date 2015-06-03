@@ -13,3 +13,4 @@
 //= require jquery
 //= require fuel/admin
 //= require fuel/facebook
+//= require fuel/sliding-panel

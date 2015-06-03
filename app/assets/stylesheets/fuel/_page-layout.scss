@@ -5,7 +5,7 @@
 // Variables
 $page-header-border:    1px solid $grey-light;
 $page-header-offset:    245px;
-$page-header-padding:   18.5px 10px;
+$page-header-padding:   20px 10px;
 
 $page-offset:           0 25px 50px 275px;
 
@@ -16,12 +16,23 @@ $page-offset:           0 25px 50px 275px;
   @include rem(padding, $page-header-padding);
   border-bottom: $page-header-border;
   background-color: $white-base;
-  width: 100%;
+  width: auto;
 }
 
 .page-header--title {
+  @include s-foxtrot;
   margin-bottom: 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.page-header--link {
+  @extend .link-primary;
+  @include font-type($primary-sans-serif, normal, 700);
+  @include s-foxtrot;
+  display: inline-block;
+  float: right;
+  text-transform: uppercase;
 }
 
 

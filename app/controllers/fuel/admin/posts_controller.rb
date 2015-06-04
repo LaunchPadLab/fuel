@@ -59,7 +59,7 @@ module Fuel
       private
 
         def post_params
-          params.require(:fuel_post).permit(:tag, :author_id, :content, :title, :teaser, :featured_image, :published_at)
+          params.require(:fuel_post).permit(:tag, :author_id, :content, :title, :teaser, :featured_image, :published, :published_at)
         end
 
         def update_published

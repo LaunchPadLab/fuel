@@ -18,7 +18,7 @@
           <h2 class="fuel-post-title"><%= link_to post.title, fuel.post_path(post) %></h2>
           <div class="fuel-post-additional-info">
             <span class="fuel_post_date"><%= post.created_at.strftime('%b %d, %Y') %> - </span>
-            <span class="fuel-post-author">By <%= post.author %></span>
+            <span class="fuel-post-author">By <%= post.author.full_name %></span>
           </div>
           <% if post.featured_image_file_name.present? || post.featured_image_url.present? %>
             <div class="image-area">

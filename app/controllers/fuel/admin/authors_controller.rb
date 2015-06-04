@@ -7,8 +7,6 @@ module Fuel
       before_filter :set_url, only: [:new, :create, :edit, :update]
 
       def index
-        @author = @authors.first
-        set_url
       end
 
       def new

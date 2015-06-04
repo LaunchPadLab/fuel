@@ -10,6 +10,7 @@ require "truncate_html"
 require "paperclip"
 require "bourbon"
 require "neat"
+require "pickadate-rails"
 
 module Fuel
 

@@ -14,11 +14,8 @@ module Fuel
       end
 
       def create
-        if Rails.version[0].to_i < 4
-          @post = Fuel::Post.new(params[:fuel_post])
-        else
-          @post = Fuel::Post.new(post_params)
-        end
+        @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_post] : post_params
+        @post = Fuel::Post.new(@params_hash)
         update_published
 
         if @post.save
@@ -33,17 +30,14 @@ module Fuel
       end
 
       def update
-        if Rails.version[0].to_i < 4
-          @post.attributes = params[:fuel_post]
-        else
-          @post.attributes = post_params
-        end
+        @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_post] : post_params
+        @post.attributes = @params_hash
         update_published
 
         if @post.save
-          redirect_to fuel.admin_posts_path, notice: "Post was updated and #{@message}"
+          redirect_to fuel.edit_admin_post_path(@post), notice: "Post was updated and #{@message}"
         else
-          render action: "edit"
+          render "edit"
         end
       end
 
@@ -65,11 +59,13 @@ module Fuel
       private
 
         def post_params
-          params.require(:fuel_post).permit(:tag, :author_id, :content, :title, :teaser, :featured_image, :posted_at)
+          params.require(:fuel_post).permit(:tag, :author_id, :content, :title, :teaser, :featured_image, :published_at)
         end
 
         def update_published
-          @post.published = params[:commit] == "Save Draft" ? false : true
+          published_at_string = @params_hash[:published_at]
+          published_at_datetime = DateTime.strptime(published_at_string, "%m/%d/%Y")
+          @post.published_at = published_at_datetime if published_at_datetime
           @message = @post.published ? "posted" : "saved"
         end
 

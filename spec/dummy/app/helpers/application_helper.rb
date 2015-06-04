@@ -8,4 +8,8 @@ module ApplicationHelper
     end
     doc.to_html.html_safe
   end
+
+  def hide_published_at(post)
+    @post.is_published ? '' : 'display:none;'
+  end
 end

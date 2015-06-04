@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fuel (0.3.6)
+    fuel (0.3.7)
       aws-sdk (< 2.0)
       bourbon
       friendly_id
@@ -9,6 +9,7 @@ PATH
       kaminari
       neat
       paperclip (>= 3)
+      pickadate-rails
       rails
       redcarpet
       sass-rails
@@ -115,6 +116,8 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    pickadate-rails (3.5.5.0)
+      railties (>= 3.1.0)
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)

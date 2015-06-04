@@ -14,3 +14,7 @@
 //= require fuel/admin
 //= require fuel/facebook
 //= require fuel/sliding-panel
+//= require pickadate/picker
+//= require pickadate/picker.date
+//= require fuel/datepicker
+//= require fuel/posts

@@ -1,0 +1,16 @@
+$(function(){
+
+  $("#fuel_post_published").on("change", function(){
+    var val = $(this).val();
+    var $publishedAtGroup = $("#publishedAtGroup");
+    var $publishedAt = $publishedAtGroup.find("input#fuel_post_published_at");
+    if (val == "true"){
+      $publishedAtGroup.show();
+      $publishedAt.prop('disabled', false);
+    } else {
+      $publishedAtGroup.hide();
+      $publishedAt.prop('disabled', true);
+    }
+  });
+
+});

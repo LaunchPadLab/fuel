@@ -15,7 +15,13 @@ fieldset{ @include rem(margin-bottom, 30px); }
 
 .half-group {
   @include span-columns(6 of 12);
+}
 
+.third-group {
+  @include span-columns(4 of 12);
+}
+
+.half-group, .third-group {
   &.last {
     @include rem(margin-bottom, 20px);
     margin-right: 0;

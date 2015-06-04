@@ -42,7 +42,7 @@ $resource-date-color:        $grey-dark;
   .author-item--title {
     @include font-type($primary-sans-serif, normal, 700);
     @include rem(margin-bottom, 5px);
-    @include s-golf;
+    @include s-hotel;
     color: $resource-date-color;
     text-transform: uppercase;
   }
@@ -50,6 +50,7 @@ $resource-date-color:        $grey-dark;
   .post-item--title,
   .author-item--name {
     @include rem(margin-bottom, 5px);
+    @include s-echo;
   }
 
   .post-item--content, .author-item--bio {

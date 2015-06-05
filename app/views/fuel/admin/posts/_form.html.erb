@@ -7,45 +7,48 @@
       <% end %>
     </div>
   <% end %>
-  <fieldset class="fieldset">
-    <div class="half-group">
+  <div class="form-container--left">
+    <fieldset>
       <%= f.label :title %>
       <%= f.text_field :title %>
-    </div>
-    <div class="half-group">
-      <div class="half-group__nested">
+    </fieldset>
+    <fieldset>
+      <div class="form-group-half">
+        <%= f.label :author_id %>
+        <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name, @post.author_id) %>
+      </div>
+      <div class="form-group-half">
+        <%= f.label :tag %>
+        <%= f.select :tag, options_for_select(Fuel.configuration.tags, @post.tag) %>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="half-group">
         <%= f.label :published, 'Published' %>
         <%= f.select :published, options_for_select({"Yes" => true, "No" => false}, @post.is_published) %>
       </div>
-      <div class="half-group__nested" id="publishedAtGroup" style="<%= hide_published_at(@post) %>">
+      <div class="half-group" id="publishedAtGroup" style="<%= hide_published_at(@post) %>">
         <%= f.label :published_at, 'Published At' %>
         <%= f.text_field :published_at, data: { value: (@post.published_at || DateTime.now).strftime("%m/%d/%Y") }, class: 'datepicker', disabled: !@post.is_published %>
       </div>
-    </div>
-  </fieldset>
-  <fieldset class="fieldset">
-    <div class="half-group">
+    </fieldset>
+    <fieldset>
       <%= f.label :teaser, 'Post Tease' %>
       <%= f.text_area :teaser, class: 'tease' %>
+    </fieldset>
+    <fieldset class="fieldset">
+      <%= f.label :content, 'Your Post' %>
+      <%= f.text_area :content, class: 'post' %>
+    </fieldset>
+    <fieldset class="fieldset">
+      <%= f.submit (action_name == "edit" ? "Update Post" : "Create Post"), class: 'button button--secondary' %>
+    </fieldset>
+  </div>
+  <div class="form-container--right card">
+    <%= f.label :featured_image, 'Featured Image' %>
+    <div class="card-image card-image--featured_image">
+      <%= image_tag @post.featured_image.url if @post.featured_image.present? %>
     </div>
-    <div class="half-group last">
-      <%= f.label :author_id %>
-      <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name, @post.author_id) %>
-    </div>
-    <div class="half-group last">
-      <%= f.label :tag %>
-      <%= f.select :tag, options_for_select(Fuel.configuration.tags, @post.tag) %>
-    </div><br>
-    <div class="half-group last">
-      <%= f.label :featured_image, "Featured Image" %>
-      <%= f.file_field :featured_image %>
-    </div>
-  </fieldset>
-  <fieldset class="fieldset">
-    <%= f.label :content, 'Your Post' %>
-    <%= f.text_area :content, class: 'post' %>
-  </fieldset>
-  <fieldset class="fieldset">
-    <%= f.submit (action_name == "edit" ? "Update Post" : "Create Post"), class: 'button button--secondary' %>
-  </fieldset>
+    <%= f.file_field :featured_image %>
+  </div>
 <% end %>

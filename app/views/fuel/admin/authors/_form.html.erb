@@ -44,7 +44,7 @@
   </div>
   <div class="form-container--right card">
     <%= f.label :avatar, 'Updated Author Picture' %>
-    <div class="card-image--avatar">
+    <div class="card-image card-image--avatar">
       <%= image_tag @author.avatar.url if @author.avatar.present? %>
     </div>
     <%= f.file_field :avatar %>

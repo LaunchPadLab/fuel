@@ -17,15 +17,23 @@ $card-padding:       20px;
   overflow: hidden;
 }
 
-.card-image--avatar{
-  @include rem(height, 100px);
+.card-image {
   @include rem(margin, 20px auto);
-  @include rem(width, 100px);
   border-radius: 30em;
   overflow: hidden;
 
-  img{
+  img {
     height: 100%;
     width: 100%;
   }
+}
+
+.card-image--avatar {
+  @include rem(height, 100px);
+  @include rem(width, 100px);
+}
+
+.card-image--featured_image {
+  @include rem(height, 200px);
+  @include rem(width, 200px);
 }

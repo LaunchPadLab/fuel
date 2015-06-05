@@ -19,3 +19,4 @@
 //= require fuel/datepicker
 //= require fuel/posts
 //= require froala_editor.min.js
+//= require fuel/rich-text

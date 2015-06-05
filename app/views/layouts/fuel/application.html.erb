@@ -9,22 +9,12 @@
     <script src="//use.typekit.net/nti1hfq.js"></script>
     <script async>try{Typekit.load();}catch(e){}</script>
   </head>
-  <body>
+  <body class="<%= controller_name %>-controller <%= action_name %>-action">
     <%= render partial: 'fuel/components/navbar' %>
     <main role="main" aria-label="main-content" class="<%= controller_name -%> <%= action_name -%> navbar-offset">
       <%= yield %>
     </main>
     <%= javascript_include_tag "fuel/application" %>
     <%= javascript_include_tag 'application' %>
-    <script>
-       // var editor = new wysihtml5.Editor("fuel_post_content", { // id of textarea element
-       //    toolbar:      "toolbar", // id of toolbar element
-       //    stylesheets:  "<%= stylesheet_path('wysihtml') %>", // optional, css to style the editor's content
-       //    parserRules:  wysihtml5ParserRules, // defined in parser rules set
-       // });
-      $(function() {
-          $('#fuel_post_content').editable({inlineMode: false, theme: 'gray'})
-      });
-    </script>
   </body>
 </html>

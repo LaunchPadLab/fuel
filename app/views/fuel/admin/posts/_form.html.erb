@@ -13,14 +13,24 @@
       <%= f.text_field :title %>
     </div>
     <div class="half-group">
-      <%= f.label :author_id %>
-      <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name, @post.author_id) %>
+      <div class="half-group__nested">
+        <%= f.label :published, 'Published' %>
+        <%= f.select :published, options_for_select({"Yes" => true, "No" => false}, @post.is_published) %>
+      </div>
+      <div class="half-group__nested" id="publishedAtGroup" style="<%= hide_published_at(@post) %>">
+        <%= f.label :published_at, 'Published At' %>
+        <%= f.text_field :published_at, data: { value: (@post.published_at || DateTime.now).strftime("%m/%d/%Y") }, class: 'datepicker', disabled: !@post.is_published %>
+      </div>
     </div>
   </fieldset>
   <fieldset class="fieldset">
     <div class="half-group">
       <%= f.label :teaser, 'Post Tease' %>
       <%= f.text_area :teaser, class: 'tease' %>
+    </div>
+    <div class="half-group last">
+      <%= f.label :author_id %>
+      <%= f.select :author_id, options_from_collection_for_select(Fuel::Author.all, :id, :full_name, @post.author_id) %>
     </div>
     <div class="half-group last">
       <%= f.label :tag %>
@@ -36,18 +46,6 @@
     <%= f.text_area :content, class: 'post' %>
   </fieldset>
   <fieldset class="fieldset">
-    <div class="third-group">
-      <%= f.label :published, 'Published' %>
-      <%= f.select :published, options_for_select({"Yes" => true, "No" => false}, @post.is_published) %>
-    </div>
-    <div class="third-group" id="publishedAtGroup" style="<%= hide_published_at(@post) %>">
-      <%= f.label :published_at, 'Published At' %>
-      <%= f.text_field :published_at, data: { value: (@post.published_at || DateTime.now).strftime("%m/%d/%Y") }, class: 'datepicker', disabled: !@post.is_published %>
-    </div>
-    <div class="third-group">
-    </div>
-  </fieldset>
-  <fieldset class="fieldset">
-    <%= f.submit (action_name == "edit" ? "Update Blog Post" : "Create Blog Post"), class: 'button button--primary' %>
+    <%= f.submit (action_name == "edit" ? "Update Post" : "Create Post"), class: 'button button--secondary' %>
   </fieldset>
 <% end %>

@@ -1,5 +1,9 @@
-<div class="fuel fuel-admin new">
-  <%= link_to "Back to Blog Admin", fuel.admin_posts_path %>
-  <h1 class="header">New Post</h1>
-  <%= render 'form' %>
-</div>
+<%= render 'posts' %>
+<section class="page">
+  <header class="page-header">
+    <h5 class="page-header--title">Create Blog Post</h5>
+  </header>
+  <div class="page-area">
+    <%= render "form" %>
+  </div>
+</section>

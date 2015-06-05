@@ -36,13 +36,6 @@
       <%= f.label :teaser, 'Post Tease' %>
       <%= f.text_area :teaser, class: 'tease' %>
     </fieldset>
-    <fieldset class="fieldset">
-      <%= f.label :content, 'Your Post' %>
-      <%= f.text_area :content, class: 'post' %>
-    </fieldset>
-    <fieldset class="fieldset">
-      <%= f.submit (action_name == "edit" ? "Update Post" : "Create Post"), class: 'button button--secondary' %>
-    </fieldset>
   </div>
   <div class="form-container--right card">
     <%= f.label :featured_image, 'Featured Image' %>
@@ -50,5 +43,14 @@
       <%= image_tag @post.featured_image.url(:medium) if @post.featured_image.present? %>
     </div>
     <%= f.file_field :featured_image %>
+  </div>
+  <div class="form-container--full">
+    <fieldset>
+      <%= f.label :content, 'Your Post' %>
+      <%= f.text_area :content, class: 'post' %>
+    </fieldset>
+    <fieldset>
+      <%= f.submit (action_name == "edit" ? "Update Post" : "Create Post"), class: 'button button--secondary' %>
+    </fieldset>
   </div>
 <% end %>

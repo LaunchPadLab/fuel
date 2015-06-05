@@ -1,6 +1,6 @@
 module Fuel
   module Admin
-    class PostsController < FuelController
+    class PostsController < AdminController
       layout "fuel/application"
       before_filter :find_posts
       before_filter :find_post, only: [:edit, :update, :destroy]

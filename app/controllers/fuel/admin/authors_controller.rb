@@ -1,6 +1,6 @@
 module Fuel
   module Admin
-    class AuthorsController < FuelController
+    class AuthorsController < AdminController
       layout "fuel/application"
       before_filter :find_authors
       before_filter :find_author, only: [:edit, :update, :destroy]

@@ -59,10 +59,10 @@ config.layout = "application"
 ```
 
 
-S3
+Paperclip
 --------------------
 
-S3 ships with three storage options: File Storage, S3, or Fog. We recommend using S3. To do so, add the following to your config/application.rb file:
+Paperclip ships with three storage options: File Storage, S3, or Fog. We recommend using S3. To do so, add the following to your config/application.rb file:
 
 ```ruby
   config.paperclip_defaults = {
@@ -104,7 +104,7 @@ config.twitter = true
 ```
 
 
-SEO 
+SEO
 ----------
 
 To see our HTML `<title>` and `<meta> description` for your blog, you have access to two instance variables: `@title` and `@description`. These should be called in your `layout` template for your blog as follows:

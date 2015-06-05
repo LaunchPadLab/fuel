@@ -16,5 +16,15 @@
     </main>
     <%= javascript_include_tag "fuel/application" %>
     <%= javascript_include_tag 'application' %>
+    <script>
+       // var editor = new wysihtml5.Editor("fuel_post_content", { // id of textarea element
+       //    toolbar:      "toolbar", // id of toolbar element
+       //    stylesheets:  "<%= stylesheet_path('wysihtml') %>", // optional, css to style the editor's content
+       //    parserRules:  wysihtml5ParserRules, // defined in parser rules set
+       // });
+      $(function() {
+          $('#fuel_post_content').editable({inlineMode: false, theme: 'gray'})
+      });
+    </script>
   </body>
 </html>

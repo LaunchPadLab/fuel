@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency "bourbon"
   s.add_dependency "neat"
   s.add_dependency "pickadate-rails"
+  s.add_dependency "wysiwyg-rails"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

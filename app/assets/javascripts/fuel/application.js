@@ -18,3 +18,4 @@
 //= require pickadate/picker.date
 //= require fuel/datepicker
 //= require fuel/posts
+//= require froala_editor.min.js

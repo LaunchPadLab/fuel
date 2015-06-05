@@ -1,5 +1,6 @@
 module Fuel
   class Post < ActiveRecord::Base
+    include ActionView::Helpers::OutputSafetyHelper
 
     extend FriendlyId
     friendly_id :title, use: :slugged
@@ -45,6 +46,12 @@ module Fuel
 
     def teaser_content
       teaser.present? ? teaser : content
+    end
+
+    def to_html
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
+          :autolink => true, :space_after_headers => true)
+      raw markdown.render(content)
     end
 
   end

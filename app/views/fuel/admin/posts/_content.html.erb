@@ -1,5 +1,5 @@
 <div id="render-content">
   <div class="fuel-posts">
-    <%= markdown(content || "").try(:html_safe) %>
+    <%= (content || "").try(:html_safe) %>
   </div>
 </div>

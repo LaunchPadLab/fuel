@@ -27,7 +27,7 @@
           <% end %>
           <div class="fuel-post-content">
             <% content = post.teaser && post.teaser.length > 0 ? post.teaser : post.content %>
-            <%= markdown(truncate_html content, length: 250).html_safe %>
+            <%= truncate_html(content, length: 250).html_safe %>
           </div>
           <% if post.content.length > 800 %>
             <p><%= link_to 'Read more', fuel.post_url(post) %></p>

@@ -9,7 +9,7 @@
     <script src="//use.typekit.net/nti1hfq.js"></script>
     <script async>try{Typekit.load();}catch(e){}</script>
   </head>
-  <body>
+  <body class="<%= controller_name %>-controller <%= action_name %>-action">
     <%= render partial: 'fuel/components/navbar' %>
     <main role="main" aria-label="main-content" class="<%= controller_name -%> <%= action_name -%> navbar-offset">
       <%= yield %>

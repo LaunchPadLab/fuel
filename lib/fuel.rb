@@ -11,6 +11,8 @@ require "paperclip"
 require "bourbon"
 require "neat"
 require "pickadate-rails"
+require "wysiwyg-rails"
+require "font-awesome-rails"
 
 module Fuel
 

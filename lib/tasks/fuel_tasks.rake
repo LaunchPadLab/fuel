@@ -12,7 +12,7 @@ namespace :fuel do
     end
   end
 
-desc 'Import blog from CSV'
+  desc 'Import blog from CSV'
   task :import_blog => :environment do
     puts "Prior to running: #{Fuel::Post.count} blog posts in database"
     puts "deleting #{Fuel::Post.count} posts..."
@@ -23,5 +23,13 @@ desc 'Import blog from CSV'
     puts "importing new blog posts and authors..."
     BlogImporter.new.pull
     puts "Success! There are now #{Fuel::Post.count} blog posts in database."
+  end
+
+  desc "Markdown to HTML"
+  task :markdown_to_html => :environment do
+    Fuel::Post.all.each do |post|
+      post.content = post.to_html
+      post.save
+    end
   end
 end

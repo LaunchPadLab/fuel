@@ -32,6 +32,11 @@ body {
 }
 
 
+// Alignment
+.left { float: left; }
+.right { float: right; }
+
+
 // Page Structure
 .navbar-offset {
   @include rem(margin-left, $navbar-offset);

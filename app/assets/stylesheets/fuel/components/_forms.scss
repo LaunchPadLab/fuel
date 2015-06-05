@@ -15,13 +15,19 @@ fieldset{ @include rem(margin-bottom, 30px); }
 
 .half-group {
   @include span-columns(6 of 12);
+
+  .half-group__nested {
+    @include span-columns(3 of 6);
+  }
 }
 
 .third-group {
   @include span-columns(4 of 12);
 }
 
-.half-group, .third-group {
+.half-group,
+.third-group {
+
   &.last {
     @include rem(margin-bottom, 20px);
     margin-right: 0;
@@ -63,9 +69,16 @@ input[type="submit"] {
   &:hover { cursor: pointer; }
 }
 
+input.datepicker {
+  background-image: image-url('fuel/icons/calendar-icon.svg');
+  background-position: 97%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+}
+
 // Specific Teaser Heights
 textarea {
-  &.tease { @include rem(height, 108px); }
+  &.tease { @include rem(height, 178px); }
   &.post { @include rem(height, 200px); }
 }
 

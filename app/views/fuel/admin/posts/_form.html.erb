@@ -40,7 +40,7 @@
   <div class="form-container--right card">
     <%= f.label :featured_image, 'Featured Image' %>
     <div class="card-image card-image--featured_image">
-      <%= image_tag @post.featured_image.url(:medium) if @post.featured_image.present? %>
+      <%= image_tag @post.featured_image.url(:medium) %>
     </div>
     <%= f.file_field :featured_image %>
   </div>

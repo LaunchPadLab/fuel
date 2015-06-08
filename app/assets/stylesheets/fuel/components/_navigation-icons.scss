@@ -4,7 +4,7 @@
 
 // Variables
 $navigation-height:    50px;
-$navigation-icon-size: 152px 55px;
+$navigation-icon-size: 200px 55px;
 $navigation-width:     50px;
 $navigation-icons:     image-url('fuel/icons/navigation-icons.svg');
 
@@ -25,7 +25,8 @@ $navigation-icons:     image-url('fuel/icons/navigation-icons.svg');
 $icons: (
   authors  $navigation-width * 0,
   posts    $navigation-width * 1,
-  settings $navigation-width * 3
+  settings $navigation-width * 3,
+  picture  $navigation-width * 4,
 );
 
 

@@ -11,7 +11,7 @@ module Fuel
       attr_accessible :tag, :author_id, :content, :title, :teaser, :featured_image, :seo_title, :seo_description, :published_at
     end
 
-    has_attached_file :featured_image, :styles => { :medium => Fuel.configuration.featured_image_settings[:styles][:medium], :thumb => Fuel.configuration.featured_image_settings[:styles][:thumb] }, :default_url => "/images/:style/missing.png"
+    has_attached_file :featured_image, :styles => { :medium => Fuel.configuration.featured_image_settings[:styles][:medium], :thumb => Fuel.configuration.featured_image_settings[:styles][:thumb] }, :default_url => "fuel/default-img.jpg"
     validates_attachment_content_type :featured_image, :content_type => /\Aimage\/.*\Z/
 
     validates_presence_of :title, :content, :author_id, if: :is_published

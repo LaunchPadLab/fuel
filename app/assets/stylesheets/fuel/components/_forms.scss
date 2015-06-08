@@ -11,28 +11,7 @@ label {
   text-transform: uppercase;
 }
 
-fieldset{ @include rem(margin-bottom, 30px); }
-
-.half-group {
-  @include span-columns(6 of 12);
-
-  .half-group__nested {
-    @include span-columns(3 of 6);
-  }
-}
-
-.third-group {
-  @include span-columns(4 of 12);
-}
-
-.half-group,
-.third-group {
-
-  &.last {
-    @include rem(margin-bottom, 20px);
-    margin-right: 0;
-  }
-}
+fieldset { @include rem(margin-bottom, 30px); }
 
 // Inputs
 #{$all-text-inputs},
@@ -87,4 +66,25 @@ select{
   background-position: 97%;
   background-repeat: no-repeat;
   background-size: 10px;
+}
+
+
+// Form layouts/groups
+.half-group {
+  @include span-columns(6 of 12);
+
+  .half-group__nested {
+    @include span-columns(3 of 6);
+  }
+}
+
+.third-group { @include span-columns(4 of 12); }
+
+.half-group,
+.third-group {
+
+  &.last {
+    @include rem(margin-bottom, 20px);
+    margin-right: 0;
+  }
 }

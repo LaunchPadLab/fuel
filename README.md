@@ -78,9 +78,9 @@ Paperclip ships with three storage options: File Storage, S3, or Fog. We recomme
 Make sure to also add your environment variables to config/application.yml using something like [Figaro](https://github.com/laserlemon/figaro):
 
 ```yml
-AWS_ACCESS_KEY: [YOUR-S3-ACCESS-KEY]
-AWS_SECRET_ACCESS_KEY: [YOUR-S3-SECRET-KEY]
-AWS_BUCKET: [YOUR-S3-BUCKET]
+AWS_ACCESS_KEY: your-s3-access-key
+AWS_SECRET_ACCESS_KEY: your-s3-secret-key
+AWS_BUCKET: your-s3-bucket
 ```
 
 
@@ -90,7 +90,11 @@ Social Integration
 To set proper og:graph meta data for your blog, add the following to the head of your main layout (such as application.html.erb):
 
 ```
-<%= yield :social_meta_tags %>
+<% if content_for?(:meta_tags) %>
+  <%= yield(:meta_tags) %>
+<% else %>
+  <!-- default meta tags here -->
+<% end %>
 ```
 
 **Twitter**

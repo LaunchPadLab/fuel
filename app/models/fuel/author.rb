@@ -4,7 +4,7 @@ module Fuel
     has_many :posts
 
     if Rails.version[0].to_i < 4
-      attr_accessible :first_name, :last_name, :title, :bio, :avatar, :email, :twitter, :github, :dribbble
+      attr_accessible :first_name, :last_name, :title, :bio, :avatar, :email, :twitter, :github, :dribbble, :start_date
     end
 
     def full_name

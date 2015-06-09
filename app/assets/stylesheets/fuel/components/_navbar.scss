@@ -10,7 +10,7 @@ $navbar-shadow-color:     rgba(0, 0, 0, 0.5);
 $navbar-shadow-spread:    inset 0 0 5px;
 $navbar-width:            70px;
 
-$navbar-logo-size:        100px;
+$navbar-logo-size:        50px;
 
 $navbar-link-color:       $white-base;
 
@@ -25,10 +25,15 @@ $navbar-link-color:       $white-base;
 }
 
 .navbar-logo {
-  @include rem(height, $navbar-logo-size - 20px);
+  @include rem(height, $navbar-logo-size);
+  @include rem(margin-bottom, 20px);
   @include rem(width, $navbar-logo-size);
+  background: $white-base;
+  border: 2px solid $white-base;
+  border-radius: 30em;
+  overflow: hidden;
 
-  img{ width: 50%; }
+  img{ width: 100%; }
 }
 
 .navbar-link {

@@ -88,3 +88,8 @@ select{
     margin-right: 0;
   }
 }
+
+a.delete-post {
+  float: right;
+  @include s-golf;
+}

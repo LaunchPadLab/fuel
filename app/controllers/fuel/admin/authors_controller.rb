@@ -15,8 +15,8 @@ module Fuel
 
       def create
         @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_author] : author_params
-        @author = Fuel::Author.new(@params_hash)
         set_start_date
+        @author = Fuel::Author.new(@params_hash)
 
         if @author.save
           redirect_to fuel.admin_authors_path, notice: "Your author was successfully #{@message}."
@@ -31,8 +31,8 @@ module Fuel
 
       def update
         @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_author] : author_params
-        @author.attributes = @params_hash
         set_start_date
+        @author.attributes = @params_hash
 
         if @author.save
           redirect_to fuel.admin_authors_path, notice: "Author was updated and #{@message}"
@@ -57,8 +57,8 @@ module Fuel
 
         def set_start_date
           start_date_string = @params_hash[:start_date]
-          start_datetime = DateTime.strptime(start_date_string, "%m/%d/%Y")
-          @author.start_date = start_datetime if start_datetime
+          start_datetime = start_date_string.present? ? DateTime.strptime(start_date_string, "%m/%d/%Y") : nil
+          @params_hash[:start_date] = start_datetime
         end
 
         def author_params

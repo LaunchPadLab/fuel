@@ -11,28 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150604161938) do
-
-  create_table "friendly_id_slugs", force: :cascade do |t|
-    t.string   "slug",           limit: 255, null: false
-    t.integer  "sluggable_id",               null: false
-    t.string   "sluggable_type", limit: 50
-    t.string   "scope",          limit: 255
-    t.datetime "created_at"
-  end
-
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+ActiveRecord::Schema.define(version: 20150616184619) do
 
   create_table "fuel_authors", force: :cascade do |t|
-    t.string   "first_name",          limit: 255
-    t.string   "last_name",           limit: 255
-    t.string   "title",               limit: 255
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "title"
     t.text     "bio"
-    t.string   "avatar_file_name",    limit: 255
-    t.string   "avatar_content_type", limit: 255
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
     t.datetime "created_at"
@@ -41,24 +28,25 @@ ActiveRecord::Schema.define(version: 20150604161938) do
     t.string   "twitter"
     t.string   "github"
     t.string   "dribbble"
+    t.date     "start_date"
   end
 
   create_table "fuel_posts", force: :cascade do |t|
-    t.string   "tag",                         limit: 255
-    t.string   "author",                      limit: 255
+    t.string   "tag"
+    t.string   "author"
     t.text     "content"
-    t.string   "title",                       limit: 255
-    t.string   "slug",                        limit: 255
-    t.boolean  "published",                               default: true
+    t.string   "title"
+    t.string   "slug"
+    t.boolean  "published",                   default: true
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "featured_image_url",          limit: 255
+    t.string   "featured_image_url"
     t.text     "teaser"
-    t.string   "featured_image_file_name",    limit: 255
-    t.string   "featured_image_content_type", limit: 255
+    t.string   "featured_image_file_name"
+    t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
-    t.string   "seo_title",                   limit: 255
+    t.string   "seo_title"
     t.text     "seo_description"
     t.integer  "author_id"
     t.datetime "published_at"

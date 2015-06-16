@@ -15,8 +15,9 @@ module Fuel
 
       def create
         @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_post] : post_params
+        update_published_at
         @post = Fuel::Post.new(@params_hash)
-        update_published
+        set_message
 
         if @post.save
           redirect_to fuel.admin_posts_path, notice: "Your blog post was successfully #{@message}."
@@ -31,8 +32,9 @@ module Fuel
 
       def update
         @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_post] : post_params
+        update_published_at
         @post.attributes = @params_hash
-        update_published
+        set_message
 
         if @post.save
           redirect_to fuel.edit_admin_post_path(@post), notice: "Post was updated and #{@message}"
@@ -62,10 +64,13 @@ module Fuel
           params.require(:fuel_post).permit(:tag, :author_id, :content, :title, :teaser, :featured_image, :published, :published_at)
         end
 
-        def update_published
+        def update_published_at
           published_at_string = @params_hash[:published_at]
           published_at_datetime = DateTime.strptime(published_at_string, "%m/%d/%Y")
-          @post.published_at = published_at_datetime if published_at_datetime
+          @params_hash[:published_at] = published_at_datetime
+        end
+
+        def set_message
           @message = @post.published ? "posted" : "saved"
         end
 

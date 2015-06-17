@@ -58,6 +58,14 @@ You will probably want the blog posts to render within an existing layout of you
 config.layout = "application"
 ```
 
+**Logo**
+
+You can add your own logo to be used in the Blog Admin backoffice. Add you logo's image to your Rails app's images folder (app/assets/images) then update config/initializers/fuel.rb to reference that image like below. Note that the image should be square and at least 58 x 58 pixels.
+
+```ruby
+config.logo = "your-image.png"
+```
+
 
 Paperclip
 --------------------

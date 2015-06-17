@@ -40,7 +40,7 @@ Fuel.configure do |config|
     }
   }
 
-  # logo should be square and at least 57px x 57px
+  # logo should be square and at least 58px x 58px
   # add your logo to app/assets/images
   # and change config.logo to "your-image-name.png"
   config.logo = "fuel/logo.svg"

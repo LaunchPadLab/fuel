@@ -14,11 +14,9 @@ module Fuel
       end
 
       def create
-        if Rails.version[0].to_i < 4
-          @author = Fuel::Author.new(params[:fuel_author])
-        else
-          @author = Fuel::Author.new(author_params)
-        end
+        @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_author] : author_params
+        set_start_date
+        @author = Fuel::Author.new(@params_hash)
 
         if @author.save
           redirect_to fuel.admin_authors_path, notice: "Your author was successfully #{@message}."
@@ -32,11 +30,9 @@ module Fuel
       end
 
       def update
-        if Rails.version[0].to_i < 4
-          @author.attributes = params[:fuel_author]
-        else
-          @author.attributes = author_params
-        end
+        @params_hash = Rails.version[0].to_i < 4 ? params[:fuel_author] : author_params
+        set_start_date
+        @author.attributes = @params_hash
 
         if @author.save
           redirect_to fuel.admin_authors_path, notice: "Author was updated and #{@message}"
@@ -59,8 +55,14 @@ module Fuel
 
       private
 
+        def set_start_date
+          start_date_string = @params_hash[:start_date]
+          start_datetime = start_date_string.present? ? DateTime.strptime(start_date_string, "%m/%d/%Y") : nil
+          @params_hash[:start_date] = start_datetime
+        end
+
         def author_params
-          params.require(:fuel_author).permit(:first_name, :last_name, :title, :bio, :avatar, :email, :twitter, :github, :dribbble)
+          params.require(:fuel_author).permit(:first_name, :last_name, :title, :bio, :avatar, :email, :twitter, :github, :dribbble, :start_date)
         end
 
         def find_author
@@ -68,7 +70,7 @@ module Fuel
         end
 
         def find_authors
-          @authors = Fuel::Author.order("first_name ASC")
+          @authors = Fuel::Author.order("start_date ASC")
         end
 
         def set_url

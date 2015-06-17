@@ -40,6 +40,12 @@ Fuel.configure do |config|
     }
   }
 
+  # logo should be square and at least 57px x 57px
+  # add your logo to app/assets/images
+  # and change config.logo to "your-image-name.png"
+  config.logo = "fuel/logo.svg"
+
+
   # config.facebook_app_id = "318506165696214"
 
   # Add Disqus

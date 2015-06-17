@@ -25,10 +25,12 @@ class BlogImporter
     parsed_json.each do |post|
       puts "Importing #{post['title']}"
       post.delete("id")
-      author_name = post["author"].dup
+      author_first_name = post["author"]["first_name"]
+      author_last_name = post["author"]["last_name"]
+      author_full_name = "#{author_first_name} #{author_last_name}"
       image_url = post["prioritized_featured_image_url"].present? ? post["prioritized_featured_image_url"].dup : nil
       post.delete("prioritized_featured_image_url")
-      member = author_name_to_member[author_name]
+      member = author_name_to_member[author_full_name]
       author = Fuel::Author.find_by_email(member[:email])
       post["author_id"] = author.id
       post.delete("author")
@@ -42,20 +44,18 @@ class BlogImporter
 
   def author_name_to_member
     @key_to_member ||= {
-      "BH" => ExampleAuthor::BRENDAN,
-      "Brendan" => ExampleAuthor::BRENDAN,
-      "Tom" => ExampleAuthor::TOM,
-      "TC" => ExampleAuthor::TOM,
-      "Ryan" => ExampleAuthor::RYAN,
-      "Scott" => ExampleAuthor::SCOTT,
-      "Kurt" => ExampleAuthor::KURT,
-      "Katie" => ExampleAuthor::KATIE,
-      "Scott " => ExampleAuthor::SCOTT,
-      "Monique" => ExampleAuthor::MONIQUE,
-      "Jack " => ExampleAuthor::JACK,
-      "Dave" => ExampleAuthor::DAVE
+      "Brendan Hennessy" => Fuel::Author.find_by_email("brendan@launchpadlab.com"),
+      "Tom Cullen" => Fuel::Author.find_by_email("tom@launchpadlab.com"),
+      "Ryan Francis" => Fuel::Author.find_by_email("ryan@launchpadlab.com"),
+      "Scott Weisman" => Fuel::Author.find_by_email("scott@launchpadlab.com"),
+      "Kurt Cunningham" => Fuel::Author.find_by_email("kurt@launchpadlab.com"),
+      "Katie Astrauskas" => Fuel::Author.find_by_email("katie@launchpadlab.com"),
+      "Monique Marchwiany" => Fuel::Author.find_by_email("monique@launchpadlab.com"),
+      "Jack Miller" => Fuel::Author.find_by_email("jack@launchpadlab.com"),
+      "Dave Corwin" => Fuel::Author.find_by_email("dave@launchpadlab.com")
     }
   end
+
 
   def create_authors
     [ExampleAuthor::BRENDAN, ExampleAuthor::TOM, ExampleAuthor::RYAN, ExampleAuthor::SCOTT, ExampleAuthor::KURT, ExampleAuthor::DAVE, ExampleAuthor::KATIE, ExampleAuthor::MONIQUE, ExampleAuthor::JACK].each do |member_const|

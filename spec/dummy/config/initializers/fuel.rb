@@ -29,6 +29,8 @@ Fuel.configure do |config|
     }
   }
 
+  config.logo = "fuel/icon-test.png"
+
   # Add Disqus
   #config.disqus_name = 'your_disqus_name'
 

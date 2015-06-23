@@ -1,0 +1,37 @@
+// Colors
+// ========================================
+
+// Black
+$black-base:   #333333;
+$black-dark:   #000000;
+
+// Blue
+$blue-light:   #4CCEFF;
+$blue-base:    #00ADEF;
+$blue-dark:    #0094CC;
+
+// Grey
+$grey-light:   #ECECEC;
+$grey-base:    #CCCCCC;
+$grey-dark:    #999999;
+
+// White
+$white-light:  #FAFAFA;
+$white-base:   #FFFFFF;
+$white-dark:   #F5F5F5;
+
+
+// Color List
+$colors: (
+  black-base    $black-base,
+  black-dark    $black-dark,
+  blue-light    $blue-light,
+  blue-base     $blue-base,
+  blue-dark     $blue-dark,
+  grey-light    $grey-light,
+  grey-base     $grey-base,
+  grey-dark     $grey-dark,
+  white-light   $white-light,
+  white-base    $white-base,
+  white-dark    $white-dark
+);

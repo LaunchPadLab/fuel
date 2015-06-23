@@ -1,0 +1,25 @@
+// Typography Variables
+// ========================================
+
+  // Font Families
+  $sans-serif: "proxima-nova", Helvetica, sans-serif;
+  $slab-serif: "museo-slab", Georgia, serif;
+
+  // Sizes
+  $font-size-base: 14px;
+
+  $s-giga:    60px;
+  $s-mega:    42px;
+
+  $s-alpha:   30px;
+  $s-bravo:   24px;
+  $s-charlie: 21px;
+  $s-delta:   18px;
+  $s-echo:    16px;
+  $s-foxtrot: $font-size-base;
+  $s-golf:    12px;
+  $s-hotel:   11px;
+
+  // Line Heights
+  $base-line-height: $font-size-base * 1.5;
+  $base-line-small:  $font-size-base;

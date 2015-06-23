@@ -1,0 +1,67 @@
+// Home Styles
+// ========================================
+
+
+// Variables
+$fuel-background-img:    'backgrounds/fuel.jpg';
+
+$code-block-background:  $grey-light;
+$code-block-border:      6px solid $blue-base;
+$code-block-margin:      50px 0 0;
+$code-block-padding:     20px 10px;
+
+
+// Structure
+.view {
+  width: 100%;
+}
+
+.view--left__container,
+.view--right__container {
+  float: left;
+  display: inline-block;
+  width: 50%;
+
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.view--left__container {
+  padding: 12% 50px 0;
+
+  .title {
+    @include font-type($sans-serif, normal, 300);
+    @include s-giga;
+    color: $blue-base;
+  }
+
+  .description {
+    @extend %slab-serif;
+    @include s-charlie;
+    color: $grey-dark;
+  }
+}
+
+.view--right__container {
+  @include background-size(cover);
+  @include position(fixed);
+  background-image: image-url($fuel-background-img);
+  padding: 8% 50px 0;
+}
+
+
+// Page Styles
+.code-block {
+  @include rem(margin, $code-block-margin);
+  @include rem(padding, $code-block-padding);
+  background-color: $code-block-background;
+  border-left: $code-block-border;
+
+  .code-block--text {
+    @include s-delta;
+    font-family: monospace;
+    margin: 0;
+  }
+}

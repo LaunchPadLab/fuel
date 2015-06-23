@@ -1,0 +1,26 @@
+{
+  "name": "fuel",
+  "version": "1.0.0",
+  "homepage": "https://github.com/LaunchPadLab/fuel",
+  "authors": [
+    "LaunchPad Lab"
+  ],
+  "description": "Marketing site for LaunchPad Lab's Fuel gem",
+  "main": "index.html.ern",
+  "keywords": [
+    "gem",
+    "blogging",
+    "rails"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

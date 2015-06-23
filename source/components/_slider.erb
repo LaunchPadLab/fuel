@@ -1,0 +1,30 @@
+<div class="slider">
+  <ul class="slider-options">
+    <li class="slider-link is-active-link">
+      <i class="icon--download"></i>
+      <h5 class="inverse title">Download &amp; install</h5>
+      <p class="inverse">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+      <%= image_tag 'ui/download-img.png', class: 'slider-item--image' %>
+    </li>
+    <li class="slider-link">
+      <i class="icon--create"></i>
+      <h5 class="inverse title">Create &amp; Edit Content</h5>
+      <p class="inverse">View one or compare multiple trips' profitabilities to find your best option as a business owner.</p>
+      <%= image_tag 'ui/create-img.png', class: 'slider-item--image' %>
+    </li>
+    <li class="slider-link">
+      <i class="icon--publish"></i>
+      <h5 class="inverse title">Publish Content</h5>
+      <p class="inverse">View one or compare multiple trips' profitabilities to find your best option as a business owner.</p>
+      <%= image_tag 'ui/publish-img.png', class: 'slider-item--image' %>
+    </li>
+  </ul>
+  <div class="slider--triggers">
+    <% link_to '#', id: 'slider--trigger__prev', class: 'trigger' do %>
+      <%= image_tag 'icons/arrow-icon-prev.svg' %>
+    <% end %>
+    <% link_to '#', id: 'slider--trigger__next', class: 'trigger' do %>
+      <%= image_tag 'icons/arrow-icon-next.svg' %>
+    <% end %>
+  </div>
+</div>

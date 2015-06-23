@@ -7,7 +7,7 @@ $('#slider--trigger__next').on('click', function (e) {
   if (nextli.length == 0) {
     nextli = currli.siblings(':first');
   }
-  currli.removeClass('is-active-link slide-left slide-right');
+  currli.removeClass('is-active-link');
   nextli.addClass('is-active-link slide-left');
 });
 
@@ -19,6 +19,6 @@ $('#slider--trigger__prev').on('click', function (e) {
   if (prevli.length == 0) {
     prevli = currli.siblings(':last');
   }
-  currli.removeClass('is-active-link slide-right slide-left');
+  currli.removeClass('is-active-link');
   prevli.addClass('is-active-link slide-right');
 });

@@ -36,14 +36,14 @@ $slider-trigger-icon-width:  15px;
 
   &.is-active-link {
     display: block;
-  }
 
-  &.slide-left {
-    @include animation(fade-in-left 0.75s ease-in);
-  }
+    .title,
+    p,
+    i { @include animation(fade-in 1.4s ease-in); }
 
-  &.slide-right {
-    @include animation(fade-in-right 0.75s ease-in);
+    .slider-item--image {
+      @include animation(fade-in-up 0.8s ease-in);
+    }
   }
 
   .title {

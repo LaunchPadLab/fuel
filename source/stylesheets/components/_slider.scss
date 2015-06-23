@@ -71,6 +71,7 @@ $slider-trigger-icon-width:  15px;
 .slider-item--image {
   @include position(absolute, null 0 -10% 0);
   margin: 0 auto;
+  min-width: 500px;
   width: $slider-img-width;
 }
 

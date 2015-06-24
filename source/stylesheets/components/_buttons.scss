@@ -61,12 +61,22 @@
 
 // Button Outline
 .button--outline {
-  border: 1px solid $white-base;
   border-radius: 30em;
+  border: 1px solid $blue-base;
 
   &:hover {
-    background-color: $white-base;
+    background-color: $blue-base;
+    border: 1px solid $blue-base;
+    color: $white-base;
+  }
+
+  @include media($tablet-landscape) {
     border: 1px solid $white-base;
-    color: $blue-base;
+
+    &:hover {
+      background-color: $white-base;
+      border: 1px solid $white-base;
+      color: $blue-base;
+    }
   }
 }

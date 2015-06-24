@@ -13,18 +13,32 @@ $code-block-padding:     20px 10px;
 
 // Structure
 .view {
+  @include rem(margin-top, 75px);
   width: 100%;
+  @include media($tablet-landscape) {
+    margin: 0;
+  }
 }
 
 .view--left__container,
 .view--right__container {
-  float: left;
-  display: inline-block;
-  width: 50%;
+  width: 100%;
+  padding: 0 30px;
+  text-align: center;
+
+  @include media($tablet-landscape) {
+    float: left;
+    display: inline-block;
+    text-align: left;
+    width: 50%;
+  }
 
   .content {
-    max-width: 800px;
-    margin: 0 auto;
+
+    @include media($tablet-landscape) {
+      max-width: 800px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -33,22 +47,35 @@ $code-block-padding:     20px 10px;
 
   .title {
     @include font-type($sans-serif, normal, 300);
-    @include s-giga;
+    @include s-alpha;
     color: $blue-base;
+
+    @include media($tablet-landscape) { @include s-mega; }
+    @include media($tablet-landscape) { @include s-giga; }
   }
 
   .description {
     @extend %slab-serif;
-    @include s-charlie;
+    @include s-delta;
     color: $grey-dark;
+
+    @include media($tablet-landscape) { @include s-charlie; }
   }
 }
 
 .view--right__container {
   @include background-size(cover);
-  @include position(fixed);
+  @include rem(height, 450px);
+  @include rem(margin-top, 50px);
   background-image: image-url($fuel-background-img);
-  padding: 8% 50px 0;
+  overflow: hidden;
+
+  @include media($tablet-landscape) {
+    @include position(fixed);
+    margin: 0;
+    padding: 8% 50px 0;
+    height: 100%;
+  }
 }
 
 

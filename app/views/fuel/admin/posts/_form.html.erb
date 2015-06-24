@@ -75,6 +75,7 @@
         <div data-wysihtml5-dialog="insertImage" style="display: none;">
           <label>
             Image:
+            <%= file_field_tag :image, id: "image-upload", data: { path: fuel.admin_posts_image_path }  %>
             <input data-wysihtml5-dialog-field="src" value="http://">
           </label>
           <label>

@@ -18,5 +18,5 @@
 //= require pickadate/picker.date
 //= require fuel/datepicker
 //= require fuel/posts
-//= require froala_editor.min.js
-//= require fuel/rich-text
+//= require wysihtml-toolbar
+//= require parser_rules/advanced_and_extended

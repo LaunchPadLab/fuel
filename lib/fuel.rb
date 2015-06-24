@@ -11,7 +11,7 @@ require "paperclip"
 require "bourbon"
 require "neat"
 require "pickadate-rails"
-require "wysiwyg-rails"
+require "wysihtml/rails"
 
 module Fuel
 

@@ -17,5 +17,17 @@
     </main>
     <%= javascript_include_tag "fuel/application" %>
     <%= javascript_include_tag "application" %>
+    <script>
+    $(function() {
+      $body = $("body");
+
+      if ($("body").hasClass("posts-controller")){
+         var editor = new wysihtml5.Editor("fuel_post_content", { // id of textarea element
+            toolbar:      "toolbar", // id of toolbar element
+            parserRules:  wysihtml5ParserRules,
+         });
+      };
+    });
+    </script>
   </body>
 </html>

@@ -6,6 +6,7 @@
        var editor = new wysihtml5.Editor("fuel_post_content", { // id of textarea element
           toolbar:      "toolbar", // id of toolbar element
           parserRules:  wysihtml5ParserRules,
+          stylesheets: "<%= stylesheet_path('fuel/wysihtml') %>"
        });
 
       $('.directUpload').each(function(i, elem) {

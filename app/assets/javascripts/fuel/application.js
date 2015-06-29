@@ -18,7 +18,6 @@
 //= require pickadate/picker.date
 //= require fuel/datepicker
 //= require fuel/posts
-//= require wysihtml-toolbar
-//= require parser_rules/advanced_and_extended
+//= require fuel/wysihtml5x-toolbar.min.js
+//= require fuel/advanced_and_extended
 //= require jquery-fileupload/basic
-//= require fuel/modal

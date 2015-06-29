@@ -11,7 +11,6 @@ require "paperclip"
 require "bourbon"
 require "neat"
 require "pickadate-rails"
-require "wysihtml/rails"
 require "aws-sdk"
 require "jquery-fileupload-rails"
 require "fuel/aws"
@@ -21,6 +20,7 @@ module Fuel
   def self.configure(&block)
     block.call(configuration)
     configure_aws
+    Rails.application.config.assets.precompile += %w( fuel/wysihtml.css )
   end
 
   def self.configure_aws

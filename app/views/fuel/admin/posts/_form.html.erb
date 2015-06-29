@@ -52,55 +52,47 @@
         <li class="editor-button" data-wysihtml5-command="italic" title="CTRL+I"><i class="fa fa-italic"></i></li>
         <li class="editor-button" data-wysihtml5-command="insertUnorderedList"><i class="fa fa-list-ul"></i></li>
         <li class="editor-button" data-wysihtml5-command="insertOrderedList"><i class="fa fa-list-ol"></i></li>
-        <li class="editor-button trigger-modal" data-wysihtml5-command="createLink"><i class="fa fa-link"></i></li>
-        <li class="editor-button trigger-modal" data-wysihtml5-command="insertImage"><i class="fa fa-image"></i></li>
+        <li class="editor-button" data-wysihtml5-command="createLink"><i class="fa fa-link"></i></li>
+        <li class="editor-button" data-wysihtml5-command="insertImage"><i class="fa fa-image"></i></li>
         <li class="editor-button" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2"><i class="fa fa-header"></i></li>
         <li class="editor-button" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p"><i class="fa fa-paragraph"></i></li>
-        <li class="editor-button" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p"><i class="fa fa-quote-left"></i></li>
+        <li class="editor-button" data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="blockquote"><i class="fa fa-quote-left"></i></li>
         <li class="editor-button" data-wysihtml5-command="formatCode" data-wysihtml5-command-value="language-html"><i class="fa fa-code"></i></li>
         <li class="editor-button" data-wysihtml5-command="undo"><i class="fa fa-undo"></i></li>
         <li class="editor-button" data-wysihtml5-action="change_view">HTML</li>
-        <label id="createLink-trigger" for="create-link-modal" style="display:none;"></label>
-        <div data-wysihtml5-dialog="createLink" class="modal">
-          <input class="modal-state" id="create-link-modal" type="checkbox" />
-          <div class="modal-window">
-            <div class="modal-container">
-              <header class="modal-header">
-                <h3>Create Link</h3>
-                <label class="modal-close" for="create-link-modal"></label>
-              </header>
-              <div class="modal-inner">
-                <div class="modal-body">
-                  <label>
-                    Link:
-                    <input data-wysihtml5-dialog-field="href" value="http://">
-                  </label>
-                  <a data-wysihtml5-dialog-action="save" class="save-button">OK</a>&nbsp;<a data-wysihtml5-dialog-action="cancel">Cancel</a>
-                </div>
-              </div>
-              <footer class="modal-footer">
-                <%= link_to 'Cancel', '#', data: { wysihtml5_dialog_action: "cancel" }, class: 'link-danger modal-link' %>
-                <%= link_to 'Insert', '#', data: { wysihtml5_dialog_action: "save" }, class: 'link-primary save-button modal-link' %>
-              </footer>
-            </div>
+
+        <div data-wysihtml5-dialog="createLink" style="display: none;" class="dropdown-window dropdown--createLink">
+          <div class="dropdown-body">
+            <input data-wysihtml5-dialog-field="href" value="http://">
           </div>
+          <footer class="dropdown-footer">
+            <a data-wysihtml5-dialog-action="save" class="save-link button button--primary button--small">Insert</a>
+          </footer>
         </div>
 
-        <div data-wysihtml5-dialog="insertImage" style="display: none;">
-          <label>
-            Image:
-            <%= file_field_tag :image, id: "image-upload", class: "directUpload"  %>
-            <input data-wysihtml5-dialog-field="src" value="http://" id="imageUrl">
-          </label>
-          <label>
-            Align:
-            <select data-wysihtml5-dialog-field="className">
-              <option value="">default</option>
-              <option value="wysiwyg-float-left">left</option>
-              <option value="wysiwyg-float-right">right</option>
-            </select>
-          </label>
-          <a data-wysihtml5-dialog-action="save">OK</a>&nbsp;<a data-wysihtml5-dialog-action="cancel">Cancel</a>
+        <div data-wysihtml5-dialog="insertImage" style="display: none;" class="dropdown-window dropdown--image">
+          <div class="dropdown-body">
+            <label>
+              Upload Image:
+              <%= file_field_tag :image, id: "image-upload", class: "directUpload"  %>
+            </label>
+            <label>
+              Image URL:
+              <input data-wysihtml5-dialog-field="src" value="http://" id="imageUrl">
+            </label>
+            <label>
+              Align:
+              <select data-wysihtml5-dialog-field="className">
+                <option value="">default</option>
+                <option value="wysiwyg-float-left">left</option>
+                <option value="wysiwyg-float-right">right</option>
+              </select>
+            </label>
+          </div>
+          <footer class="dropdown-footer">
+            <a data-wysihtml5-dialog-action="save" class="save-link button button--primary button--small">Insert</a>
+            <a data-wysihtml5-dialog-action="cancel" class="button button--danger button--small">Cancel</a>
+          </footer>
         </div>
       </ul>
       <%= f.text_area :content, class: 'post' %>

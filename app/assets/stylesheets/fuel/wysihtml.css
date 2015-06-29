@@ -1,33 +1,3 @@
-$editor-border: thin solid $grey-base;
-
-#toolbar {
-  @include clearfix;
-  background-color: $white-dark;
-  border: $editor-border;
-  border-bottom: none;
-  padding: 0;
-  margin: 0;
-}
-
-.editor-button{
-  @include rem(padding, 5px 10px);
-  display: inline-block;
-  margin: 0;
-
-  &:nth-child(even) {
-    border-left: $editor-border;
-    border-right: $editor-border;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  label {
-
-  }
-}
-
 .wysiwyg-font-size-smaller {
   font-size: smaller;
 }

@@ -1,0 +1,71 @@
+<script>
+  $(function() {
+    $body = $("body");
+
+    if ($("body").hasClass("posts-controller")){
+       var editor = new wysihtml5.Editor("fuel_post_content", { // id of textarea element
+          toolbar:      "toolbar", // id of toolbar element
+          parserRules:  wysihtml5ParserRules,
+          stylesheets: "<%= stylesheet_path('fuel/wysihtml') %>"
+       });
+
+      $('.directUpload').each(function(i, elem) {
+        var fileInput    = $(elem);
+        // var form         = $(fileInput.parents('form:first'));
+        var submitButton = $(".save-button");
+        var progressBar  = $("<div class='bar'></div>");
+        var barContainer = $("<div class='progress'></div>").append(progressBar);
+        // var submitUrl = fileInput.data("url");
+        // var formData = fileInput.data("formData");
+        var submitUrl = '<%= s3_direct_post.url %>';
+        var formData = JSON.parse('<%= s3_direct_post.fields.to_json.html_safe %>');
+
+        fileInput.after(barContainer);
+        fileInput.fileupload({
+          fileInput:       fileInput,
+          url:             submitUrl,
+          type:            'POST',
+          autoUpload:       true,
+          formData:         formData,
+          paramName:        'file', // S3 does not like nested name fields i.e. name="user[avatar_url]"
+          dataType:         'XML',  // S3 returns XML if success_action_status is set to 201
+          replaceFileInput: false,
+          progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            progressBar.css('width', progress + '%')
+          },
+          start: function (e) {
+            submitButton.prop('disabled', true);
+
+            progressBar.
+              css('background', 'green').
+              css('display', 'block').
+              css('width', '0%').
+              text("Loading...");
+          },
+          done: function(e, data) {
+            submitButton.prop('disabled', false);
+            progressBar.text("Uploading done");
+
+            // extract key and generate URL from response
+            var key   = $(data.jqXHR.responseXML).find("Key").text();
+
+            var newUrl   = '//<%= @s3_direct_post.url.host %>/' + key;
+            console.log(newUrl);
+
+            // set url in form
+            $("#imageUrl").val(newUrl);
+          },
+          fail: function(e, data) {
+            submitButton.prop('disabled', false);
+
+            progressBar.
+              css("background", "red").
+              text("Failed");
+          }
+        });
+      });
+    };
+
+  });
+</script>

@@ -67,28 +67,46 @@ config.logo = "your-image.png"
 ```
 
 
-Paperclip
+Paperclip + S3
 --------------------
 
-Paperclip ships with three storage options: File Storage, S3, or Fog. We recommend using S3. To do so, add the following to your config/application.rb file:
+Fuel ships with Paperclip and S3 for uploading images to your blog posts. To get these working, all you need to do is pass the right credentials to the below variables defined in config/initializers/fuel.rb:
 
 ```ruby
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['AWS_BUCKET'],
-      :access_key_id => ENV['AWS_ACCESS_KEY'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-    }
-  }
+  # AWS S3 SETTINGS
+  config.aws_bucket = ENV['AWS_BUCKET']
+  config.aws_access_key = ENV["AWS_ACCESS_KEY"]
+  config.aws_secret_access_key = ENV["AWS_SECRET_ACCESS_KEY"]
 ```
 
-Make sure to also add your environment variables to config/application.yml using something like [Figaro](https://github.com/laserlemon/figaro):
+We recommend using [Figaro](https://github.com/laserlemon/figaro) to properly set these environment variables:
 
 ```yml
+# config/application.yml
+
 AWS_ACCESS_KEY: your-s3-access-key
 AWS_SECRET_ACCESS_KEY: your-s3-secret-key
-AWS_BUCKET: your-s3-bucket
+
+development:
+  AWS_BUCKET: your-development-s3-bucket
+production:
+  AWS_BUCKET: your-production-s3-bucket
+```
+
+
+In order for the uploads to work locally, you will need to change your CORS settings on your development S3 bucket (in Amazon S3's admin console). You can find the file in: your-bucket => Properties => Permissions => Edit CORS Configuration
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+  <CORSRule>
+    <AllowedOrigin>http://localhost:3000</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <AllowedMethod>POST</AllowedMethod>
+    <AllowedMethod>PUT</AllowedMethod>
+    <AllowedHeader>*</AllowedHeader>
+  </CORSRule>
+</CORSConfiguration>
 ```
 
 

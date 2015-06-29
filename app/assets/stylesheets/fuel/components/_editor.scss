@@ -1,0 +1,84 @@
+
+$editor-border: thin solid $grey-base;
+
+#toolbar {
+  @include clearfix;
+  background-color: $white-dark;
+  border: $editor-border;
+  border-bottom: none;
+  padding: 0;
+  position: relative;
+  margin: 0;
+}
+
+.editor-button{
+  @include rem(padding, 5px 12px);
+  color: $black-base;
+  display: inline-block;
+  margin: 0;
+
+  // &:nth-child(even) {
+    // border-left: $editor-border;
+    // border-right: $editor-border;
+  // }
+
+  &:hover, &.wysihtml5-command-dialog-opened {
+    cursor: pointer;
+    color: $blue-base;
+  }
+
+}
+
+.dropdown-window {
+  background-color: $white-base;
+  border: thin solid $grey-dark;
+  position: absolute;
+  width: 400px;
+}
+
+.dropdown-body {
+  padding: 20px;
+  border-bottom: thin solid $grey-dark;
+}
+
+.dropdown-footer {
+  background-color: $white-dark;
+  height: 48px;
+  padding: 10px 22px;
+  font-weight: bold;
+
+  a {
+    cursor: pointer;
+    float: right;
+  }
+
+  .button {
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
+
+}
+
+
+.dropdown--createLink {
+  left: 100px;
+}
+
+.dropdown--image {
+  left: 200px;
+
+  label {
+    margin-top: 20px;
+  }
+
+  .progress {
+    max-width: 600px;
+    margin:    0.2em 0 0.2em 0;
+  }
+
+  .progress .bar {
+    @include rem(padding, 5px 10px);
+    color:   white;
+    display: none;
+  }
+}

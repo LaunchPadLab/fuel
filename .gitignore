@@ -10,3 +10,4 @@ spec/codeclimate_env.rb
 spec/dummy/log/development.log
 spec/dummy/public/*
 coverage/*
+build/

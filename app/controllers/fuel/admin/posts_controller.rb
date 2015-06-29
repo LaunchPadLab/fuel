@@ -58,6 +58,10 @@ module Fuel
       def show
       end
 
+      def upload_image
+        raise params.inspect
+      end
+
       private
 
         def post_params

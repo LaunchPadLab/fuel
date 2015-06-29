@@ -18,5 +18,6 @@
 //= require pickadate/picker.date
 //= require fuel/datepicker
 //= require fuel/posts
-//= require froala_editor.min.js
-//= require fuel/rich-text
+//= require fuel/wysihtml5x-toolbar.min.js
+//= require fuel/advanced_and_extended
+//= require jquery-fileupload/basic

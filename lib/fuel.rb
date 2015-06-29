@@ -11,12 +11,21 @@ require "paperclip"
 require "bourbon"
 require "neat"
 require "pickadate-rails"
-require "wysiwyg-rails"
+require "aws-sdk"
+require "jquery-fileupload-rails"
+require "fuel/aws"
 
 module Fuel
 
   def self.configure(&block)
     block.call(configuration)
+    configure_aws
+    Rails.application.config.assets.precompile += %w( fuel/wysihtml.css )
+  end
+
+  def self.configure_aws
+    AWS.config( access_key_id:     configuration.aws_access_key,
+                secret_access_key: configuration.aws_secret_access_key )
   end
 
   def self.configuration

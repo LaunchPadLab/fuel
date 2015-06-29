@@ -104,3 +104,8 @@
     margin: 0 auto;
   }
 }
+
+.button--small {
+  @include rem(padding, 5px 8px);
+  @include s-hotel;
+}

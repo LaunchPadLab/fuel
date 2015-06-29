@@ -81,6 +81,26 @@ Paperclip ships with three storage options: File Storage, S3, or Fog. We recomme
       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
+
+  AWS.config(access_key_id:     ENV['AWS_ACCESS_KEY'],
+             secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'] )
+
+  S3_BUCKET = AWS::S3.new.buckets[ENV['AWS_BUCKET']]
+```
+
+In order for the uploads to work locally, you will need to change your CORS settings on your development S3 bucket (in Amazon S3's admin console). You can find the file in: your-bucket => Properties => Permissions => Edit CORS Configuration
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/">
+  <CORSRule>
+    <AllowedOrigin>http://localhost:3000</AllowedOrigin>
+    <AllowedMethod>GET</AllowedMethod>
+    <AllowedMethod>POST</AllowedMethod>
+    <AllowedMethod>PUT</AllowedMethod>
+    <AllowedHeader>*</AllowedHeader>
+  </CORSRule>
+</CORSConfiguration>
 ```
 
 Make sure to also add your environment variables to config/application.yml using something like [Figaro](https://github.com/laserlemon/figaro):

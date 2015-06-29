@@ -54,4 +54,9 @@ Fuel.configure do |config|
   # Add Twitter
   #config.twitter = true
 
+  # AWS S3 SETTINGS
+  config.aws_bucket = ENV['AWS_BUCKET']
+  config.aws_access_key = ENV["AWS_ACCESS_KEY"]
+  config.aws_secret_access_key = ENV["AWS_SECRET_ACCESS_KEY"]
+
 end

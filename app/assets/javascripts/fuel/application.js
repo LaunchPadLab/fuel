@@ -20,4 +20,4 @@
 //= require fuel/posts
 //= require wysihtml-toolbar
 //= require parser_rules/advanced_and_extended
-//= require fuel/rich-text
+//= require jquery-fileupload/basic

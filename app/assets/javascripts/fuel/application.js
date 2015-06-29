@@ -21,3 +21,4 @@
 //= require wysihtml-toolbar
 //= require parser_rules/advanced_and_extended
 //= require jquery-fileupload/basic
+//= require fuel/modal

@@ -11,3 +11,4 @@ spec/dummy/log/development.log
 spec/dummy/public/*
 coverage/*
 build/
+spec/dummy/config/application.yml

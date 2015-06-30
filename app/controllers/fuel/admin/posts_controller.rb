@@ -67,6 +67,7 @@ module Fuel
 
         def update_published_at
           published_at_string = @params_hash[:published_at]
+          return unless published_at_string.present?
           published_at_datetime = DateTime.strptime(published_at_string, "%m/%d/%Y")
           @params_hash[:published_at] = published_at_datetime
         end

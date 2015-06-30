@@ -21,6 +21,9 @@ include Fuel
 
 RSpec.configure do |config|
 
+  config.before :each, type: :controller do
+    controller.class.include Fuel::Engine.routes.url_helpers
+  end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

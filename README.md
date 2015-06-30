@@ -7,6 +7,14 @@ By [LaunchPad Lab](http://launchpadlab.com).
 
 Stop developing Rails blogs and start writing your actual blog posts with this dead simple blogging engine for Rails.
 
+Overview
+-------------------
+
+Fuel is still in beta but is actively being used in several production environments. The schema is very simple and consists of Posts and Authors.
+
+
+
+
 Installation
 --------------------
 
@@ -22,6 +30,8 @@ Terminal:
 bundle
 rails g fuel:install
 ```
+
+See below for instructions on how to get image uploading wired up as blogging is no fun without pictures.
 
 
 Basic Usage
@@ -67,10 +77,10 @@ config.logo = "your-image.png"
 ```
 
 
-Paperclip + S3
+Image Uploading
 --------------------
 
-Fuel ships with Paperclip and S3 for uploading images to your blog posts. To get these working, all you need to do is pass the right credentials to the below variables defined in config/initializers/fuel.rb:
+Fuel ships with Paperclip and S3 for uploading images for your blog posts and authors. To get these working, all you need to do is pass the right credentials to the below variables defined in config/initializers/fuel.rb:
 
 ```ruby
   # AWS S3 SETTINGS
@@ -94,7 +104,7 @@ production:
 ```
 
 
-In order for the uploads to work locally, you will need to change your CORS settings on your development S3 bucket (in Amazon S3's admin console). You can find the file in: your-bucket => Properties => Permissions => Edit CORS Configuration
+In order for the uploads to work, you will need to change your CORS settings on each of your S3 buckets in Amazon S3's admin console (i.e. both your development and production and possibly staging if you have that environment as well). You can find the file in: your-bucket => Properties => Permissions => Edit CORS Configuration
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>

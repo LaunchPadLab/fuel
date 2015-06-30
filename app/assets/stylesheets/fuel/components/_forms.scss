@@ -11,7 +11,11 @@ label {
   text-transform: uppercase;
 }
 
-fieldset { @include rem(margin-bottom, 30px); }
+fieldset {
+  @include rem(margin-bottom, 30px);
+
+  &.small { @include rem(margin-bottom, 15px);  }
+}
 
 // Inputs
 #{$all-text-inputs},
@@ -92,4 +96,17 @@ select{
 a.delete-post {
   float: right;
   @include s-golf;
+}
+
+
+// Progresss Bars
+.progress {
+  @include rem(margin, 10px 0);
+  width: 100%;
+}
+
+.progress .bar {
+  @include rem(padding, 5px 10px);
+  color: $white-base;
+  display: none;
 }

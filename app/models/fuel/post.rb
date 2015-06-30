@@ -18,10 +18,11 @@ module Fuel
     end
     validates_attachment_content_type :featured_image, :content_type => /\Aimage\/.*\Z/
 
-    validates_presence_of :title, :content, :author_id, if: :is_published
+    validates_presence_of :title, :content, :author_id, :published_at, if: :is_published
     paginates_per Fuel.configuration.paginates_per.to_i
 
-    scope :recent_published_posts, -> { where(published: true).order("created_at DESC") }
+    scope :recent_published_posts, -> { published.recent }
+    scope :published, -> { where(published: true) }
     scope :recent, -> { order("created_at DESC") }
 
     def s3_credentials

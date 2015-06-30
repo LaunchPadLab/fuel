@@ -38,5 +38,12 @@ Gem::Specification.new do |s|
   s.add_development_dependency "better_errors"
   s.add_development_dependency "binding_of_caller"
   s.add_development_dependency "figaro"
+  s.add_development_dependency "faker"
+  s.add_development_dependency "pry-nav"
+  s.add_development_dependency "pry-rails"
+  s.add_development_dependency "pry-stack_explorer"
+  s.add_development_dependency "pry-theme"
+  s.add_development_dependency "shoulda-matchers"
+  s.add_development_dependency "rspec-collection_matchers"
 
 end

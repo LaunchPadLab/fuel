@@ -1,42 +1,62 @@
 require 'spec_helper'
 
 module Fuel
-  describe Post do
-    it "is valid with a title, author, tag, content, and published" do
-      post = build(:post)
-      expect(post).to be_valid
+  describe Post, type: :model do
+
+    context "draft" do
+      subject { build(:post) }
+      it { is_expected.to be_valid }
     end
 
-    required_attributes = [:title, :author, :content]
-    required_attributes.each do |attr|
-      it "is invalid without a #{attr}" do
-        post = build(:post, attr => nil)
-        expect(post).to have(1).errors_on(attr)
-      end
-      it "is valid without a #{attr} when not published (i.e. saved as a draft)" do
-        post = build(:post, attr => nil, published: false)
-        expect(post).to have(0).errors_on(attr)
+    context "slug" do
+      subject { create(:post) }
+
+      it "is expected to generate a slug" do
+        expect(subject.slug.length).to be > 0
       end
     end
 
-    describe "Scope recent published posts" do
+    context "published" do
+      subject { build(:published_post) }
+
+      it { is_expected.to be_valid }
+      it { is_expected.to validate_presence_of(:title) }
+      it { is_expected.to validate_presence_of(:content) }
+      it { is_expected.to validate_presence_of(:author_id) }
+      it { is_expected.to validate_presence_of(:published_at) }
+      it { is_expected.to belong_to(:author) }
+    end
+
+
+    describe "scopes" do
+
+      let(:published_posts) { create_list(:published_post, number_posts) }
+      let(:number_posts) { 3 }
+      let(:draft) { create(:post) }
+
       before(:each) do
-        @num_published_posts = 3
-        @num_published_posts.times do |post|
-          create(:post)
+        published_posts
+      end
+
+      context "published" do
+        subject(:published) { Fuel::Post.published }
+
+        it "returns an array of posts" do
+          expect(published.count).to be > (0)
         end
-        create(:unpublished_post)
-        @posts = Fuel::Post.recent_published_posts
+
+        it "only displays published posts" do
+          expect(published.count).to eq(number_posts)
+        end
       end
-      it "returns an array of posts" do
-        expect(@posts.count).to be > (0)
-      end
-      it "only displays published posts" do
-        expect(@posts.count).to eq(@num_published_posts)
-      end
-      it "sorts the posts by created_at datetime" do
-        is_ordered = @posts[0].created_at > @posts[1].created_at && @posts[1].created_at > @posts[2].created_at
-        expect(is_ordered).to be_true
+
+      context "recent" do
+        subject(:recent) { Fuel::Post.recent }
+
+        it "sorts the posts by created_at datetime" do
+          is_ordered = recent[0].created_at > recent[1].created_at && recent[1].created_at > recent[2].created_at
+          expect(is_ordered).to be_truthy
+        end
       end
     end
 

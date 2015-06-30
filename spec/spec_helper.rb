@@ -9,10 +9,18 @@ require 'factory_girl'
 require 'factories'
 require 'database_cleaner'
 require 'rspec/autorun'
+require 'pry-nav'
+require 'pry-rails'
+require 'pry-stack_explorer'
+require 'pry-theme'
+require 'shoulda-matchers'
+require 'rspec/collection_matchers'
+
 include Fuel
-ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+# ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

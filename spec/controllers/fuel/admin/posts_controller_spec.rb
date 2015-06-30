@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Fuel::Admin::PostsController do
+describe Fuel::Admin::PostsController, type: :controller do
 
   routes { Fuel::Engine.routes }
 
@@ -11,7 +11,7 @@ describe Fuel::Admin::PostsController do
 
   describe 'GET #index' do
     it "populates an array of posts" do
-      get :index
+      get :index, { use_route: Fuel::Engine.admin_posts_path }
       expect(assigns(:posts).count).to eq(Post.count)
     end
     it "renders the :index view" do

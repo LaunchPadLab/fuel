@@ -12,7 +12,7 @@ Overview
 
 Fuel is still in beta but is actively being used in several production environments. The schema is very simple and consists of Posts and Authors.
 
-
+Screenshots are available here: http://learn.launchpadlab.com/fuel/
 
 
 Installation

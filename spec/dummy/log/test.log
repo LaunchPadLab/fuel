@@ -15309,3 +15309,576 @@ Processing by Fuel::Admin::PostsController#destroy as HTML
 Redirected to http://test.host/blog/admin/posts
 Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
   [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (1.7ms)[0m  [1mDELETE FROM "fuel_authors";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'fuel_authors';[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM "fuel_posts";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM sqlite_sequence where name = 'fuel_posts';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "f9209365-96bc-4994-b0a3-b8655aaa59f7"], ["created_at", "2015-06-30 05:07:55.493563"], ["updated_at", "2015-06-30 05:07:55.493563"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "29acaff9-7519-40d6-be2a-0dca23013d0a"], ["created_at", "2015-06-30 05:07:55.498934"], ["updated_at", "2015-06-30 05:07:55.498934"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "42b9916b-2107-49c9-b6b0-6609d7942af5"], ["created_at", "2015-06-30 05:07:55.502143"], ["updated_at", "2015-06-30 05:07:55.502143"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "502c1c34-e6eb-4870-b32d-290d51bc5f0a"], ["created_at", "2015-06-30 05:07:55.504213"], ["updated_at", "2015-06-30 05:07:55.504213"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "1daf0af9-5c94-4822-b53d-d1bb2a4e1465"], ["created_at", "2015-06-30 05:07:55.505949"], ["updated_at", "2015-06-30 05:07:55.505949"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Fuel::Admin::PostsController#index as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "4cb881f9-061b-4ec0-81f4-7f56307eb4eb"], ["created_at", "2015-06-30 05:07:55.526602"], ["updated_at", "2015-06-30 05:07:55.526602"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "08bd4af6-25ac-48a0-96d1-9cacdb20d7e3"], ["created_at", "2015-06-30 05:07:55.528598"], ["updated_at", "2015-06-30 05:07:55.528598"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "3e05654d-7152-454e-b604-479bab9b1a84"], ["created_at", "2015-06-30 05:07:55.530530"], ["updated_at", "2015-06-30 05:07:55.530530"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "82b055b0-4afb-4dc9-b445-a6370830b454"], ["created_at", "2015-06-30 05:07:55.532211"], ["updated_at", "2015-06-30 05:07:55.532211"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "4c0b6876-d5a4-4d76-bb59-8b022199649d"], ["created_at", "2015-06-30 05:07:55.533924"], ["updated_at", "2015-06-30 05:07:55.533924"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Fuel::Admin::PostsController#index as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/index.html.erb within layouts/fuel/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "5f645729-9533-4721-97b5-04a5050aa6f2"], ["created_at", "2015-06-30 05:07:55.540910"], ["updated_at", "2015-06-30 05:07:55.540910"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "942693f6-e1e6-45c6-bc44-abb7d0838d5c"], ["created_at", "2015-06-30 05:07:55.542870"], ["updated_at", "2015-06-30 05:07:55.542870"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "7cf933ea-c8e6-420c-b61f-e4af3431c646"], ["created_at", "2015-06-30 05:07:55.544671"], ["updated_at", "2015-06-30 05:07:55.544671"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "6ea1f511-9688-4bb3-99ff-ea2f4562de15"], ["created_at", "2015-06-30 05:07:55.546287"], ["updated_at", "2015-06-30 05:07:55.546287"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "47da2d44-c741-4754-9000-7cac6c5c710d"], ["created_at", "2015-06-30 05:07:55.547893"], ["updated_at", "2015-06-30 05:07:55.547893"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.erb within layouts/fuel/application (0.2ms)
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "85f3b69c-102b-430e-b410-fd7e3818af3a"], ["created_at", "2015-06-30 05:07:55.557651"], ["updated_at", "2015-06-30 05:07:55.557651"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "3d00acd8-5a6e-4fbd-9149-d78aa54189e4"], ["created_at", "2015-06-30 05:07:55.560266"], ["updated_at", "2015-06-30 05:07:55.560266"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "5e809847-c71c-4c85-8110-7b694ff51a5e"], ["created_at", "2015-06-30 05:07:55.562315"], ["updated_at", "2015-06-30 05:07:55.562315"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "8dc50d90-e315-4ef6-a800-d0d20f67f432"], ["created_at", "2015-06-30 05:07:55.563945"], ["updated_at", "2015-06-30 05:07:55.563945"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "be2d0fae-494e-4fe7-9ee3-10ba7f7e0704"], ["created_at", "2015-06-30 05:07:55.565674"], ["updated_at", "2015-06-30 05:07:55.565674"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Fuel::Admin::PostsController#new as HTML
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.erb within layouts/fuel/application (0.3ms)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "2062f34e-3987-471f-93ce-560486803b21"], ["created_at", "2015-06-30 05:07:55.572701"], ["updated_at", "2015-06-30 05:07:55.572701"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "304e013b-76d2-4983-bc52-0fb0c9415204"], ["created_at", "2015-06-30 05:07:55.575097"], ["updated_at", "2015-06-30 05:07:55.575097"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "a667f608-989a-45f0-9c1d-48ef8735f547"], ["created_at", "2015-06-30 05:07:55.579796"], ["updated_at", "2015-06-30 05:07:55.579796"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "6a9b05ea-29ec-4709-9015-aae154f928fb"], ["created_at", "2015-06-30 05:07:55.583661"], ["updated_at", "2015-06-30 05:07:55.583661"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "5fda343e-b5c0-4628-abef-6179d9aeff29"], ["created_at", "2015-06-30 05:07:55.587724"], ["updated_at", "2015-06-30 05:07:55.587724"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "b387ddc4-3da1-44b5-b19f-2c625dffff51"], ["created_at", "2015-06-30 05:07:55.591062"], ["updated_at", "2015-06-30 05:07:55.591062"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"b387ddc4-3da1-44b5-b19f-2c625dffff51"}
+  [1m[36mFuel::Post Load (0.2ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "b387ddc4-3da1-44b5-b19f-2c625dffff51"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (0.4ms)
+Completed 200 OK in 12ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "40fc6b5c-1f9b-4452-91ec-b26fa740e32f"], ["created_at", "2015-06-30 05:07:55.610032"], ["updated_at", "2015-06-30 05:07:55.610032"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "06517b49-2437-4ab3-9118-778caa56d415"], ["created_at", "2015-06-30 05:07:55.612173"], ["updated_at", "2015-06-30 05:07:55.612173"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "cbeb3419-0536-44c8-897f-36fcce6177d5"], ["created_at", "2015-06-30 05:07:55.614060"], ["updated_at", "2015-06-30 05:07:55.614060"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "2420b966-9407-4ab6-9762-12828bea7381"], ["created_at", "2015-06-30 05:07:55.615747"], ["updated_at", "2015-06-30 05:07:55.615747"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "f592ec1c-508f-43f9-a139-922e43a8d403"], ["created_at", "2015-06-30 05:07:55.617647"], ["updated_at", "2015-06-30 05:07:55.617647"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "ee0a02cd-bb4c-4e22-95c9-f7be5491f020"], ["created_at", "2015-06-30 05:07:55.620590"], ["updated_at", "2015-06-30 05:07:55.620590"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Fuel::Admin::PostsController#edit as HTML
+  Parameters: {"id"=>"ee0a02cd-bb4c-4e22-95c9-f7be5491f020"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "ee0a02cd-bb4c-4e22-95c9-f7be5491f020"]]
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "ab54b01b-f668-46b3-b5e7-43c44899480d"], ["created_at", "2015-06-30 05:07:55.629648"], ["updated_at", "2015-06-30 05:07:55.629648"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "9f332d2c-cf66-46bd-ae1f-32fdccb766b0"], ["created_at", "2015-06-30 05:07:55.632054"], ["updated_at", "2015-06-30 05:07:55.632054"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "3e3c645d-7db3-4b2a-a203-5747570ac9ea"], ["created_at", "2015-06-30 05:07:55.634443"], ["updated_at", "2015-06-30 05:07:55.634443"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "399fd5df-cad0-453f-988f-79931d56f8ec"], ["created_at", "2015-06-30 05:07:55.636273"], ["updated_at", "2015-06-30 05:07:55.636273"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "8ad75e69-8694-447f-aba5-0c24a72f2f99"], ["created_at", "2015-06-30 05:07:55.638250"], ["updated_at", "2015-06-30 05:07:55.638250"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts"
+Processing by Fuel::Admin::PostsController#create as HTML
+  Parameters: {"fuel_post"=>{"published"=>false}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "819d0c87-52b2-48d1-a846-b6895c5fa9da"], ["created_at", "2015-06-30 05:07:55.643284"], ["updated_at", "2015-06-30 05:07:55.643284"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/blog/admin/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts"
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "f5a221b5-0aff-4e35-8069-7a3698435d84"], ["created_at", "2015-06-30 05:07:55.648908"], ["updated_at", "2015-06-30 05:07:55.648908"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "3c5d3f12-5846-4b15-8dc8-b620bb588cc2"], ["created_at", "2015-06-30 05:07:55.651389"], ["updated_at", "2015-06-30 05:07:55.651389"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "a7a66234-9718-4640-8b94-596fb7fcf908"], ["created_at", "2015-06-30 05:07:55.653661"], ["updated_at", "2015-06-30 05:07:55.653661"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "42710045-2241-40aa-87ca-d6b031a751ba"], ["created_at", "2015-06-30 05:07:55.655365"], ["updated_at", "2015-06-30 05:07:55.655365"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "ee3d279c-bd32-4b81-8ce3-f2028a167a44"], ["created_at", "2015-06-30 05:07:55.657157"], ["updated_at", "2015-06-30 05:07:55.657157"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts"
+Processing by Fuel::Admin::PostsController#create as HTML
+  Parameters: {"fuel_post"=>{"published"=>false}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "73bd9ff8-cef9-45da-9573-f6ed4ab6aff6"], ["created_at", "2015-06-30 05:07:55.661513"], ["updated_at", "2015-06-30 05:07:55.661513"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/blog/admin/posts
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "9c238367-83a6-4cbd-98ec-779615c1cf16"], ["created_at", "2015-06-30 05:07:55.666476"], ["updated_at", "2015-06-30 05:07:55.666476"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "239cabfb-0841-49a8-aba9-88668700025c"], ["created_at", "2015-06-30 05:07:55.668728"], ["updated_at", "2015-06-30 05:07:55.668728"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "2f3bb939-6ef7-47a5-81a7-75f384236323"], ["created_at", "2015-06-30 05:07:55.671282"], ["updated_at", "2015-06-30 05:07:55.671282"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "b75c84c8-67c0-4b0f-b746-7ea7b7d7c75f"], ["created_at", "2015-06-30 05:07:55.674588"], ["updated_at", "2015-06-30 05:07:55.674588"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "1392a75f-5760-445a-9882-16f06d5e61a1"], ["created_at", "2015-06-30 05:07:55.677149"], ["updated_at", "2015-06-30 05:07:55.677149"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"[0m
+Processing by Fuel::Admin::PostsController#create as HTML
+  Parameters: {"fuel_post"=>{"published"=>true, "title"=>nil}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.erb within layouts/fuel/application (0.3ms)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts"
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "9ec40fce-f61a-47f6-9734-1622b1f9c5a7"], ["created_at", "2015-06-30 05:07:55.691401"], ["updated_at", "2015-06-30 05:07:55.691401"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "6a43dca0-ca00-4116-aeb4-d73b8be63d00"], ["created_at", "2015-06-30 05:07:55.695607"], ["updated_at", "2015-06-30 05:07:55.695607"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "4d199307-28c8-4584-883f-c0965c5e368b"], ["created_at", "2015-06-30 05:07:55.699516"], ["updated_at", "2015-06-30 05:07:55.699516"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "74fb4fc0-7de3-4fb8-9bc9-75dbea6c1a7b"], ["created_at", "2015-06-30 05:07:55.702376"], ["updated_at", "2015-06-30 05:07:55.702376"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "a08c1f29-b3fd-46e5-8d49-94b6b73818b6"], ["created_at", "2015-06-30 05:07:55.704772"], ["updated_at", "2015-06-30 05:07:55.704772"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts"
+Processing by Fuel::Admin::PostsController#create as HTML
+  Parameters: {"fuel_post"=>{"published"=>true, "title"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/new.html.erb within layouts/fuel/application (0.2ms)
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "ed2356b0-3cef-4588-9ae7-39d9ba740f6a"], ["created_at", "2015-06-30 05:07:55.717467"], ["updated_at", "2015-06-30 05:07:55.717467"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "96b5ba4c-87f6-4be6-96a8-2892fb3f4020"], ["created_at", "2015-06-30 05:07:55.720130"], ["updated_at", "2015-06-30 05:07:55.720130"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "8118ab4f-af14-40f6-94b3-0e900f1d244c"], ["created_at", "2015-06-30 05:07:55.722720"], ["updated_at", "2015-06-30 05:07:55.722720"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "6c66fc34-f5bd-438f-b40d-b4d3d33a92bc"], ["created_at", "2015-06-30 05:07:55.725007"], ["updated_at", "2015-06-30 05:07:55.725007"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "3c70995d-1941-41f3-b866-ba1385bd88aa"], ["created_at", "2015-06-30 05:07:55.727461"], ["updated_at", "2015-06-30 05:07:55.727461"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "ce6d08ca-90d9-417f-82aa-3b4680cb8db9"], ["created_at", "2015-06-30 05:07:55.731197"], ["updated_at", "2015-06-30 05:07:55.731197"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Fuel::Admin::PostsController#update as HTML
+  Parameters: {"fuel_post"=>{"published"=>false, "title"=>"Is this thing on?"}, "id"=>"ce6d08ca-90d9-417f-82aa-3b4680cb8db9"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ce6d08ca-90d9-417f-82aa-3b4680cb8db9"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fuel_posts" SET "title" = ?, "updated_at" = ? WHERE "fuel_posts"."id" = ?[0m  [["title", "Is this thing on?"], ["updated_at", "2015-06-30 05:07:55.735070"], ["id", 6]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/blog/admin/posts/ce6d08ca-90d9-417f-82aa-3b4680cb8db9/edit
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "f786dbe1-6ad3-4a39-b00e-eadb6dc9c9e9"], ["created_at", "2015-06-30 05:07:55.744650"], ["updated_at", "2015-06-30 05:07:55.744650"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "1739bdff-5327-4dd1-beca-e9ac39025042"], ["created_at", "2015-06-30 05:07:55.746942"], ["updated_at", "2015-06-30 05:07:55.746942"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "ee9518e2-231d-40f4-987c-da12a7c91fee"], ["created_at", "2015-06-30 05:07:55.749709"], ["updated_at", "2015-06-30 05:07:55.749709"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "67ba02c8-14e2-422c-8b65-862f990b43ae"], ["created_at", "2015-06-30 05:07:55.752036"], ["updated_at", "2015-06-30 05:07:55.752036"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "f0386ab5-7e1b-4fe9-9afe-9a7b6c2bad0e"], ["created_at", "2015-06-30 05:07:55.754154"], ["updated_at", "2015-06-30 05:07:55.754154"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "6e7febf3-f9c9-48f8-9c2a-8dae6187f341"], ["created_at", "2015-06-30 05:07:55.757801"], ["updated_at", "2015-06-30 05:07:55.757801"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Fuel::Admin::PostsController#update as HTML
+  Parameters: {"fuel_post"=>{"published"=>false}, "id"=>"6e7febf3-f9c9-48f8-9c2a-8dae6187f341"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "6e7febf3-f9c9-48f8-9c2a-8dae6187f341"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/blog/admin/posts/6e7febf3-f9c9-48f8-9c2a-8dae6187f341/edit
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "92b06a47-d4ca-4098-8262-7c4088819f45"], ["created_at", "2015-06-30 05:07:55.767647"], ["updated_at", "2015-06-30 05:07:55.767647"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "9f522219-6876-4287-847e-e6d21b12090d"], ["created_at", "2015-06-30 05:07:55.770684"], ["updated_at", "2015-06-30 05:07:55.770684"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "958208fb-30ce-4034-9924-b0b4cc3f20ba"], ["created_at", "2015-06-30 05:07:55.773595"], ["updated_at", "2015-06-30 05:07:55.773595"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "f9b7cd30-0d43-4a03-99b7-1844b61cd305"], ["created_at", "2015-06-30 05:07:55.776294"], ["updated_at", "2015-06-30 05:07:55.776294"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "12935389-cdff-41b4-bd81-1f1cb9eb9ed1"], ["created_at", "2015-06-30 05:07:55.778060"], ["updated_at", "2015-06-30 05:07:55.778060"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "ca1a14b4-fc0d-4a50-8105-ec66dfd7c7aa"], ["created_at", "2015-06-30 05:07:55.781231"], ["updated_at", "2015-06-30 05:07:55.781231"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Fuel::Admin::PostsController#update as HTML
+  Parameters: {"fuel_post"=>{"published"=>true, "title"=>nil, "content"=>"Hopefully I don't persist", "published_at"=>"06/30/2015"}, "id"=>"ca1a14b4-fc0d-4a50-8105-ec66dfd7c7aa"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "ca1a14b4-fc0d-4a50-8105-ec66dfd7c7aa"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (0.2ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "dfff8ad7-da1a-4921-9779-010ce814728c"], ["created_at", "2015-06-30 05:07:55.792068"], ["updated_at", "2015-06-30 05:07:55.792068"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "fe28a567-002d-4caa-9f42-cc488a9a497b"], ["created_at", "2015-06-30 05:07:55.794222"], ["updated_at", "2015-06-30 05:07:55.794222"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "7f1d7af4-e978-4779-8264-f6c6e3ec5fc9"], ["created_at", "2015-06-30 05:07:55.796158"], ["updated_at", "2015-06-30 05:07:55.796158"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "e09c7d10-ac9f-4176-95ea-251cd543dd40"], ["created_at", "2015-06-30 05:07:55.798029"], ["updated_at", "2015-06-30 05:07:55.798029"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "9cf22fa4-d53c-418e-bc2e-d44271b3fba6"], ["created_at", "2015-06-30 05:07:55.800337"], ["updated_at", "2015-06-30 05:07:55.800337"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "c26d4869-1e3d-4d5a-80d1-41c2455a829f"], ["created_at", "2015-06-30 05:07:55.804561"], ["updated_at", "2015-06-30 05:07:55.804561"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by Fuel::Admin::PostsController#update as HTML
+  Parameters: {"fuel_post"=>{"published"=>true, "title"=>nil, "content"=>"<p>Some content for a blog post</p>", "published_at"=>"06/30/2015"}, "id"=>"c26d4869-1e3d-4d5a-80d1-41c2455a829f"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "c26d4869-1e3d-4d5a-80d1-41c2455a829f"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered /Users/ryanfrancis/Documents/LaunchPad/fuel/app/views/fuel/admin/posts/edit.html.erb within layouts/fuel/application (0.3ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "9412acc6-aab7-4a08-9607-a0e964ea5ae4"], ["created_at", "2015-06-30 05:07:55.815822"], ["updated_at", "2015-06-30 05:07:55.815822"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "2c1bed48-125d-46ff-92f9-810e1fd27607"], ["created_at", "2015-06-30 05:07:55.818774"], ["updated_at", "2015-06-30 05:07:55.818774"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "3dd448aa-a941-4733-826c-e191affca02b"], ["created_at", "2015-06-30 05:07:55.821335"], ["updated_at", "2015-06-30 05:07:55.821335"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "e2491907-df74-4c65-abe5-17c48aba89bf"], ["created_at", "2015-06-30 05:07:55.823944"], ["updated_at", "2015-06-30 05:07:55.823944"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "0c6024a2-6b49-4aa6-b4f7-bc40f69e092c"], ["created_at", "2015-06-30 05:07:55.826523"], ["updated_at", "2015-06-30 05:07:55.826523"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "4af7648a-b437-4d73-a8fd-06eb4becd3fd"], ["created_at", "2015-06-30 05:07:55.828281"], ["updated_at", "2015-06-30 05:07:55.828281"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts"
+Processing by Fuel::Admin::PostsController#destroy as HTML
+  Parameters: {"id"=>"4af7648a-b437-4d73-a8fd-06eb4becd3fd"}
+  [1m[36mFuel::Post Load (0.1ms)[0m  [1mSELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "4af7648a-b437-4d73-a8fd-06eb4becd3fd"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "fuel_posts" WHERE "fuel_posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/blog/admin/posts
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fuel_posts"[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "d2bd0216-a7cd-4b61-85f4-1379d7478971"], ["created_at", "2015-06-30 05:07:55.836217"], ["updated_at", "2015-06-30 05:07:55.836217"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "6cc4f93a-fc6c-45da-b02d-ff321857651c"], ["created_at", "2015-06-30 05:07:55.838486"], ["updated_at", "2015-06-30 05:07:55.838486"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "ca2b6eae-5753-4e93-b288-466286707b31"], ["created_at", "2015-06-30 05:07:55.840905"], ["updated_at", "2015-06-30 05:07:55.840905"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "b88465cc-06f6-4c6c-b333-67e2bed91db5"], ["created_at", "2015-06-30 05:07:55.843063"], ["updated_at", "2015-06-30 05:07:55.843063"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "e61ff22c-cc14-4d8a-9420-cbf754e25f79"], ["created_at", "2015-06-30 05:07:55.845931"], ["updated_at", "2015-06-30 05:07:55.845931"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["published", "f"], ["slug", "6d60eae0-6987-45c9-8309-abe49d6b0295"], ["created_at", "2015-06-30 05:07:55.847913"], ["updated_at", "2015-06-30 05:07:55.847913"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by Fuel::Admin::PostsController#destroy as HTML
+  Parameters: {"id"=>"6d60eae0-6987-45c9-8309-abe49d6b0295"}
+  [1m[35mFuel::Post Load (0.1ms)[0m  SELECT  "fuel_posts".* FROM "fuel_posts" WHERE "fuel_posts"."slug" = ? LIMIT 1  [["slug", "6d60eae0-6987-45c9-8309-abe49d6b0295"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "fuel_posts" WHERE "fuel_posts"."id" = ?  [["id", 6]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/blog/admin/posts
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "fuel_posts" ("published", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["published", "f"], ["slug", "831554ac-eb33-4057-a09f-723c99787608"], ["created_at", "2015-06-30 05:07:55.859040"], ["updated_at", "2015-06-30 05:07:55.859040"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:55.876020"], ["updated_at", "2015-06-30 05:07:55.876020"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.005306"], ["updated_at", "2015-06-30 05:07:56.005306"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.013322"], ["updated_at", "2015-06-30 05:07:56.013322"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.021818"], ["updated_at", "2015-06-30 05:07:56.021818"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.030748"], ["updated_at", "2015-06-30 05:07:56.030748"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.054006"], ["updated_at", "2015-06-30 05:07:56.054006"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.058637"], ["updated_at", "2015-06-30 05:07:56.058637"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-06-22 05:07:56.060043"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"], ["created_at", "2015-06-30 05:07:56.061656"], ["updated_at", "2015-06-30 05:07:56.061656"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.064199"], ["updated_at", "2015-06-30 05:07:56.064199"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mFuel::Post Exists (0.1ms)[0m  SELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author_id", 2], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-06-25 05:07:56.065361"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat-34f58248-766f-4492-bc06-f2b20e4f2cc4"], ["created_at", "2015-06-30 05:07:56.067231"], ["updated_at", "2015-06-30 05:07:56.067231"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.069476"], ["updated_at", "2015-06-30 05:07:56.069476"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 3], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-04-28 05:07:56.070808"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat-023461e5-ea01-4765-80d3-791af982807c"], ["created_at", "2015-06-30 05:07:56.074599"], ["updated_at", "2015-06-30 05:07:56.074599"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts" WHERE "fuel_posts"."published" = 't'
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.079641"], ["updated_at", "2015-06-30 05:07:56.079641"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-05-24 05:07:56.081199"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"], ["created_at", "2015-06-30 05:07:56.083070"], ["updated_at", "2015-06-30 05:07:56.083070"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.085581"], ["updated_at", "2015-06-30 05:07:56.085581"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mFuel::Post Exists (0.2ms)[0m  SELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author_id", 2], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-04-19 05:07:56.087715"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat-9dc48069-407a-4672-94a1-8bc70e76eb4a"], ["created_at", "2015-06-30 05:07:56.092657"], ["updated_at", "2015-06-30 05:07:56.092657"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.095755"], ["updated_at", "2015-06-30 05:07:56.095755"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 3], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-03-24 05:07:56.097178"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat-a3c9e414-f74a-4a42-ad84-d5bc684144ba"], ["created_at", "2015-06-30 05:07:56.099515"], ["updated_at", "2015-06-30 05:07:56.099515"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "fuel_posts" WHERE "fuel_posts"."published" = 't'
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.107034"], ["updated_at", "2015-06-30 05:07:56.107034"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 1], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-06-05 05:07:56.108577"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"], ["created_at", "2015-06-30 05:07:56.110337"], ["updated_at", "2015-06-30 05:07:56.110337"]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.114904"], ["updated_at", "2015-06-30 05:07:56.114904"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mFuel::Post Exists (0.0ms)[0m  SELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["author_id", 2], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-05-24 05:07:56.116468"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat-4a39e06f-fdc2-4c60-b8b1-cfb696496ead"], ["created_at", "2015-06-30 05:07:56.118361"], ["updated_at", "2015-06-30 05:07:56.118361"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_authors" ("first_name", "last_name", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["first_name", "Oren"], ["last_name", "Hahn"], ["title", "Direct Research Technician"], ["created_at", "2015-06-30 05:07:56.120740"], ["updated_at", "2015-06-30 05:07:56.120740"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mFuel::Post Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "fuel_posts" WHERE ("fuel_posts"."id" IS NOT NULL) AND "fuel_posts"."slug" = ? LIMIT 1[0m  [["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "fuel_posts" ("author_id", "title", "content", "published_at", "slug", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["author_id", 3], ["title", "Minus veniam vel iure laudantium harum quaerat."], ["content", "<p>Some content for a blog post</p>"], ["published_at", "2015-06-20 05:07:56.121911"], ["slug", "minus-veniam-vel-iure-laudantium-harum-quaerat-75885d9c-e34a-4a91-809e-127bb44213fd"], ["created_at", "2015-06-30 05:07:56.123993"], ["updated_at", "2015-06-30 05:07:56.123993"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mFuel::Post Load (0.2ms)[0m  SELECT "fuel_posts".* FROM "fuel_posts"  ORDER BY created_at DESC
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m

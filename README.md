@@ -10,7 +10,7 @@ Stop developing Rails blogs and start writing your actual blog posts with this d
 Overview
 -------------------
 
-Fuel is still in beta but is actively being used in several production environments. The schema is very simple and consists of Posts and Authors.
+Fuel is still in beta but is actively being used in several production environments. The schema is very simple and consists of Posts and Authors and is namespaced under Fuel to ensure it won't interfere with any of your current models.
 
 Screenshots are available here: http://learn.launchpadlab.com/fuel/
 
@@ -201,7 +201,7 @@ config.helpers = ["ApplicationHelper",
 The MIT License (MIT)
 --------------------
 
-Copyright (c) 2014 LaunchPad Lab
+Copyright (c) 2015 LaunchPad Lab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

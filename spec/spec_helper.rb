@@ -1,6 +1,6 @@
-# require 'codeclimate_env.rb'
-# require 'codeclimate-test-reporter'
-# CodeClimate::TestReporter.start
+require 'codeclimate_env.rb'
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path('../dummy/config/environment', __FILE__)
@@ -9,10 +9,21 @@ require 'factory_girl'
 require 'factories'
 require 'database_cleaner'
 require 'rspec/autorun'
+require 'pry-nav'
+require 'pry-rails'
+require 'pry-stack_explorer'
+require 'pry-theme'
+require 'shoulda-matchers'
+require 'rspec/collection_matchers'
+
 include Fuel
-ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
+# ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+
+  config.before :each, type: :controller do
+    controller.class.include Fuel::Engine.routes.url_helpers
+  end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:

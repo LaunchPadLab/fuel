@@ -1,16 +1,18 @@
 require 'spec_helper'
 
-describe Fuel::PostsController do
+describe Fuel::PostsController, type: :controller do
 
   routes { Fuel::Engine.routes }
 
   describe 'GET #index' do
+
+    let(:number_posts) { 10 }
+    let(:posts) { create_list(:published_post, number_posts) }
+    let(:unpublished_post) { create(:post) }
+
     before(:each) do
-      @num_published_posts = 10
-      @num_published_posts.times do |post|
-        create(:post)
-      end
-      create(:unpublished_post)
+      posts
+      unpublished_post
     end
 
     it "populates an array of posts" do
@@ -28,22 +30,25 @@ describe Fuel::PostsController do
   end
 
   describe 'GET #show' do
+
+    let(:post) { create(:published_post) }
+
     before :each do
-      @post = create(:post)
+      post
     end
 
     it "assigns the requested post to @post using slug" do
-      get :show, id: @post.slug
-      expect(assigns(:post)).to eq @post
+      get :show, id: post.slug
+      expect(assigns(:post)).to eq post
     end
 
     it "assigns the requested post to @post using ID" do
-      get :show, id: @post.id
-      expect(assigns(:post)).to eq @post
+      get :show, id: post.id
+      expect(assigns(:post)).to eq post
     end
 
     it "truncates title to 70 characters or less" do
-      get :show, id: @post.slug
+      get :show, id: post.slug
       title_length = assigns(:title).length
       expect(title_length).to be < 70
     end

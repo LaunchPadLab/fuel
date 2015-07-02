@@ -16,7 +16,7 @@ module Fuel
 
     def show
       @post = Fuel::Post.find_by_slug(params[:id]) || Fuel::Post.find_by_id(params[:id]) || not_found
-      @title = truncate_on_space(@post.seo_title, 70)
+      @title = truncate_on_space(@post.seo_title || @post.title, 70)
       @description = @post.seo_description
       @disqus_name = Fuel.configuration.disqus_name
     end

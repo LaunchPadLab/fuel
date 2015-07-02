@@ -35,7 +35,7 @@ module Fuel
         @author.attributes = @params_hash
 
         if @author.save
-          redirect_to fuel.admin_authors_path, notice: "Author was updated and #{@message}"
+          redirect_to fuel.edit_admin_author_path(@author), notice: "Author was updated and #{@message}"
         else
           render action: "edit"
         end

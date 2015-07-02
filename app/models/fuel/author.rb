@@ -18,6 +18,7 @@ module Fuel
     end
 
     validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+    validates :first_name, :last_name, :title, presence: true
 
     def s3_credentials
       {:bucket => Fuel.configuration.aws_bucket, :access_key_id => Fuel.configuration.aws_access_key, :secret_access_key => Fuel.configuration.aws_secret_access_key}

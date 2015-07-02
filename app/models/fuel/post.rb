@@ -18,22 +18,23 @@ module Fuel
     end
     validates_attachment_content_type :featured_image, :content_type => /\Aimage\/.*\Z/
 
-    validates_presence_of :title, :content, :author_id, if: :is_published
+    validates_presence_of :title, :content, :author_id, :published_at, if: :is_published
     paginates_per Fuel.configuration.paginates_per.to_i
 
-    scope :recent_published_posts, -> { where(published: true).order("created_at DESC") }
-    scope :recent, -> { order("created_at DESC") }
+    scope :recent_published_posts, -> { published.recent }
+    scope :published, -> { where(published: true) }
+    scope :recent, -> { order("published_at DESC").order("created_at DESC") }
 
     def s3_credentials
       {:bucket => Fuel.configuration.aws_bucket, :access_key_id => Fuel.configuration.aws_access_key, :secret_access_key => Fuel.configuration.aws_secret_access_key}
     end
 
     def next
-      self.class.recent.where("created_at <= ? AND id != ?", created_at, id).first
+      self.class.recent.where("published_at <= ? AND id != ?", published_at, id).first
     end
 
     def previous
-      self.class.recent.where("created_at >= ? AND id != ?", created_at, id).last
+      self.class.recent.where("published_at >= ? AND id != ?", published_at, id).last
     end
 
     def should_generate_new_friendly_id?

@@ -1,18 +1,22 @@
 require 'spec_helper'
 
-describe Fuel::Admin::PostsController do
+describe Fuel::Admin::PostsController, type: :controller do
 
   routes { Fuel::Engine.routes }
+
+  let(:posts) { create_list(:post, number_posts) }
+  let(:number_posts) { 5 }
 
   before(:each) do
     credentials = ActionController::HttpAuthentication::Basic.encode_credentials Fuel.configuration.username, Fuel.configuration.password
     request.env['HTTP_AUTHORIZATION'] = credentials
+    posts
   end
 
   describe 'GET #index' do
     it "populates an array of posts" do
       get :index
-      expect(assigns(:posts).count).to eq(Post.count)
+      expect(assigns(:posts).count).to eq(number_posts)
     end
     it "renders the :index view" do
       get :index
@@ -50,20 +54,20 @@ describe Fuel::Admin::PostsController do
     context "with valid attributes" do
       before(:each) do
         @original_count = Post.count
-        post :create, post: attributes_for(:post)
+        post :create, fuel_post: attributes_for(:post)
       end
       it "saves the new post in the database" do
         new_count = Post.count
         expect(new_count - @original_count).to eq(1)
       end
-      it "redirects to the show page" do
-        expect(response).to redirect_to(fuel.admin_posts_path)
+      it "redirects to the index page" do
+        expect(response).to redirect_to(admin_posts_path)
       end
     end
     context "with invalid attributes" do
       before(:each) do
         @original_count = Post.count
-        post :create, post: attributes_for(:invalid_post)
+        post :create, fuel_post: attributes_for(:invalid_post)
       end
       it "does not save the new post in the database" do
         new_count = Post.count
@@ -76,48 +80,60 @@ describe Fuel::Admin::PostsController do
   end
 
   describe 'PUT #update' do
+
+    let(:post) { create(:post) }
+    let(:published_post) { create(:published_post) }
+    let(:post_hash) { attributes_for(:post) }
+    let(:published_post_hash) { attributes_for(:published_post, published_at: DateTime.now.strftime("%m/%d/%Y")) }
+
     before(:each) do
-      @post = create(:post)
+      post_hash
+      published_post_hash
     end
+
     context "with valid attributes" do
       it "updates the post in the database" do
         test_title = "Is this thing on?"
-        put :update, id: @post, post: attributes_for(:post, title: test_title)
-        @post.reload
-        expect(@post.title).to eq(test_title)
+        put :update, id: post, fuel_post: post_hash.merge(title: test_title)
+        post.reload
+        expect(post.title).to eq(test_title)
       end
-      it "redirects to the post" do
-        put :update, id: @post, post: attributes_for(:post)
-        expect(response).to redirect_to(fuel.admin_posts_path)
+      it "redirects to the post edit page" do
+        put :update, id: post, fuel_post: post_hash
+        expect(response).to redirect_to(edit_admin_post_path(post))
       end
     end
     context "with invalid attributes" do
       it "does not update the post" do
-        author = "Tom Cullen"
-        put :update, id: @post, post: attributes_for(:post, title: nil, author: author)
-        @post.reload
-        expect(@post.author).to_not eq(author)
+        content = "Hopefully I don't persist"
+        put :update, id: post, fuel_post: published_post_hash.merge(content: content, title: nil)
+        post.reload
+        expect(post.content).to_not eq(content)
       end
       it "re-renders the #edit template" do
-        put :update, id: @post, post: attributes_for(:post, title: nil)
+        put :update, id: post, fuel_post: published_post_hash.merge(title: nil)
         expect(response).to render_template(:edit)
       end
     end
   end
 
   describe 'DELETE #destroy' do
+
+    subject(:post) { create(:post) }
+
     before(:each) do
-      @post = create(:post)
+      post
     end
+
     it "deletes the posts" do
       original_count = Post.count
-      delete :destroy, id: @post
+      delete :destroy, id: post
       new_count = Post.count
       expect(original_count - new_count).to eq(1)
     end
     it "redirects to admin/posts#index" do
-      delete :destroy, id: @post
-      expect(response).to redirect_to(fuel.admin_posts_path)
+      delete :destroy, id: post
+      expect(response).to redirect_to(admin_posts_path)
     end
   end
 

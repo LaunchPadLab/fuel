@@ -1,4 +1,4 @@
-if File.exist?('codeclimate_env.rb')
+if File.exist?('spec/codeclimate_env.rb')
   require 'codeclimate_env.rb'
   require 'codeclimate-test-reporter'
   CodeClimate::TestReporter.start

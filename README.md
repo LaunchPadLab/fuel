@@ -198,6 +198,13 @@ config.helpers = ["ApplicationHelper",
 ```
 
 
+Contributing
+--------------------
+
+Interested in contributing to the Fuel project? Please contact ryan@launchpadlab.com for local setup instructions and proper ENV variables.
+
+
+
 The MIT License (MIT)
 --------------------
 

@@ -1,7 +1,9 @@
-require 'codeclimate_env.rb'
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.start
-# This file is copied to spec/ when you run 'rails generate rspec:install'
+if File.exist?('codeclimate_env.rb')
+  require 'codeclimate_env.rb'
+  require 'codeclimate-test-reporter'
+  CodeClimate::TestReporter.start
+end
+
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path('../dummy/config/environment', __FILE__)
 require 'rspec/rails'

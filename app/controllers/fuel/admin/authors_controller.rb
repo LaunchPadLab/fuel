@@ -57,6 +57,7 @@ module Fuel
 
         def set_start_date
           start_date_string = @params_hash[:start_date]
+          return unless start_date_string.present?
           start_datetime = start_date_string.present? ? DateTime.strptime(start_date_string, "%m/%d/%Y") : nil
           @params_hash[:start_date] = start_datetime
         end

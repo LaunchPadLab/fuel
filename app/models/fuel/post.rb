@@ -23,7 +23,7 @@ module Fuel
 
     scope :recent_published_posts, -> { published.recent }
     scope :published, -> { where(published: true) }
-    scope :recent, -> { order("created_at DESC") }
+    scope :recent, -> { order("published_at DESC").order("created_at DESC") }
 
     def s3_credentials
       {:bucket => Fuel.configuration.aws_bucket, :access_key_id => Fuel.configuration.aws_access_key, :secret_access_key => Fuel.configuration.aws_secret_access_key}

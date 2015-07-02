@@ -53,8 +53,8 @@ module Fuel
       context "recent" do
         subject(:recent) { Fuel::Post.recent }
 
-        it "sorts the posts by created_at datetime" do
-          is_ordered = recent[0].created_at > recent[1].created_at && recent[1].created_at > recent[2].created_at
+        it "sorts the posts by published_at datetime" do
+          is_ordered = recent[0].published_at > recent[1].published_at && recent[1].published_at > recent[2].published_at
           expect(is_ordered).to be_truthy
         end
       end

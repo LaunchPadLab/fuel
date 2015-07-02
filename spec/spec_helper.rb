@@ -1,6 +1,6 @@
-# require 'codeclimate_env.rb'
-# require 'codeclimate-test-reporter'
-# CodeClimate::TestReporter.start
+ENV["CODECLIMATE_REPO_TOKEN"] = "a18d4ae96dd06db174789c3819d6347347232494f24a2c6f536e85f3455f6890"
+require 'codeclimate-test-reporter'
+CodeClimate::TestReporter.start
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path('../dummy/config/environment', __FILE__)

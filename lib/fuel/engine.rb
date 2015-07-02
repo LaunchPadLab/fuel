@@ -13,8 +13,8 @@ module Fuel
       end
     end
 
-    if defined?(ActiveAdmin)
-      initializer :fuel do
+    initializer :fuel do
+      if defined?(ActiveAdmin)
         ActiveAdmin.application.load_paths += Dir[File.dirname(__FILE__) + '/admin']
       end
     end

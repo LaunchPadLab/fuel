@@ -13,5 +13,9 @@ module Fuel
       end
     end
 
+    initializer :copilot do
+      ActiveAdmin.application.load_paths += Dir[File.dirname(__FILE__) + '/admin']
+    end
+
   end
 end

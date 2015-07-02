@@ -12,3 +12,4 @@ spec/dummy/public/*
 coverage/*
 build/
 spec/dummy/config/application.yml
+spec/codeclimate_env.rb

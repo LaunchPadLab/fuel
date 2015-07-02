@@ -60,7 +60,7 @@ module Fuel
       end
 
       context "next" do
-        let(:post) { published_posts.last }
+        let(:post) { Fuel::Post.published.recent.first }
         subject(:next_post) { post.next }
 
         before(:each) do

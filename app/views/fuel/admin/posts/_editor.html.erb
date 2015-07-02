@@ -4,7 +4,7 @@
 
     if ($("body").hasClass("posts-controller")){
        var editor = new wysihtml5.Editor("fuel_post_content", { // id of textarea element
-          toolbar:      "toolbar", // id of toolbar element
+          toolbar:      "editor", // id of toolbar element
           parserRules:  wysihtml5ParserRules,
           stylesheets: "<%= stylesheet_path('fuel/wysihtml') %>"
        });
@@ -38,9 +38,8 @@
             submitButton.prop('disabled', true);
 
             progressBar.
-              css('background', 'green').
+              css('background', '#C4DC6E').
               css('display', 'block').
-              css('width', '0%').
               text("Loading...");
           },
           done: function(e, data) {
@@ -60,7 +59,7 @@
             submitButton.prop('disabled', false);
 
             progressBar.
-              css("background", "red").
+              css("background", "#F7917C").
               text("Failed");
           }
         });

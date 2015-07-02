@@ -1,9 +1,9 @@
-<%#= form_tag('preview', method: "post", id: "preview_form") do %>
-  <%#= hidden_field_tag :content %>
-<%# end %>
 <div class="js-menu sliding-panel-content">
   <header class="sliding-panel-header">
-    <h5 class="inverse title">You are currently previewing this post.</h5>
+    <h5 class="inverse title">You are currently previewing this post</h5>
+    <%= link_to '#', class: "js-menu-trigger" do %>
+      <i class="add-icon sliding-panel-header--close"></i>
+    <% end %>
   </header>
   <div class="sliding-panel-body">
     <%= render 'content', content: @post.content %>

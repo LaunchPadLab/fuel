@@ -8,6 +8,11 @@ $card-border:        1px solid $grey-base;
 $card-border-radius: 3px;
 $card-padding:       20px;
 
+$card-fixed-offset:  -2px;
+$card-fixed-spread:  0 5px 10px;
+$card-fixed-shadow:  rgba(0, 0, 0, 0.25);
+$card-fixed-width:   400px;
+
 // Structure
 .card {
   @include rem(padding, $card-padding);
@@ -15,6 +20,15 @@ $card-padding:       20px;
   border: $card-border;
   border-radius: $card-border-radius;
   overflow: hidden;
+}
+
+.card__fixed {
+  @include animation(fade-in 0.3s linear);
+  @include box-shadow($card-fixed-spread, $card-fixed-shadow);
+  @include position(absolute, null null null 100px);
+  @include rem(margin-top, $card-fixed-offset);
+  @include rem(width, $card-fixed-width);
+  z-index: 1000;
 }
 
 .card-image {

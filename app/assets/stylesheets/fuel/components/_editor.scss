@@ -1,84 +1,45 @@
+// Editor Component
+// ========================================
 
-$editor-border: thin solid $grey-base;
 
-#toolbar {
+// Variables
+$editor-background-color:  $white-dark;
+$editor-border:            1px solid $grey-base;
+$editor-border-radius:     3px;
+$editor-margin:            0 0 -2px;
+
+$editor-button-color:      $black-base;
+$editor-button-padding:    5px 12px;
+$editor-button-transition: all 0.2s ease-in-out;
+
+
+// Structure
+#editor {
   @include clearfix;
-  background-color: $white-dark;
+  @include position(relative);
+  @include rem(margin, $editor-margin);
+  background-color: $editor-background-color;
   border: $editor-border;
-  border-bottom: none;
+  border-top-left-radius: $editor-border-radius;
+  border-top-right-radius: $editor-border-radius;
   padding: 0;
-  position: relative;
-  margin: 0;
 }
 
 .editor-button{
-  @include rem(padding, 5px 12px);
-  color: $black-base;
+  @include rem(padding, $editor-button-padding);
+  @include transition($editor-button-transition);
+  color: $editor-button-color;
   display: inline-block;
   margin: 0;
 
-  // &:nth-child(even) {
-    // border-left: $editor-border;
-    // border-right: $editor-border;
-  // }
+  &:nth-child(even) {
+    border-left: $editor-border;
+    border-right: $editor-border;
+  }
 
-  &:hover, &.wysihtml5-command-dialog-opened {
+  &:hover,
+  &.wysihtml5-command-dialog-opened {
     cursor: pointer;
     color: $blue-base;
-  }
-
-}
-
-.dropdown-window {
-  background-color: $white-base;
-  border: thin solid $grey-dark;
-  position: absolute;
-  width: 400px;
-}
-
-.dropdown-body {
-  padding: 20px;
-  border-bottom: thin solid $grey-dark;
-}
-
-.dropdown-footer {
-  background-color: $white-dark;
-  height: 48px;
-  padding: 10px 22px;
-  font-weight: bold;
-
-  a {
-    cursor: pointer;
-    float: right;
-  }
-
-  .button {
-    margin-left: 20px;
-    margin-bottom: 0px;
-  }
-
-}
-
-
-.dropdown--createLink {
-  left: 100px;
-}
-
-.dropdown--image {
-  left: 200px;
-
-  label {
-    margin-top: 20px;
-  }
-
-  .progress {
-    max-width: 600px;
-    margin:    0.2em 0 0.2em 0;
-  }
-
-  .progress .bar {
-    @include rem(padding, 5px 10px);
-    color:   white;
-    display: none;
   }
 }

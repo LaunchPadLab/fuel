@@ -47,7 +47,7 @@
   <div class="form-container--full">
     <fieldset>
       <%= f.label :content, 'Your Post' %>
-      <ul id="toolbar" style="display: none;">
+      <ul id="editor" style="display: none;">
         <li class="editor-button" data-wysihtml5-command="bold" title="CTRL+B"><i class="fa fa-bold"></i></li>
         <li class="editor-button" data-wysihtml5-command="italic" title="CTRL+I"><i class="fa fa-italic"></i></li>
         <li class="editor-button" data-wysihtml5-command="insertUnorderedList"><i class="fa fa-list-ul"></i></li>
@@ -61,25 +61,26 @@
         <li class="editor-button" data-wysihtml5-command="undo"><i class="fa fa-undo"></i></li>
         <li class="editor-button" data-wysihtml5-action="change_view">HTML</li>
 
-        <div data-wysihtml5-dialog="createLink" style="display: none;" class="dropdown-window dropdown--createLink">
-          <div class="dropdown-body">
+        <div data-wysihtml5-dialog="createLink" style="display: none;" class="card card__fixed">
+          <fieldset class="small">
+            <label>Link URL:</label>
             <input data-wysihtml5-dialog-field="href" value="http://">
-          </div>
-          <footer class="dropdown-footer">
-            <a data-wysihtml5-dialog-action="save" class="save-link button button--primary button--small">Insert</a>
-          </footer>
+          </fieldset>
+          <fieldset class="margin--clear right">
+            <a data-wysihtml5-dialog-action="save" class="save-link button button--primary button--small margin--clear">Insert</a>
+          </fieldset>
         </div>
 
-        <div data-wysihtml5-dialog="insertImage" style="display: none;" class="dropdown-window dropdown--image">
-          <div class="dropdown-body">
-            <label>
-              Upload Image:
-              <%= file_field_tag :image, id: "image-upload", class: "directUpload"  %>
-            </label>
-            <label>
-              Image URL:
-              <input data-wysihtml5-dialog-field="src" value="http://" id="imageUrl">
-            </label>
+        <div data-wysihtml5-dialog="insertImage" style="display: none;" class="card card__fixed">
+          <fieldset class="small">
+            <div class="half-group">
+              <label> Upload Image: <%= file_field_tag :image, id: "image-upload", class: "directUpload"  %> </label>
+            </div>
+            <div class="half-group">
+              <label> Or Image URL: <input data-wysihtml5-dialog-field="src" value="http://" id="imageUrl"> </label>
+            </div>
+          </fieldset>
+          <fieldset class="small">
             <label>
               Align:
               <select data-wysihtml5-dialog-field="className">
@@ -88,11 +89,11 @@
                 <option value="wysiwyg-float-right">right</option>
               </select>
             </label>
-          </div>
-          <footer class="dropdown-footer">
-            <a data-wysihtml5-dialog-action="save" class="save-link button button--primary button--small">Insert</a>
-            <a data-wysihtml5-dialog-action="cancel" class="button button--danger button--small">Cancel</a>
-          </footer>
+          </fieldset>
+          <fieldset class="right margin--clear">
+            <a data-wysihtml5-dialog-action="save" class="save-link button button--primary button--small margin--clear">Insert</a>
+            <a data-wysihtml5-dialog-action="cancel" class="button button--danger button--small margin--clear">Cancel</a>
+          </fieldset>
         </div>
       </ul>
       <%= f.text_area :content, class: 'post' %>

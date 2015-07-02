@@ -28,6 +28,7 @@ $sliding-panel-spread-active:      5px 0 10px;
 }
 
 .sliding-panel-header {
+  @include position(relative);
   @include rem(margin-bottom, 20px);
   @include rem(padding, 20px);
   background-color: $sliding-panel-header-background;
@@ -39,9 +40,18 @@ $sliding-panel-spread-active:      5px 0 10px;
   }
 }
 
+.sliding-panel-header--close {
+  @include position(absolute, 15px 15px null null);
+  @include transform(rotate(45deg));
+}
+
 .sliding-panel-body {
   margin: 0 auto;
   width: 65%;
+
+  img,
+  iframe,
+  video { width: 100%; }
 }
 
 .sliding-panel-fade-screen {

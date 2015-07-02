@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fuel (0.3.28)
+    fuel (0.3.29)
       aws-sdk (< 2.0)
       bourbon
       friendly_id

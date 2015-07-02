@@ -13,3 +13,5 @@ coverage/*
 build/
 spec/dummy/config/application.yml
 spec/codeclimate_env.rb
+spec/dummy/db/test.sqlite3
+spec/dummy/log/test.log

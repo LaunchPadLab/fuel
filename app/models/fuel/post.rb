@@ -30,11 +30,11 @@ module Fuel
     end
 
     def next
-      self.class.recent.where("created_at <= ? AND id != ?", created_at, id).first
+      self.class.recent.where("published_at <= ? AND id != ?", published_at, id).first
     end
 
     def previous
-      self.class.recent.where("created_at >= ? AND id != ?", created_at, id).last
+      self.class.recent.where("published_at >= ? AND id != ?", published_at, id).last
     end
 
     def should_generate_new_friendly_id?

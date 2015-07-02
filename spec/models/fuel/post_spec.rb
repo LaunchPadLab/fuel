@@ -90,9 +90,8 @@ module Fuel
 
     describe "instance methods" do
 
-      context "next" do
+      let(:post) { create(:post) }
 
-      end
 
     end
 

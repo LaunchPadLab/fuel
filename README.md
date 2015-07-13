@@ -21,7 +21,7 @@ Installation
 Gemfile:
 
 ```ruby
-gem "fuel"
+gem "fuel", :git => "https://github.com/launchpadlab/fuel.git"
 ```
 
 Terminal:

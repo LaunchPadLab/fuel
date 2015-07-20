@@ -9,6 +9,7 @@
           stylesheets: "<%= stylesheet_path('fuel/wysihtml') %>"
        });
 
+      <% if s3_direct_post %>
       $('.directUpload').each(function(i, elem) {
         var fileInput    = $(elem);
         // var form         = $(fileInput.parents('form:first'));
@@ -64,6 +65,7 @@
           }
         });
       });
+      <% end %>
     };
 
   });

@@ -1,4 +1,12 @@
 <%= form_for @author, url: @url, html: { multipart: true } do |f| %>
+  <% if @author.errors.any? %>
+    <div class="alert alert--warning">
+      <p class="alert--content"><%= @author.errors.full_messages.to_sentence %></h2></p>
+      <%= link_to '#', class: 'alert--trigger' do %>
+        <%= embedded_svg 'fuel/icons/alert-icon.svg', class: 'alert--close-icon' %>
+      <% end %>
+    </div>
+  <% end %>
   <div class="form-container--left">
     <fieldset>
       <div class="form-group-half">
@@ -46,12 +54,15 @@
     </fieldset>
     <fieldset class="fieldset">
       <%= f.submit class: 'button button--secondary' %>
+      <% if @author.id %>
+        <%= link_to 'Delete Author', fuel.admin_author_path(@author), method: :delete, data: { confirm: "Are you sure you want to delete #{@author.full_name}?" }, class: "delete-post button button--danger" %>
+      <% end %>
     </fieldset>
   </div>
   <div class="form-container--right card">
     <%= f.label :avatar, 'Updated Author Picture' %>
     <div class="card-image card-image--avatar">
-      <%= image_tag @author.avatar.url %>
+      <%= image_tag @author.avatar.url || 'fuel/default-img.jpg' %>
     </div>
     <%= f.file_field :avatar %>
   </div>

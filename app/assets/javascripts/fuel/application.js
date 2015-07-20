@@ -20,4 +20,5 @@
 //= require fuel/posts
 //= require fuel/wysihtml5x-toolbar.min.js
 //= require fuel/advanced_and_extended
+//= require fuel/alerts
 //= require jquery-fileupload/basic

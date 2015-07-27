@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
 //= require fuel/admin
 //= require fuel/facebook
 //= require fuel/sliding-panel

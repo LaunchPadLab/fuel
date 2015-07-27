@@ -2,32 +2,33 @@
   $(function() {
     $body = $("body");
 
+    var editorId = "fuel_post_content";
+    var editorStylesheetPath = "<%= stylesheet_path('fuel/wysihtml') %>";
+    var editorSubmitUrl = '<%= s3_direct_post.url %>';
+    var editorFormData = JSON.parse('<%= s3_direct_post.fields.to_json.html_safe %>');
+    var editorHostUrl = '//<%= @s3_direct_post.url.host %>/';
+
     if ($("body").hasClass("posts-controller")){
-       var editor = new wysihtml5.Editor("fuel_post_content", { // id of textarea element
-          toolbar:      "editor", // id of toolbar element
-          parserRules:  wysihtml5ParserRules,
-          stylesheets: "<%= stylesheet_path('fuel/wysihtml') %>"
-       });
+      var editor = new wysihtml5.Editor(editorId, { // id of textarea element
+        toolbar:      "editor", // id of toolbar element
+        parserRules:  wysihtml5ParserRules,
+        stylesheets: editorStylesheetPath
+      });
 
       <% if s3_direct_post %>
       $('.directUpload').each(function(i, elem) {
         var fileInput    = $(elem);
-        // var form         = $(fileInput.parents('form:first'));
         var submitButton = $(".save-button");
         var progressBar  = $("<div class='bar'></div>");
         var barContainer = $("<div class='progress'></div>").append(progressBar);
-        // var submitUrl = fileInput.data("url");
-        // var formData = fileInput.data("formData");
-        var submitUrl = '<%= s3_direct_post.url %>';
-        var formData = JSON.parse('<%= s3_direct_post.fields.to_json.html_safe %>');
 
         fileInput.after(barContainer);
         fileInput.fileupload({
           fileInput:       fileInput,
-          url:             submitUrl,
+          url:             editorSubmitUrl,
           type:            'POST',
           autoUpload:       true,
-          formData:         formData,
+          formData:         editorFormData,
           paramName:        'file', // S3 does not like nested name fields i.e. name="user[avatar_url]"
           dataType:         'XML',  // S3 returns XML if success_action_status is set to 201
           replaceFileInput: false,
@@ -50,7 +51,7 @@
             // extract key and generate URL from response
             var key   = $(data.jqXHR.responseXML).find("Key").text();
 
-            var newUrl   = '//<%= @s3_direct_post.url.host %>/' + key;
+            var newUrl   = editorHostUrl + key;
             console.log(newUrl);
 
             // set url in form

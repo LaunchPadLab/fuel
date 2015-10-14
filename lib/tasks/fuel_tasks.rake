@@ -28,7 +28,7 @@ namespace :fuel do
   desc "Markdown to HTML"
   task :markdown_to_html => :environment do
     Fuel::Post.all.each do |post|
-      post.content = post.to_html
+      post.content = post.content
       post.save
     end
   end

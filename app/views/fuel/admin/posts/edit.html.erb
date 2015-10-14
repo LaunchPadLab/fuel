@@ -2,7 +2,7 @@
 <section class="page">
   <header class="page-header">
     <h5 class="page-header--title"><span>Post</span>: <%= @post.title %></h5>
-    <%= link_to 'Preview Post', '#', class: "js-menu-trigger page-header--link" %>
+    <%= link_to 'View Post', post_path(@post), class: "page-header--link", target: "_blank" %>
   </header>
   <div class="page-area">
     <%= render 'form' %>

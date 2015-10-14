@@ -36,6 +36,12 @@
       <%= f.label :teaser, 'Post Tease' %>
       <%= f.text_area :teaser, class: 'tease' %>
     </fieldset>
+    <fieldset>
+      <div class="form-group-half">
+        <%= f.label :format %>
+        <%= f.select :format, options_for_select(format_options, selected: f.object.format) %>
+      </div>
+    </fieldset>
   </div>
   <div class="form-container--right card">
     <%= f.label :featured_image, 'Featured Image' %>
@@ -45,7 +51,7 @@
     <%= f.file_field :featured_image %>
   </div>
   <div class="form-container--full">
-    <fieldset>
+    <fieldset class="editor-area" data-format="html">
       <%= f.label :content, 'Your Post' %>
       <ul id="editor" style="display: none;">
         <li class="editor-button" data-wysihtml5-command="bold" title="CTRL+B"><i class="fa fa-bold"></i></li>
@@ -96,7 +102,14 @@
           </fieldset>
         </div>
       </ul>
-      <%= f.text_area :content, class: 'post' %>
+      <%= f.text_area :content, class: 'post', id: "fuel_post_content_html" %>
+    </fieldset>
+    <fieldset class="editor-area" data-format="markdown">
+      <%= f.label :content, 'Your Post' %>
+      <%= f.text_area :content, value: f.object.raw_content, class: 'post', id: "fuel_post_content_markdown" %>
+      <div class="preview-link-area">
+        <%= link_to 'Preview Post', '#', class: "trigger-preview preview--link", data: { url: fuel.admin_posts_preview_path } %>
+      </div>
     </fieldset>
     <fieldset>
       <%= f.submit (action_name == "edit" ? "Update Post" : "Create Post"), class: 'button button--secondary' %>

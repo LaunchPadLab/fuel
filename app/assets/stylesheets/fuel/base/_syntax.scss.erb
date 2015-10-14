@@ -1,0 +1,15 @@
+<%= Rouge::Themes::Github.render(scope: '.highlight') %>
+
+.highlight {
+  background-color: white;
+  border: thin solid $grey-base;
+  padding: 10px 20px;
+  overflow-x: auto;
+  word-break: inherit;
+  word-wrap: inherit;
+  letter-spacing: 0.2px;
+
+  span {
+    line-height: 25px;
+  }
+}

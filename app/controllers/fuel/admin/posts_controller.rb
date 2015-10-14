@@ -50,8 +50,11 @@ module Fuel
 
       def preview
         @content = params[:fuel_post][:content]
+        content = Fuel::Post.new.to_html(@content)
+        html = render_to_string partial: "fuel/admin/posts/content", locals: { content: content }
+
         respond_to do |format|
-          format.js
+          format.json { render json: { html: html } }
         end
       end
 
@@ -62,7 +65,7 @@ module Fuel
       private
 
         def post_params
-          params.require(:fuel_post).permit(:tag, :author_id, :content, :title, :teaser, :featured_image, :published, :published_at)
+          params.require(:fuel_post).permit(:tag, :author_id, :content, :title, :teaser, :featured_image, :published, :published_at, :format)
         end
 
         def update_published_at

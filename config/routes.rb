@@ -6,7 +6,7 @@ Fuel::Engine.routes.draw do
     # admin namespace is listed first intentionally
     namespace :admin do
       root to: 'posts#index'
-      get "posts/preview" => 'posts#preview'
+      post "posts/preview" => 'posts#preview'
       get "posts/:slug/posts/preview" => 'posts#preview'
       resources :posts do
         member do

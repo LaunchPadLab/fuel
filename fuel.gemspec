@@ -29,6 +29,8 @@ Gem::Specification.new do |s|
   s.add_dependency "neat"
   s.add_dependency "pickadate-rails"
   s.add_dependency "jquery-fileupload-rails"
+  s.add_dependency "github-markup"
+  s.add_dependency "rouge"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

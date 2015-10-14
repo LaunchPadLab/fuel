@@ -18,6 +18,8 @@
 //= require pickadate/picker
 //= require pickadate/picker.date
 //= require fuel/pickadate-datepicker
+//= require fuel/to-markdown
+//= require fuel/showdown
 //= require fuel/posts
 //= require fuel/wysihtml5x-toolbar.min.js
 //= require fuel/advanced_and_extended

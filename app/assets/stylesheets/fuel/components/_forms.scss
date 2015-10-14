@@ -62,7 +62,7 @@ input[type="submit"] {
 // Specific Teaser Heights
 textarea {
   &.tease { @include rem(height, 60px); }
-  &.post { @include rem(height, 250px); }
+  &.post { @include rem(height, 350px); }
 }
 
 select{

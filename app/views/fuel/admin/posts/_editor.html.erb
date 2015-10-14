@@ -2,14 +2,14 @@
   $(function() {
     $body = $("body");
 
-    var editorId = "fuel_post_content";
+    var editorId = "fuel_post_content_html";
     var editorStylesheetPath = "<%= stylesheet_path('fuel/wysihtml') %>";
     var editorSubmitUrl = '<%= s3_direct_post.url %>';
     var editorFormData = JSON.parse('<%= s3_direct_post.fields.to_json.html_safe %>');
     var editorHostUrl = '//<%= @s3_direct_post.url.host %>/';
 
     if ($("body").hasClass("posts-controller")){
-      var editor = new wysihtml5.Editor(editorId, { // id of textarea element
+      wysihtml5Editor = new wysihtml5.Editor(editorId, { // id of textarea element
         toolbar:      "editor", // id of toolbar element
         parserRules:  wysihtml5ParserRules,
         stylesheets: editorStylesheetPath
@@ -67,6 +67,8 @@
         });
       });
       <% end %>
+
+      setCorrectEditor();
     };
 
   });

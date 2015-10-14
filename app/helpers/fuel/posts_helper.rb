@@ -36,5 +36,9 @@ module Fuel
       )
     end
 
+    def format_options
+      Fuel::Post::Formats::DISPLAY.dup.invert
+    end
+
   end
 end

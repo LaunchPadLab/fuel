@@ -8,7 +8,7 @@ module Fuel
     belongs_to :author
 
     if Rails.version[0].to_i < 4
-      attr_accessible :tag, :author_id, :content, :title, :teaser, :featured_image, :seo_title, :seo_description, :published_at
+      attr_accessible :tag, :author_id, :content, :title, :teaser, :featured_image, :seo_title, :seo_description, :published_at, :format
     end
 
     if Fuel.configuration.aws_bucket
@@ -24,6 +24,13 @@ module Fuel
     scope :recent_published_posts, -> { published.recent }
     scope :published, -> { where(published: true) }
     scope :recent, -> { order("published_at DESC").order("created_at DESC") }
+
+    module Formats
+      MARKDOWN = "markdown"
+      HTML = "html"
+      DISPLAY = { HTML => "HTML", MARKDOWN => "Markdown" }
+      DEFAULT = HTML
+    end
 
     def s3_credentials
       {:bucket => Fuel.configuration.aws_bucket, :access_key_id => Fuel.configuration.aws_access_key, :secret_access_key => Fuel.configuration.aws_secret_access_key}
@@ -57,10 +64,26 @@ module Fuel
       teaser.present? ? teaser : content
     end
 
-    def to_html
-      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML,
-          :autolink => true, :space_after_headers => true)
+    def to_html(content = raw_content)
+      markdown = Redcarpet::Markdown.new(Fuel::Html,
+          :autolink => true, :space_after_headers => true, fenced_code_blocks: true, disable_indented_code_blocks: true)
       raw markdown.render(content)
+    end
+
+    def content
+      markdown? ? to_html(raw_content) : raw_content
+    end
+
+    def raw_content
+      attributes["content"]
+    end
+
+    def html?
+      format == Formats::HTML
+    end
+
+    def markdown?
+      format == Formats::MARKDOWN
     end
 
   end

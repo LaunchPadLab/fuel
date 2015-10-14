@@ -14,6 +14,10 @@ require "pickadate-rails"
 require "aws-sdk"
 require "jquery-fileupload-rails"
 require "fuel/aws"
+require "github/markup"
+require "rouge"
+require "rouge/plugins/redcarpet"
+require "fuel/html"
 
 module Fuel
 

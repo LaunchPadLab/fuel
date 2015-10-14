@@ -1,5 +1,8 @@
 $(function(){
 
+  var $markdownField = $("#fuel_post_content_markdown");
+  var $htmlField = $("#fuel_post_content_html");
+
   $("#fuel_post_published").on("change", function(){
     var val = $(this).val();
     var $publishedAtGroup = $("#publishedAtGroup");
@@ -11,6 +14,91 @@ $(function(){
       $publishedAtGroup.hide();
       $publishedAt.prop('disabled', true);
     }
+  });
+
+  var findFormat = function(){
+    return $("#fuel_post_format").val();
+  }
+
+  var isMarkdown = function(){
+    return findFormat() == "markdown"
+  }
+
+  setCorrectEditor = function(){
+    var format = findFormat();
+
+    var $editors = $(".editor-area");
+    $editors.find("textarea").prop("disabled", true);
+    $editors.hide();
+
+    var $activeEditor = $(".editor-area*[data-format='" + format + "']");
+    $activeEditor.find("textarea").prop("disabled", false);
+    $activeEditor.show();
+
+    if (isMarkdown()){
+      wysihtml5Editor.disable();
+    } else {
+      wysihtml5Editor.enable();
+    };
+  };
+
+  var formatContent = function(){
+    var format = findFormat();
+    if (isMarkdown()){
+      var html = wysihtml5Editor.getValue(),
+          markdown = toMarkdown(html);
+      $markdownField.val(markdown);
+    } else {
+      var markdown = $markdownField.val(),
+          converter = new showdown.Converter(),
+          html = converter.makeHtml(markdown);
+
+      wysihtml5Editor.setValue(html);
+    }
+  };
+
+  var retrieveCurrentContent = function(){
+    if (isMarkdown()){
+      var content = $markdownField.val();
+    } else {
+      var content = wysihtml5Editor.getValue();
+    }
+    return content;
+  };
+
+  var setContent = function(content){
+    if (isMarkdown()){
+      wysihtml5Editor.setValue(content);
+    } else {
+      $markdownField.val(content);
+    }
+  }
+
+  $("#fuel_post_format").on("change", function(){
+    setCorrectEditor();
+    formatContent();
+  });
+
+  $(".trigger-preview").on("click", function(e){
+    e.preventDefault();
+    var url = $(this).data("url");
+
+    var content = retrieveCurrentContent();
+    $.ajax({
+      dataType: "json",
+      url: url,
+      type: "post",
+      data: {
+        fuel_post: {
+          content: content
+        }
+      },
+      success: function(data){
+        $("#render-content").replaceWith(data.html);
+      }
+    });
+    $('.js-menu,.js-menu-screen').toggleClass('is-visible');
+    $('.js-menu').parents('body').toggleClass('is-fixed');
   });
 
 });

@@ -43,3 +43,15 @@ $editor-button-transition: all 0.2s ease-in-out;
     color: $blue-base;
   }
 }
+
+
+.preview-link-area {
+  @include row();
+  @include rem(margin-top, 10px);
+}
+
+.preview--link {
+  @extend .link-primary;
+  @include font-type($primary-sans-serif, normal, 700);
+  @include rem(margin-top, 15px);
+}

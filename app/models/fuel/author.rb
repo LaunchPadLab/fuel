@@ -23,5 +23,9 @@ module Fuel
     def s3_credentials
       {:bucket => Fuel.configuration.aws_bucket, :access_key_id => Fuel.configuration.aws_access_key, :secret_access_key => Fuel.configuration.aws_secret_access_key}
     end
+
+    def other_posts(post_id)
+      @other_posts ||= posts.published.recent.where.not(id: post_id)
+    end
   end
 end

@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
 
-  s.add_dependency "rails"
+  s.add_dependency "rails", ">=3"
   s.add_dependency "friendly_id"
   s.add_dependency "redcarpet"
   s.add_dependency "kaminari"
@@ -31,6 +31,7 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-fileupload-rails"
   s.add_dependency "github-markup"
   s.add_dependency "rouge"
+  s.add_dependency "sass_rails_patch", "~> 0.0.1"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"

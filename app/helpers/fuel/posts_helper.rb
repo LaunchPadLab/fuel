@@ -31,7 +31,7 @@ module Fuel
 
     def s3_direct_post
       @s3_direct_post ||= (
-        return unless s3_bucket.present?
+        return unless s3_bucket
         s3_bucket.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: 201, acl: :public_read)
       )
     end

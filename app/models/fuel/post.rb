@@ -8,7 +8,7 @@ module Fuel
     belongs_to :author
 
     if Rails.version[0].to_i < 4
-      attr_accessible :tag, :author_id, :content, :title, :teaser, :featured_image, :seo_title, :seo_description, :published_at, :format
+      attr_accessible :tag, :author_id, :content, :title, :teaser, :featured_image, :seo_title, :seo_description, :published, :published_at, :format
     end
 
     if Fuel.configuration.aws_bucket

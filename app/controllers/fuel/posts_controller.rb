@@ -15,7 +15,7 @@ module Fuel
 
       respond_to do |format|
         format.html
-        format.json { render json: @posts }
+        format.json { render json: @posts, :methods => :avatar_url }
       end
     end
 
@@ -27,7 +27,7 @@ module Fuel
 
       respond_to do |format|
         format.html
-        format.json { render json: @post }
+        format.json { render json: @post, :methods => :avatar_url }
       end
     end
 

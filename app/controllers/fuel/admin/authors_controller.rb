@@ -51,6 +51,11 @@ module Fuel
       end
 
       def show
+        @author = Fuel::Author.find(params[:id])
+
+        respond_to do |format|
+          format.json { render json: @author }
+        end
       end
 
       private

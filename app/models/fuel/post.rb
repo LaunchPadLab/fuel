@@ -86,6 +86,10 @@ module Fuel
       format == Formats::MARKDOWN
     end
 
+    def featured_image_url
+      featured_image.url(:medium)
+    end
+
     def avatar_url
       return unless author.present?
       author.avatar.url(:medium)

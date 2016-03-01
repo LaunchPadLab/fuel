@@ -12,7 +12,7 @@ module Fuel
     end
 
     if Fuel.configuration.aws_bucket
-      has_attached_file :avatar, :styles => { :medium => Fuel.configuration.avatar_settings[:styles][:medium], :thumb => Fuel.configuration.avatar_settings[:styles][:thumb] }, :default_url => "fuel/default-img.jpg", :storage => :s3, :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
+      has_attached_file :avatar, :styles => { :medium => Fuel.configuration.avatar_settings[:styles][:medium], :thumb => Fuel.configuration.avatar_settings[:styles][:thumb] }, :default_url => "fuel/default-img.jpg", :storage => :s3, :s3_protocol => :https, :s3_credentials => Proc.new{|a| a.instance.s3_credentials }
     else
       has_attached_file :avatar, :styles => { :medium => Fuel.configuration.avatar_settings[:styles][:medium], :thumb => Fuel.configuration.avatar_settings[:styles][:thumb] }, :default_url => "fuel/default-img.jpg"
     end

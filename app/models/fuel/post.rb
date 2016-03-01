@@ -33,7 +33,7 @@ module Fuel
     end
 
     def s3_credentials
-      {:bucket => Fuel.configuration.aws_bucket, :access_key_id => Fuel.configuration.aws_access_key, :secret_access_key => Fuel.configuration.aws_secret_access_key}
+      { :bucket => Fuel.configuration.aws_bucket, :access_key_id => Fuel.configuration.aws_access_key, :secret_access_key => Fuel.configuration.aws_secret_access_key, :s3_protocol => 'https' }
     end
 
     def next

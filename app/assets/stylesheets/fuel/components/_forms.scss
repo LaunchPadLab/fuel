@@ -19,7 +19,7 @@ fieldset {
 
 // Inputs
 #{$all-text-inputs},
-input,
+input[type="text"],
 input[type="file"],
 select,
 textarea{

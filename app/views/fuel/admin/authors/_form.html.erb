@@ -52,6 +52,30 @@
         <%= f.text_field :dribbble, placeholder: "ryan_p_francis" %>
       </div>
     </fieldset>
+    <fieldset>
+      <div class="form-group-half">
+        <%= f.label :instagram %>
+        <%= f.text_field :instagram, placeholder: "francirp" %>
+      </div>
+      <div class="form-group-half">
+        <%= f.label :medium %>
+        <%= f.text_field :medium, placeholder: "ryan_p_francis" %>
+      </div>
+    </fieldset>
+    <fieldset>
+      <div class="form-group-half">
+        <%= f.label :personal_site %>
+        <%= f.text_field :personal_site, placeholder: "http://mypersonalsite.com" %>
+      </div>
+      <div class="form-group-half">
+        <%= f.label :linkedin %>
+        <%= f.text_field :linkedin, placeholder: "ryanpfrancis" %>
+      </div>
+    </fieldset>
+    <fieldset>
+      <%= f.label :is_active, "Active?" %>
+      <%= f.check_box :is_active %>
+    </fieldset>
     <fieldset class="fieldset">
       <%= f.submit class: 'button button--secondary' %>
       <% if @author.id %>

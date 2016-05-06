@@ -68,7 +68,7 @@ module Fuel
         end
 
         def author_params
-          params.require(:fuel_author).permit(:first_name, :last_name, :title, :bio, :avatar, :email, :twitter, :github, :dribbble, :start_date)
+          params.require(:fuel_author).permit(Fuel::Author::KEYS)
         end
 
         def find_author

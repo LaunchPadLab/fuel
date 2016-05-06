@@ -2,9 +2,12 @@ module Fuel
   class Author < ActiveRecord::Base
 
     has_many :posts
+    KEYS = [:first_name, :last_name, :title, :bio, :avatar,
+            :email, :twitter, :github, :dribbble, :instagram,
+            :medium, :personal_site, :linkedin, :start_date, :is_active].freeze
 
     if Rails.version[0].to_i < 4
-      attr_accessible :first_name, :last_name, :title, :bio, :avatar, :email, :twitter, :github, :dribbble, :start_date
+      attr_accessible(*KEYS)
     end
 
     def full_name

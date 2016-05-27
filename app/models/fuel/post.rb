@@ -66,7 +66,7 @@ module Fuel
 
     def to_html(content = raw_content)
       markdown = Redcarpet::Markdown.new(Fuel::Html,
-          :autolink => true, :space_after_headers => true, fenced_code_blocks: true, disable_indented_code_blocks: true)
+          :autolink => true, :space_after_headers => true, fenced_code_blocks: true, disable_indented_code_blocks: true, tables: true)
       raw markdown.render(content)
     end
 

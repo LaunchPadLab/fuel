@@ -1,6 +1,14 @@
 module Fuel
   class Engine < ::Rails::Engine
 
+    config.to_prepare do
+      Rails.application.config.assets.precompile += %w(
+        fuel/wysihtml.css
+        fuel/default-img.jpg
+        fuel/logo.svg
+      )
+    end
+
     # ISOLATE NAMESPACE ONLY FOR MODELS
     mod = Fuel
     engine_name(generate_railtie_name(mod.name))

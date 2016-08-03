@@ -25,7 +25,6 @@ module Fuel
   def self.configure(&block)
     block.call(configuration)
     configure_aws
-    Rails.application.config.assets.precompile += %w( fuel/wysihtml.css )
   end
 
   def self.configure_aws

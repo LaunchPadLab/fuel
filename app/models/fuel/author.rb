@@ -30,5 +30,9 @@ module Fuel
     def other_posts(post_id)
       @other_posts ||= posts.published.recent.where.not(id: post_id)
     end
+
+    def avatar_url
+      avatar_file_name.present? ? avatar.url(:medium) : nil
+    end
   end
 end

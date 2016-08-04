@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency "jquery-rails"
   s.add_dependency "sass-rails"
   s.add_dependency "truncate_html"
-  s.add_dependency "paperclip", ">=3"
+  s.add_dependency "paperclip", ">=3", "<5"
   s.add_dependency "aws-sdk", '< 2.0'
   s.add_dependency "bourbon"
   s.add_dependency "neat"
